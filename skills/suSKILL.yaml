@@ -1,0 +1,181 @@
+skill_id: su_suzuki_miyaura_v1
+version: 1.0
+status: draft
+reaction_family: Suzuki-Miyaura cross-coupling
+dataset_context:
+  dataset_key: SU
+  description: >
+    High-throughput Suzuki-Miyaura C-C cross-coupling reaction dataset.
+    Typical components include aryl halides, organoboron coupling partners,
+    palladium catalysts, ligands, bases, solvents, and additives.
+input_assumption:
+  input_type: reaction_smiles_or_makush_smiles
+  parsed_by: MoleCode
+  user_provides_component_graphs: false
+
+component_classes:
+  - class_name: aryl_halide
+    description: Aryl or heteroaryl halide electrophile.
+    generic_template: Ar-X
+    site_types:
+      - ARYL_C_IPSO
+      - LEAVING_GROUP_X
+
+  - class_name: organoboron
+    description: Boronic acid, boronate ester, or related organoboron coupling partner.
+    generic_template: R-B(OH)2 or R-B(OR)2
+    site_types:
+      - BORON_SITE
+      - BORON_ATTACHED_CARBON
+
+  - class_name: palladium_catalyst
+    description: Palladium catalyst or palladium precursor.
+    generic_template: Pd or Pd-L complex
+    site_types:
+      - METAL_CENTER
+
+  - class_name: ligand
+    description: Ligand coordinating to palladium.
+    generic_template: L
+    site_types:
+      - LIGAND_DONOR_ATOM
+
+  - class_name: base
+    description: Base involved in boron activation and transmetallation.
+    generic_template: Base
+    site_types:
+      - BASE_BASIC_SITE
+
+  - class_name: solvent
+    description: Solvent or solvent mixture.
+    generic_template: Solvent
+    site_types:
+      - SOLVENT_INTERACTION_SITE
+
+site_definitions:
+  - site_type: ARYL_C_IPSO
+    component_class: aryl_halide
+    description: Aryl carbon directly bonded to leaving group.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: aromatic_or_sp2_carbon_bonded_to_halide_or_pseudohalide
+    editable: true
+
+  - site_type: LEAVING_GROUP_X
+    component_class: aryl_halide
+    description: Halide or pseudohalide leaving group.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: Cl_Br_I_OTf_or_related_leaving_group
+    editable: true
+
+  - site_type: BORON_SITE
+    component_class: organoboron
+    description: Boron atom in boronic acid or boronate ester.
+    matching_strategy: ELEMENT_PATTERN
+    pattern_hint: B
+    editable: true
+
+  - site_type: BORON_ATTACHED_CARBON
+    component_class: organoboron
+    description: Carbon atom attached to boron and transferred during cross-coupling.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: carbon_directly_bonded_to_boron
+    editable: true
+
+  - site_type: METAL_CENTER
+    component_class: palladium_catalyst
+    description: Palladium catalytic center.
+    matching_strategy: ELEMENT_PATTERN
+    pattern_hint: Pd
+    editable: true
+
+  - site_type: LIGAND_DONOR_ATOM
+    component_class: ligand
+    description: Donor atom coordinating to palladium.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: phosphine_or_nitrogen_donor_atom
+    editable: true
+
+  - site_type: BASE_BASIC_SITE
+    component_class: base
+    description: Basic site involved in organoboron activation.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: carbonate_phosphate_hydroxide_alkoxide_or_other_basic_site
+    editable: true
+
+relation_rules:
+  - rule_id: su_rule_001
+    relation_type: BREAKING_BOND
+    source_site_type: ARYL_C_IPSO
+    target_site_type: LEAVING_GROUP_X
+    mechanism_step: oxidative_addition
+    description: C-X bond of aryl halide participates in oxidative addition.
+    initial_weight: 0.5
+    evidence_policy: mechanism_default
+    enabled: true
+    editable: true
+
+  - rule_id: su_rule_002
+    relation_type: METAL_COORDINATION
+    source_site_type: METAL_CENTER
+    target_site_type: ARYL_C_IPSO
+    mechanism_step: oxidative_addition
+    description: Palladium interacts with the aryl halide reaction center.
+    initial_weight: 0.5
+    evidence_policy: literature_supported
+    enabled: true
+    editable: true
+
+  - rule_id: su_rule_003
+    relation_type: METAL_COORDINATION
+    source_site_type: METAL_CENTER
+    target_site_type: LEAVING_GROUP_X
+    mechanism_step: oxidative_addition
+    description: Palladium is associated with cleavage of the aryl C-X bond.
+    initial_weight: 0.5
+    evidence_policy: literature_supported
+    enabled: true
+    editable: true
+
+  - rule_id: su_rule_004
+    relation_type: METAL_COORDINATION
+    source_site_type: METAL_CENTER
+    target_site_type: LIGAND_DONOR_ATOM
+    mechanism_step: catalyst_activation
+    description: Ligand donor atom coordinates to palladium.
+    initial_weight: 0.5
+    evidence_policy: literature_supported
+    enabled: true
+    editable: true
+
+  - rule_id: su_rule_005
+    relation_type: ACID_BASE_INTERACTION
+    source_site_type: BASE_BASIC_SITE
+    target_site_type: BORON_SITE
+    mechanism_step: boron_activation
+    description: Base activates the organoboron coupling partner and facilitates transmetallation.
+    initial_weight: 0.5
+    evidence_policy: literature_supported
+    enabled: true
+    editable: true
+
+  - rule_id: su_rule_006
+    relation_type: METAL_COORDINATION
+    source_site_type: METAL_CENTER
+    target_site_type: BORON_ATTACHED_CARBON
+    mechanism_step: transmetallation
+    description: Carbon group attached to boron is transferred to palladium during transmetallation.
+    initial_weight: 0.5
+    evidence_policy: literature_supported
+    enabled: true
+    editable: true
+
+  - rule_id: su_rule_007
+    relation_type: FORMING_BOND
+    source_site_type: ARYL_C_IPSO
+    target_site_type: BORON_ATTACHED_CARBON
+    mechanism_step: reductive_elimination
+    description: C-C bond formation connects the aryl halide ipso carbon and the organoboron carbon.
+    initial_weight: 0.5
+    evidence_policy: mechanism_default
+    enabled: true
+    editable: true

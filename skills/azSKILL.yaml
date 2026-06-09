@@ -1,0 +1,165 @@
+skill_id: az_eln_buchwald_hartwig_v1
+version: 1.0
+status: draft
+reaction_family: Buchwald-Hartwig amination
+dataset_context:
+  dataset_key: AZ
+  description: >
+    AstraZeneca ELN Buchwald-Hartwig real-world dataset.
+    It covers a wider chemical space than typical HTE data, including
+    340 aryl halides, 260 amines, 24 ligands, 15 bases, and 15 solvents.
+input_assumption:
+  input_type: reaction_smiles_or_makush_smiles
+  parsed_by: MoleCode
+  user_provides_component_graphs: false
+inherits_from:
+  - dy_buchwald_hartwig_v1
+
+component_classes:
+  - class_name: aryl_halide
+    description: Broad aryl or heteroaryl halide electrophile class.
+    generic_template: Ar-X
+    count_in_dataset: 340
+    site_types:
+      - ARYL_C_IPSO
+      - LEAVING_GROUP_X
+      - ELECTRONIC_SUBSTITUENT
+      - STERIC_SUBSTITUENT
+
+  - class_name: amine
+    description: Broad amine coupling partner class.
+    generic_template: R-NH2, R2NH, or related amine
+    count_in_dataset: 260
+    site_types:
+      - AMINE_N
+      - AMINE_N_H
+      - AMINE_STERIC_ENVIRONMENT
+
+  - class_name: ligand
+    description: Ligand class used with palladium catalyst.
+    generic_template: L
+    count_in_dataset: 24
+    site_types:
+      - LIGAND_DONOR_ATOM
+      - LIGAND_STERIC_ENVIRONMENT
+
+  - class_name: base
+    description: Base class.
+    generic_template: Base
+    count_in_dataset: 15
+    site_types:
+      - BASE_BASIC_SITE
+
+  - class_name: solvent
+    description: Solvent class.
+    generic_template: Solvent
+    count_in_dataset: 15
+    site_types:
+      - SOLVENT_INTERACTION_SITE
+
+site_definitions:
+  - site_type: ARYL_C_IPSO
+    component_class: aryl_halide
+    description: Aryl or heteroaryl carbon attached to leaving group.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: aryl_or_heteroaryl_carbon_bonded_to_halide_or_pseudohalide
+    editable: true
+
+  - site_type: LEAVING_GROUP_X
+    component_class: aryl_halide
+    description: Halide or pseudohalide leaving group.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: Cl_Br_I_OTf_or_related_leaving_group
+    editable: true
+
+  - site_type: AMINE_N
+    component_class: amine
+    description: Nitrogen atom of the amine coupling partner.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: primary_secondary_or_relevant_amine_nitrogen
+    editable: true
+
+  - site_type: AMINE_N_H
+    component_class: amine
+    description: Hydrogen-bearing amine nitrogen if present.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: amine_nitrogen_with_explicit_or_implicit_hydrogen
+    editable: true
+
+  - site_type: LIGAND_DONOR_ATOM
+    component_class: ligand
+    description: Donor atom of ligand coordinating to palladium.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: phosphine_or_nitrogen_donor_atom
+    editable: true
+
+  - site_type: BASE_BASIC_SITE
+    component_class: base
+    description: Basic atom or anionic center.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: carbonate_phosphate_alkoxide_amide_or_other_basic_site
+    editable: true
+
+  - site_type: SOLVENT_INTERACTION_SITE
+    component_class: solvent
+    description: Solvent atom or functional site that may coordinate, solvate, or modulate reaction conditions.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: polar_donor_acceptor_or_coordinating_atom
+    editable: true
+
+relation_rules:
+  - rule_id: az_rule_001
+    relation_type: BREAKING_BOND
+    source_site_type: ARYL_C_IPSO
+    target_site_type: LEAVING_GROUP_X
+    mechanism_step: oxidative_addition
+    description: Aryl C-X bond participates in oxidative addition.
+    initial_weight: 0.5
+    evidence_policy: inherited_mechanism_default
+    enabled: true
+    editable: true
+
+  - rule_id: az_rule_002
+    relation_type: FORMING_BOND
+    source_site_type: ARYL_C_IPSO
+    target_site_type: AMINE_N
+    mechanism_step: reductive_elimination
+    description: C-N bond forms between aryl ipso carbon and amine nitrogen.
+    initial_weight: 0.5
+    evidence_policy: inherited_mechanism_default
+    enabled: true
+    editable: true
+
+  - rule_id: az_rule_003
+    relation_type: METAL_COORDINATION
+    source_site_type: LIGAND_DONOR_ATOM
+    target_site_type: ARYL_C_IPSO
+    mechanism_step: ligand_controlled_oxidative_addition
+    description: Ligand environment modulates palladium-mediated oxidative addition. This edge may be implemented indirectly through METAL_CENTER if the catalyst graph contains explicit Pd.
+    initial_weight: 0.5
+    evidence_policy: literature_supported
+    enabled: false
+    editable: true
+    note: Prefer METAL_CENTER-mediated edges when explicit Pd is present.
+
+  - rule_id: az_rule_004
+    relation_type: ACID_BASE_INTERACTION
+    source_site_type: BASE_BASIC_SITE
+    target_site_type: AMINE_N_H
+    mechanism_step: amine_activation
+    description: Base assists amine activation or acid neutralization.
+    initial_weight: 0.5
+    evidence_policy: literature_supported
+    enabled: true
+    editable: true
+
+  - rule_id: az_rule_005
+    relation_type: SOLVENT_EFFECT
+    source_site_type: SOLVENT_INTERACTION_SITE
+    target_site_type: METAL_CENTER
+    mechanism_step: condition_modulation
+    description: Solvent may modulate catalyst state, coordination environment, or ion-pairing, but this relation should only be used when explicit solvent evidence or user confirmation exists.
+    initial_weight: 0.5
+    evidence_policy: evidence_gated
+    enabled: false
+    editable: true

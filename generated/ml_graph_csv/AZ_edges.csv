@@ -1,0 +1,5 @@
+edge_index,source_node_id,target_node_id,edge_scope,role_or_relation,edge_feature_name,edge_feature_full_name,relation_type,bond_type,weight,evidence_sources
+0,az:amine:C1,az:amine:N1,intra_role,amine,intra_role_covalent_single_bond,INTRA_ROLE_COVALENT_SINGLE_BOND,COVALENT_BOND,SINGLE,0.33,
+1,az:aryl_halide:C1,az:aryl_halide:C2,intra_role,aryl_halide,intra_role_covalent_double_bond,INTRA_ROLE_COVALENT_DOUBLE_BOND,COVALENT_BOND,DOUBLE,0.67,
+2,az:aryl_halide:C1,az:amine:N1,cross_role,FORMING_BOND,cross_role_forming_bond,CROSS_ROLE_FORMING_BOND,FORMING_BOND,,0.5,buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic
+3,az:ligand:P1,az:aryl_halide:C1,cross_role,METAL_COORDINATION,cross_role_metal_coordination,CROSS_ROLE_METAL_COORDINATION,METAL_COORDINATION,,0.5,buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic

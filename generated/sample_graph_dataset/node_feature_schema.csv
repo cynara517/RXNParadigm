@@ -1,0 +1,85 @@
+dataset_key,feature_index,feature_name,feature_kind
+AZ,0,NMR_shift,node_dft_descriptor_value
+AZ,1,electrostatic_charge,node_dft_descriptor_value
+AZ,,az:amine:C1 source columns,amine_.C1_NMR_shift;amine_.C1_electrostatic_charge
+AZ,,az:amine:N1 source columns,amine_.N1_NMR_shift;amine_.N1_electrostatic_charge
+AZ,,az:aryl_halide:C1 source columns,halide_.C1_NMR_shift;halide_.C1_electrostatic_charge
+AZ,,az:aryl_halide:C2 source columns,halide_.C2_NMR_shift;halide_.C2_electrostatic_charge
+AZ,,az:ligand:P1 source columns,ligand_.P1_NMR_shift;ligand_.P1_electrostatic_charge
+SU_NO,0,NMR_shift,node_dft_descriptor_value
+SU_NO,1,electrostatic_charge,node_dft_descriptor_value
+SU_NO,,su_no:aryl_halide:C1 source columns,halide_.C1_NMR_shift;halide_.C1_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C2 source columns,halide_.C2_NMR_shift;halide_.C2_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C3 source columns,halide_.C3_NMR_shift;halide_.C3_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C4 source columns,halide_.C4_NMR_shift;halide_.C4_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C5 source columns,halide_.C5_NMR_shift;halide_.C5_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C6 source columns,halide_.C6_NMR_shift;halide_.C6_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C7 source columns,halide_.C7_NMR_shift;halide_.C7_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C8 source columns,halide_.C8_NMR_shift;halide_.C8_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C9 source columns,halide_.C9_NMR_shift;halide_.C9_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C10 source columns,halide_.C10_NMR_shift;halide_.C10_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C11 source columns,halide_.C11_NMR_shift;halide_.C11_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C12 source columns,halide_.C12_NMR_shift;halide_.C12_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C13 source columns,halide_.C13_NMR_shift;halide_.C13_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C14 source columns,halide_.C14_NMR_shift;halide_.C14_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C15 source columns,halide_.C15_NMR_shift;halide_.C15_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C16 source columns,halide_.C16_NMR_shift;halide_.C16_electrostatic_charge
+SU_NO,,su_no:aryl_halide:C17 source columns,halide_.C17_NMR_shift;halide_.C17_electrostatic_charge
+SU_NO,,su_no:aryl_halide:N3 source columns,halide_.N3_NMR_shift;halide_.N3_electrostatic_charge
+SU_NO,,su_no:aryl_halide:N4 source columns,halide_.N4_NMR_shift;halide_.N4_electrostatic_charge
+SU_NO,,su_no:ligand:P1 source columns,ligand_.P1_NMR_shift;ligand_.P1_electrostatic_charge
+SU_NO,,su_no:organoboron:B1 source columns,boronic Acid_.B1_electrostatic_charge
+SU_NO,,su_no:organoboron:C1 source columns,boronic Acid_.C1_NMR_shift;boronic Acid_.C1_electrostatic_charge
+SU_NO,,su_no:organoboron:C2 source columns,boronic Acid_.C2_NMR_shift;boronic Acid_.C2_electrostatic_charge
+SU_NO,,su_no:organoboron:C3 source columns,boronic Acid_.C3_NMR_shift;boronic Acid_.C3_electrostatic_charge
+SU_NO,,su_no:organoboron:C4 source columns,boronic Acid_.C4_NMR_shift;boronic Acid_.C4_electrostatic_charge
+SU_NO,,su_no:organoboron:C5 source columns,boronic Acid_.C5_NMR_shift;boronic Acid_.C5_electrostatic_charge
+SU_NO,,su_no:organoboron:C6 source columns,boronic Acid_.C6_NMR_shift;boronic Acid_.C6_electrostatic_charge
+SU_NO,,su_no:organoboron:C7 source columns,boronic Acid_.C7_NMR_shift;boronic Acid_.C7_electrostatic_charge
+SU_NO,,su_no:organoboron:C8 source columns,boronic Acid_.C8_NMR_shift;boronic Acid_.C8_electrostatic_charge
+SU_NO,,su_no:organoboron:C9 source columns,boronic Acid_.C9_NMR_shift;boronic Acid_.C9_electrostatic_charge
+SU_NO,,su_no:organoboron:C10 source columns,boronic Acid_.C10_NMR_shift;boronic Acid_.C10_electrostatic_charge
+SU_NO,,su_no:organoboron:C11 source columns,boronic Acid_.C11_NMR_shift;boronic Acid_.C11_electrostatic_charge
+SU_NO,,su_no:organoboron:C12 source columns,boronic Acid_.C12_NMR_shift;boronic Acid_.C12_electrostatic_charge
+SU_NO,,su_no:organoboron:C13 source columns,boronic Acid_.C13_NMR_shift;boronic Acid_.C13_electrostatic_charge
+SU_NO,,su_no:organoboron:C14 source columns,boronic Acid_.C14_NMR_shift;boronic Acid_.C14_electrostatic_charge
+SU_NO,,su_no:organoboron:C15 source columns,boronic Acid_.C15_NMR_shift;boronic Acid_.C15_electrostatic_charge
+SU_NO,,su_no:organoboron:C16 source columns,boronic Acid_.C16_NMR_shift;boronic Acid_.C16_electrostatic_charge
+SU_NO,,su_no:organoboron:N1 source columns,boronic Acid_.N1_NMR_shift;boronic Acid_.N1_electrostatic_charge
+SU_NO,,su_no:organoboron:N2 source columns,boronic Acid_.N2_NMR_shift;boronic Acid_.N2_electrostatic_charge
+DY,0,NMR_shift,node_dft_descriptor_value
+DY,1,electrostatic_charge,node_dft_descriptor_value
+DY,,dy:additive:C3 source columns,additive_.C3_NMR_shift;additive_.C3_electrostatic_charge
+DY,,dy:additive:C4 source columns,additive_.C4_NMR_shift;additive_.C4_electrostatic_charge
+DY,,dy:additive:C5 source columns,additive_.C5_NMR_shift;additive_.C5_electrostatic_charge
+DY,,dy:additive:N1 source columns,additive_.N1_electrostatic_charge
+DY,,dy:additive:O1 source columns,additive_.O1_electrostatic_charge
+DY,,dy:aryl_halide:C1 source columns,aryl_halide_.C1_NMR_shift;aryl_halide_.C1_electrostatic_charge
+DY,,dy:aryl_halide:C2 source columns,aryl_halide_.C2_NMR_shift;aryl_halide_.C2_electrostatic_charge
+DY,,dy:aryl_halide:C3 source columns,aryl_halide_.C3_NMR_shift;aryl_halide_.C3_electrostatic_charge
+DY,,dy:aryl_halide:C4 source columns,aryl_halide_.C4_NMR_shift;aryl_halide_.C4_electrostatic_charge
+DY,,dy:aryl_halide:H2 source columns,aryl_halide_.H2_NMR_shift;aryl_halide_.H2_electrostatic_charge
+DY,,dy:aryl_halide:H3 source columns,aryl_halide_.H3_NMR_shift;aryl_halide_.H3_electrostatic_charge
+DY,,dy:base:N1 source columns,base_.N1_electrostatic_charge
+DY,,dy:ligand:C1 source columns,ligand_.C1_NMR_shift;ligand_.C1_electrostatic_charge
+DY,,dy:ligand:C2 source columns,ligand_.C2_NMR_shift;ligand_.C2_electrostatic_charge
+DY,,dy:ligand:C3 source columns,ligand_.C3_NMR_shift;ligand_.C3_electrostatic_charge
+DY,,dy:ligand:C4 source columns,ligand_.C4_NMR_shift;ligand_.C4_electrostatic_charge
+DY,,dy:ligand:C5 source columns,ligand_.C5_NMR_shift;ligand_.C5_electrostatic_charge
+DY,,dy:ligand:C6 source columns,ligand_.C6_NMR_shift;ligand_.C6_electrostatic_charge
+DY,,dy:ligand:C7 source columns,ligand_.C7_NMR_shift;ligand_.C7_electrostatic_charge
+DY,,dy:ligand:C8 source columns,ligand_.C8_NMR_shift;ligand_.C8_electrostatic_charge
+DY,,dy:ligand:C9 source columns,ligand_.C9_NMR_shift;ligand_.C9_electrostatic_charge
+DY,,dy:ligand:C10 source columns,ligand_.C10_NMR_shift;ligand_.C10_electrostatic_charge
+DY,,dy:ligand:C11 source columns,ligand_.C11_NMR_shift;ligand_.C11_electrostatic_charge
+DY,,dy:ligand:C12 source columns,ligand_.C12_NMR_shift;ligand_.C12_electrostatic_charge
+DY,,dy:ligand:C13 source columns,ligand_.C13_NMR_shift;ligand_.C13_electrostatic_charge
+DY,,dy:ligand:C14 source columns,ligand_.C14_NMR_shift;ligand_.C14_electrostatic_charge
+DY,,dy:ligand:C15 source columns,ligand_.C15_NMR_shift;ligand_.C15_electrostatic_charge
+DY,,dy:ligand:C16 source columns,ligand_.C16_NMR_shift;ligand_.C16_electrostatic_charge
+DY,,dy:ligand:C17 source columns,ligand_.C17_NMR_shift;ligand_.C17_electrostatic_charge
+DY,,dy:ligand:H3 source columns,ligand_.H3_NMR_shift;ligand_.H3_electrostatic_charge
+DY,,dy:ligand:H4 source columns,ligand_.H4_NMR_shift;ligand_.H4_electrostatic_charge
+DY,,dy:ligand:H9 source columns,ligand_.H9_NMR_shift;ligand_.H9_electrostatic_charge
+DY,,dy:ligand:H11 source columns,ligand_.H11_NMR_shift;ligand_.H11_electrostatic_charge
+DY,,dy:ligand:P1 source columns,ligand_.P1_electrostatic_charge

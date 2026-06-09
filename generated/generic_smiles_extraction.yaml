@@ -1,0 +1,5941 @@
+artifact_id: generic_smiles_extraction_v1
+description: Concrete component SMILES and role-level generic symbols extracted from
+  full datasets, with the first three reactions retained as examples.
+datasets:
+- dataset_key: AZ
+  source_path: datasets/az_no_rdkit.csv
+  file_type: csv
+  reaction_family: Buchwald-Hartwig amination
+  row_count: 750
+  generic_reaction_template: Ar-X.R-NH2_or_R2NH.L.Base.Solvent>>Ar-NR
+  component_roles:
+  - role: additive
+    generic_symbol: Additive
+    unique_smiles_count: 1
+    components:
+    - smiles: C(=O)(C(F)(F)F)O
+      count: 2
+      example_row_indices:
+      - 532
+      - 533
+  - role: amine
+    generic_symbol: R-NH2_or_R2NH
+    unique_smiles_count: 203
+    components:
+    - smiles: C(CN)C(=O)N
+      count: 1
+      example_row_indices:
+      - 589
+    - smiles: C(CN)N
+      count: 1
+      example_row_indices:
+      - 704
+    - smiles: C/C=C(/C1=CC=C(C=C1)C)\N(C2=CC=C(C=C2)OC)C(=O)NC
+      count: 1
+      example_row_indices:
+      - 692
+    - smiles: C1=C(C=C(C=C1F)F)CN
+      count: 2
+      example_row_indices:
+      - 481
+      - 482
+    - smiles: C1=C(N=C(O1)N)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 339
+    - smiles: C1=CC(=C(C(=C1)F)CN)F
+      count: 2
+      example_row_indices:
+      - 592
+      - 593
+    - smiles: C1=CC(=CC(=C1)C(F)(F)F)CN
+      count: 1
+      example_row_indices:
+      - 303
+    - smiles: C1=CC(=CC(=C1)F)CN
+      count: 1
+      example_row_indices:
+      - 650
+    - smiles: C1=CC(=CC(=C1)N)CO
+      count: 1
+      example_row_indices:
+      - 609
+    - smiles: C1=CC(=CC(=C1)[N+](=O)[O-])N
+      count: 1
+      example_row_indices:
+      - 320
+    - smiles: C1=CC(=CC2=C1C=CN2)CO
+      count: 1
+      example_row_indices:
+      - 732
+    - smiles: C1=CC(=CC=C1C#N)N
+      count: 1
+      example_row_indices:
+      - 72
+    - smiles: C1=CC(=CC=C1CN)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 304
+    - smiles: C1=CC(=CC=C1CN)F
+      count: 1
+      example_row_indices:
+      - 534
+    - smiles: C1=CC(=CC=C1N)F
+      count: 1
+      example_row_indices:
+      - 658
+    - smiles: C1=CC(=CC=C1N)N2C=CN=C2
+      count: 2
+      example_row_indices:
+      - 9
+      - 484
+    - smiles: C1=CC(=CN=C1)C2=NC(=NC=C2)N
+      count: 2
+      example_row_indices:
+      - 635
+      - 636
+    - smiles: C1=CC(=CN=C1)CN
+      count: 1
+      example_row_indices:
+      - 524
+    - smiles: C1=CC(=CN=C1)N
+      count: 4
+      example_row_indices:
+      - 203
+      - 454
+      - 455
+      - 456
+    - smiles: C1=CC=C(C(=C1)C(=O)NOCCO)N
+      count: 1
+      example_row_indices:
+      - 210
+    - smiles: C1=CC=C(C(=C1)CN)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 302
+    - smiles: C1=CC=C(C(=C1)CN)F
+      count: 1
+      example_row_indices:
+      - 620
+    - smiles: C1=CC=C(C=C1)C(=O)N
+      count: 1
+      example_row_indices:
+      - 622
+    - smiles: C1=CC=C(C=C1)CN
+      count: 22
+      example_row_indices:
+      - 244
+      - 245
+      - 246
+      - 247
+      - 425
+    - smiles: C1=CC=C(C=C1)N
+      count: 15
+      example_row_indices:
+      - 64
+      - 146
+      - 155
+      - 156
+      - 157
+    - smiles: C1=CC=C2C(=C1)C=C(C=N2)N
+      count: 1
+      example_row_indices:
+      - 666
+    - smiles: C1=CC=NC(=C1)N
+      count: 1
+      example_row_indices:
+      - 667
+    - smiles: C1=CN=C(N=C1)N
+      count: 2
+      example_row_indices:
+      - 708
+      - 709
+    - smiles: C1=CN=CC=C1CN
+      count: 2
+      example_row_indices:
+      - 601
+      - 602
+    - smiles: C1=COC(=N1)N
+      count: 15
+      example_row_indices:
+      - 318
+      - 319
+      - 356
+      - 357
+      - 358
+    - smiles: C1C(CN1)(F)F
+      count: 1
+      example_row_indices:
+      - 555
+    - smiles: C1C(CO1)N
+      count: 2
+      example_row_indices:
+      - 626
+      - 631
+    - smiles: C1C2=CC=CC=C2CN1
+      count: 1
+      example_row_indices:
+      - 643
+    - smiles: C1CC(C1)N
+      count: 1
+      example_row_indices:
+      - 553
+    - smiles: C1CC(C1)N2CCN(CC2)C(=O)C3CC34CCNCC4
+      count: 2
+      example_row_indices:
+      - 730
+      - 731
+    - smiles: C1CC(C1)N2CCN(CC2)C(=O)C3CC4(C3)CCNCC4
+      count: 3
+      example_row_indices:
+      - 673
+      - 683
+      - 713
+    - smiles: C1CC(NC1)C2=CC(=CC3=C2OC(=CC3=O)N4CCOCC4)C(=O)N5CCOCC5
+      count: 1
+      example_row_indices:
+      - 490
+    - smiles: C1CC(NC1)C2=CC=CC=C2
+      count: 1
+      example_row_indices:
+      - 617
+    - smiles: C1CC2=CC=CC=C2NC1
+      count: 1
+      example_row_indices:
+      - 74
+    - smiles: C1CC2=NN=C(N2C1)C3=CC=C(C=C3)N
+      count: 1
+      example_row_indices:
+      - 281
+    - smiles: C1CCC(CC1)N
+      count: 1
+      example_row_indices:
+      - 616
+    - smiles: C1CCN(CC1)C2CCNCC2
+      count: 1
+      example_row_indices:
+      - 651
+    - smiles: C1CCNC(C1)C2=CC=CC=C2
+      count: 1
+      example_row_indices:
+      - 568
+    - smiles: C1CCNC1
+      count: 4
+      example_row_indices:
+      - 113
+      - 114
+      - 551
+      - 670
+    - smiles: C1CCNCC1
+      count: 5
+      example_row_indices:
+      - 109
+      - 393
+      - 394
+      - 550
+      - 611
+    - smiles: C1CN(CCN1)CC2=CC=CC=C2
+      count: 8
+      example_row_indices:
+      - 205
+      - 221
+      - 230
+      - 231
+      - 232
+    - smiles: C1CN(CCN1)CCC2=CC=CC=C2
+      count: 1
+      example_row_indices:
+      - 223
+    - smiles: C1CN(CCN1)CCC2=CC=CC=N2
+      count: 5
+      example_row_indices:
+      - 97
+      - 98
+      - 99
+      - 100
+      - 101
+    - smiles: C1CNC(=O)CN1
+      count: 2
+      example_row_indices:
+      - 340
+      - 341
+    - smiles: C1CNC1
+      count: 1
+      example_row_indices:
+      - 430
+    - smiles: C1CNCC1O
+      count: 1
+      example_row_indices:
+      - 554
+    - smiles: C1CNCC2=CC=CC=C21
+      count: 1
+      example_row_indices:
+      - 483
+    - smiles: C1CNCCC12OCCO2
+      count: 3
+      example_row_indices:
+      - 235
+      - 453
+      - 479
+    - smiles: C1CNCCC1=O
+      count: 1
+      example_row_indices:
+      - 682
+    - smiles: C1CNCCC1C#N
+      count: 2
+      example_row_indices:
+      - 294
+      - 295
+    - smiles: C1CNCCC1C(=O)N
+      count: 1
+      example_row_indices:
+      - 296
+    - smiles: C1CNCCC1CO
+      count: 2
+      example_row_indices:
+      - 132
+      - 133
+    - smiles: C1CNCCC1O
+      count: 1
+      example_row_indices:
+      - 725
+    - smiles: C1CNCCN1
+      count: 14
+      example_row_indices:
+      - 119
+      - 198
+      - 216
+      - 316
+      - 317
+    - smiles: C1COC(=O)N1
+      count: 1
+      example_row_indices:
+      - 76
+    - smiles: C1COCC(=O)N1
+      count: 1
+      example_row_indices:
+      - 671
+    - smiles: C1COCCC1CN
+      count: 4
+      example_row_indices:
+      - 470
+      - 471
+      - 522
+      - 535
+    - smiles: C1COCCC1N
+      count: 1
+      example_row_indices:
+      - 726
+    - smiles: C1COCCN1
+      count: 33
+      example_row_indices:
+      - 104
+      - 116
+      - 117
+      - 121
+      - 164
+    - smiles: C1COCCN1C2=CN=C(C=C2)N
+      count: 1
+      example_row_indices:
+      - 590
+    - smiles: C1C[C@@H](C2=NC(=NN2C1)N)C3=CC=C(C=C3)F
+      count: 3
+      example_row_indices:
+      - 420
+      - 451
+      - 457
+    - smiles: C1C[C@H](C(=O)NC1)N
+      count: 1
+      example_row_indices:
+      - 591
+    - smiles: C1OC2=CC=CC(=C2O1)N
+      count: 1
+      example_row_indices:
+      - 78
+    - smiles: CC(=O)N(C)C1=CC2=C(C=C1)C=CN2
+      count: 1
+      example_row_indices:
+      - 668
+    - smiles: CC(=O)N1CC2CNCC(C1)O2
+      count: 2
+      example_row_indices:
+      - 85
+      - 91
+    - smiles: CC(=O)N1CCC2=C1C=CC(=C2)CCN3CCNCC3
+      count: 2
+      example_row_indices:
+      - 95
+      - 96
+    - smiles: CC(=O)N1CCC2=CC(=C(C=C21)N)OC
+      count: 1
+      example_row_indices:
+      - 250
+    - smiles: CC(=O)N1CCN(CC1)C2=C(C=C(C(=C2)OC)N)OC
+      count: 1
+      example_row_indices:
+      - 112
+    - smiles: CC(=O)N1CCN(CC1)C2=CC(=C(C=C2)N)OC
+      count: 1
+      example_row_indices:
+      - 51
+    - smiles: CC(=O)N1CCNCC1
+      count: 8
+      example_row_indices:
+      - 8
+      - 45
+      - 46
+      - 47
+      - 48
+    - smiles: CC(=O)NC1=C(C=CC(=C1)N)C2CC2
+      count: 3
+      example_row_indices:
+      - 735
+      - 736
+      - 737
+    - smiles: CC(=O)NC1=C(C=CC(=C1)N)N(C)CCCN(C)C
+      count: 1
+      example_row_indices:
+      - 749
+    - smiles: CC(=O)NC1=C(C=CC(=C1)N)N(C)CCN(C)C
+      count: 3
+      example_row_indices:
+      - 614
+      - 684
+      - 685
+    - smiles: CC(=O)NC1=C(C=CC(=C1)N)N(C)CCO
+      count: 1
+      example_row_indices:
+      - 712
+    - smiles: CC(=O)NC1=C(C=CC(=C1)N)N2CCC[C@H](C2)N(C)C
+      count: 1
+      example_row_indices:
+      - 738
+    - smiles: CC(=O)NC1=C(C=CC(=C1)N)N2CCN(CC2)C
+      count: 1
+      example_row_indices:
+      - 733
+    - smiles: CC(=O)NC1=C(C=CC(=C1)N)N2CC[C@@H](C2)N(C)C
+      count: 1
+      example_row_indices:
+      - 674
+    - smiles: CC(=O)NC1=C(C=CC(=C1)N)N2CC[C@H](C2)NC(=O)OC(C)(C)C
+      count: 1
+      example_row_indices:
+      - 369
+    - smiles: CC(=O)NC1=CC(=C(C=C1C2CC2)F)N
+      count: 3
+      example_row_indices:
+      - 693
+      - 694
+      - 695
+    - smiles: CC(=O)NC1=CC=CC(=C1)N
+      count: 1
+      example_row_indices:
+      - 672
+    - smiles: CC(C)(C(=O)OC)N
+      count: 3
+      example_row_indices:
+      - 166
+      - 167
+      - 168
+    - smiles: CC(C)(C)OC(=O)CN(C)C1=CC(=C(C=C1)N)OC
+      count: 1
+      example_row_indices:
+      - 160
+    - smiles: CC(C)(C)OC(=O)N
+      count: 15
+      example_row_indices:
+      - 12
+      - 147
+      - 159
+      - 218
+      - 219
+    - smiles: CC(C)(C)OC(=O)N1CC(C1)OC2=CC(=C(C=C2)N)OC
+      count: 1
+      example_row_indices:
+      - 63
+    - smiles: CC(C)(C)OC(=O)N1CC2CNCC2C1
+      count: 1
+      example_row_indices:
+      - 699
+    - smiles: CC(C)(C)OC(=O)N1CCC(CC1)(CN=C(C2=CC=CC=C2)C3=CC=CC=C3)C(=O)N
+      count: 1
+      example_row_indices:
+      - 69
+    - smiles: CC(C)(C)OC(=O)N1CCC[C@H](C1)N
+      count: 3
+      example_row_indices:
+      - 559
+      - 560
+      - 600
+    - smiles: CC(C)(C)OC(=O)N1CCNC(=O)C1
+      count: 2
+      example_row_indices:
+      - 182
+      - 183
+    - smiles: CC(C)(C)OC(=O)N1CCNCC1
+      count: 43
+      example_row_indices:
+      - 83
+      - 84
+      - 92
+      - 93
+      - 94
+    - smiles: CC(C)(C)OC(=O)N1C[C@@H]2C[C@H]1CN2
+      count: 7
+      example_row_indices:
+      - 446
+      - 549
+      - 623
+      - 624
+      - 640
+    - smiles: CC(C)(C)OC(=O)NC
+      count: 6
+      example_row_indices:
+      - 127
+      - 128
+      - 129
+      - 187
+      - 188
+    - smiles: CC(C)(C)OC(=O)NC1CCNCC1
+      count: 3
+      example_row_indices:
+      - 62
+      - 158
+      - 603
+    - smiles: CC(C)(C)OC(=O)NC1CNC1
+      count: 2
+      example_row_indices:
+      - 135
+      - 136
+    - smiles: CC(C)(C)OC(=O)NCCC1CCNCC1
+      count: 2
+      example_row_indices:
+      - 220
+      - 222
+    - smiles: CC(C)(C)OC(=O)N[C@@H]1CCC[C@@H](C1)C(=O)N
+      count: 6
+      example_row_indices:
+      - 516
+      - 525
+      - 564
+      - 566
+      - 567
+    - smiles: CC(C)(C)OC(=O)N[C@@H]1CCC[C@H](C1)C(=O)N
+      count: 1
+      example_row_indices:
+      - 646
+    - smiles: CC(C)(C)[Si](C)(C)OCCN
+      count: 2
+      example_row_indices:
+      - 581
+      - 582
+    - smiles: CC(C)C1=C(C=C(C=C1)N)NC(=O)C
+      count: 1
+      example_row_indices:
+      - 676
+    - smiles: CC(C)CN
+      count: 1
+      example_row_indices:
+      - 427
+    - smiles: CC(C)CNC1=C(C=CC(=C1)C(F)(F)F)F
+      count: 1
+      example_row_indices:
+      - 587
+    - smiles: CC(C)N1CCNCC1
+      count: 1
+      example_row_indices:
+      - 0
+    - smiles: CC(C)[C@@H]1CNCCN1C(=O)OC(C)(C)C
+      count: 3
+      example_row_indices:
+      - 714
+      - 715
+      - 716
+    - smiles: CC(C1=CC(=CC2=C1OC(=CC2=O)N3CCOCC3)C(=O)N(C)C)N
+      count: 3
+      example_row_indices:
+      - 707
+      - 739
+      - 743
+    - smiles: CC(C1=CC=CC=C1)N
+      count: 1
+      example_row_indices:
+      - 466
+    - smiles: CC(C1=NC=C(C=N1)F)N
+      count: 1
+      example_row_indices:
+      - 598
+    - smiles: CC1(COC1)CN
+      count: 1
+      example_row_indices:
+      - 639
+    - smiles: CC1=C(C(=NN1C)C)N
+      count: 1
+      example_row_indices:
+      - 59
+    - smiles: CC1=C(C=C(C=C1)N)NC(=O)C
+      count: 8
+      example_row_indices:
+      - 686
+      - 687
+      - 688
+      - 689
+      - 710
+    - smiles: CC1=C(C=CC(=N1)N2C=NC=N2)N
+      count: 1
+      example_row_indices:
+      - 111
+    - smiles: CC1=C(OC(=N1)N)C
+      count: 2
+      example_row_indices:
+      - 311
+      - 312
+    - smiles: CC1=CC(=C(C=C1NC(=O)C)N)F
+      count: 3
+      example_row_indices:
+      - 605
+      - 721
+      - 741
+    - smiles: CC1=CC(=NC(=N1)C)N
+      count: 1
+      example_row_indices:
+      - 681
+    - smiles: CC1=CC(=NN1C(=O)OC(C)(C)C)N
+      count: 1
+      example_row_indices:
+      - 118
+    - smiles: CC1=CC2=C(N1)C=C(C=C2)OC(F)(F)F
+      count: 5
+      example_row_indices:
+      - 428
+      - 429
+      - 433
+      - 444
+      - 445
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)N)OC
+      count: 21
+      example_row_indices:
+      - 10
+      - 11
+      - 227
+      - 241
+      - 248
+    - smiles: CC1=CN(C=N1)C2=C(N=C(C=C2)N)OC
+      count: 4
+      example_row_indices:
+      - 402
+      - 403
+      - 513
+      - 621
+    - smiles: CC1=CN(C=N1)C2=CN=C(C=C2)N
+      count: 2
+      example_row_indices:
+      - 313
+      - 314
+    - smiles: CC1=CN=C(C=C1NC(=O)C)N
+      count: 1
+      example_row_indices:
+      - 724
+    - smiles: CC1=CN=C(S1)N
+      count: 1
+      example_row_indices:
+      - 31
+    - smiles: CC1=COC(=N1)N
+      count: 1
+      example_row_indices:
+      - 325
+    - smiles: CC1=CSC(=N1)N
+      count: 5
+      example_row_indices:
+      - 677
+      - 678
+      - 696
+      - 701
+      - 702
+    - smiles: CC1=NC(=NC=C1)N
+      count: 1
+      example_row_indices:
+      - 662
+    - smiles: CC1=NC2=C(C=C1)C=C(C=C2)C(=O)N
+      count: 1
+      example_row_indices:
+      - 368
+    - smiles: CC1=NC=C(N1C2CCOCC2)C3=NC(=NC=C3F)N
+      count: 15
+      example_row_indices:
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+    - smiles: CC1=NC=CN1C2=CC=C(C=C2)N
+      count: 4
+      example_row_indices:
+      - 275
+      - 493
+      - 494
+      - 495
+    - smiles: CC1=NN(C(=C1)N)C
+      count: 3
+      example_row_indices:
+      - 226
+      - 291
+      - 292
+    - smiles: CC1=NN(C(=C1)N)C(C)C
+      count: 9
+      example_row_indices:
+      - 169
+      - 170
+      - 171
+      - 172
+      - 173
+    - smiles: CC1=NN(C=C1N)C
+      count: 10
+      example_row_indices:
+      - 32
+      - 34
+      - 35
+      - 36
+      - 37
+    - smiles: CC1=NN(C=N1)C2=C(C=C(C=C2)N)OC
+      count: 2
+      example_row_indices:
+      - 228
+      - 255
+    - smiles: CC1=NN(C=N1)C2=CC=C(C=C2)N
+      count: 5
+      example_row_indices:
+      - 211
+      - 212
+      - 213
+      - 214
+      - 215
+    - smiles: CC1CNC1
+      count: 1
+      example_row_indices:
+      - 505
+    - smiles: CC1CNCC(N1)C
+      count: 1
+      example_row_indices:
+      - 50
+    - smiles: CCC[C@@H](CO)N
+      count: 1
+      example_row_indices:
+      - 86
+    - smiles: CCN1CCNCC1
+      count: 2
+      example_row_indices:
+      - 43
+      - 44
+    - smiles: CCNC1=CC=CC=C1
+      count: 2
+      example_row_indices:
+      - 632
+      - 633
+    - smiles: CCNCC
+      count: 1
+      example_row_indices:
+      - 448
+    - smiles: CCOC(=O)C1=CN=C(O1)N
+      count: 19
+      example_row_indices:
+      - 344
+      - 345
+      - 346
+      - 347
+      - 348
+    - smiles: CCOC(=O)C1=COC(=N1)N
+      count: 1
+      example_row_indices:
+      - 377
+    - smiles: CCOC(=O)C1CCNCC1
+      count: 4
+      example_row_indices:
+      - 517
+      - 526
+      - 527
+      - 744
+    - smiles: CCOC(=O)CN
+      count: 1
+      example_row_indices:
+      - 465
+    - smiles: CCONC(=O)C1=CC=CC=C1N
+      count: 1
+      example_row_indices:
+      - 209
+    - smiles: CC[C@H]1CNC(=O)O1
+      count: 1
+      example_row_indices:
+      - 87
+    - smiles: CN
+      count: 3
+      example_row_indices:
+      - 180
+      - 181
+      - 297
+    - smiles: CN(C)C(=O)C1=CC2=C(C(=C1)C3CCCN3)OC(=CC2=O)N4CCOCC4
+      count: 12
+      example_row_indices:
+      - 391
+      - 392
+      - 400
+      - 406
+      - 458
+    - smiles: CN(C)C1CCN(C1)C2=CC=CC(=C2)N
+      count: 1
+      example_row_indices:
+      - 324
+    - smiles: CN(C)CC1=CC(=CC=C1)N
+      count: 1
+      example_row_indices:
+      - 323
+    - smiles: CN(C)CCN
+      count: 2
+      example_row_indices:
+      - 134
+      - 648
+    - smiles: CN(C)CCOC1=CN=C(C=C1)N
+      count: 1
+      example_row_indices:
+      - 408
+    - smiles: CN(C)[C@H]1CCNC1
+      count: 1
+      example_row_indices:
+      - 80
+    - smiles: CN1C(=CC(=N1)OC)N
+      count: 1
+      example_row_indices:
+      - 33
+    - smiles: CN1C(=CC=N1)CCOC2=CC=C(C=C2)C3CCNCC3
+      count: 1
+      example_row_indices:
+      - 131
+    - smiles: CN1C(=CC=N1)N
+      count: 15
+      example_row_indices:
+      - 65
+      - 122
+      - 123
+      - 124
+      - 125
+    - smiles: CN1C=C(C(=N1)C(F)(F)F)N
+      count: 1
+      example_row_indices:
+      - 179
+    - smiles: CN1C=C(C=CC1=O)C2=C(N=C(C=C2)N)OC
+      count: 2
+      example_row_indices:
+      - 373
+      - 407
+    - smiles: CN1C=C(C=N1)C2=C(N=C(C=C2)N)OC
+      count: 25
+      example_row_indices:
+      - 197
+      - 201
+      - 204
+      - 299
+      - 310
+    - smiles: CN1C=NC2=C1C=C(C(=C2F)N)C(=O)OC
+      count: 3
+      example_row_indices:
+      - 1
+      - 2
+      - 3
+    - smiles: CN1CC(C1)N
+      count: 1
+      example_row_indices:
+      - 644
+    - smiles: CN1CC(CCC1=O)N
+      count: 1
+      example_row_indices:
+      - 625
+    - smiles: CN1CCC(CC1)CN
+      count: 4
+      example_row_indices:
+      - 103
+      - 120
+      - 366
+      - 367
+    - smiles: CN1CCC(CC1)OC2=CC=CC(=C2)N
+      count: 1
+      example_row_indices:
+      - 322
+    - smiles: CN1CCC2=C(C1=O)C(=CC=C2)N
+      count: 6
+      example_row_indices:
+      - 21
+      - 22
+      - 23
+      - 24
+      - 81
+    - smiles: CN1CCC[C@@H]1COC2=CN=C(C=C2)N
+      count: 1
+      example_row_indices:
+      - 452
+    - smiles: CN1CCN(CC1)CC2=CC(=CC=C2)N
+      count: 1
+      example_row_indices:
+      - 521
+    - smiles: CN1CCNCC1
+      count: 12
+      example_row_indices:
+      - 79
+      - 202
+      - 242
+      - 300
+      - 552
+    - smiles: CN1CCOC2=CC=CC(=C2C1=O)N
+      count: 1
+      example_row_indices:
+      - 145
+    - smiles: CNC(=O)C1=C(C=C(C=C1)F)N
+      count: 4
+      example_row_indices:
+      - 88
+      - 89
+      - 90
+      - 286
+    - smiles: CNC(=O)C1=C(C=CC(=C1)F)N
+      count: 1
+      example_row_indices:
+      - 71
+    - smiles: CNC(=O)C1=C(C=CC=C1OC)N
+      count: 9
+      example_row_indices:
+      - 141
+      - 142
+      - 143
+      - 144
+      - 161
+    - smiles: CNC(=O)C1=CC=CC=C1N
+      count: 8
+      example_row_indices:
+      - 27
+      - 28
+      - 66
+      - 67
+      - 68
+    - smiles: CNC(=O)CN1CCOCC1
+      count: 2
+      example_row_indices:
+      - 199
+      - 200
+    - smiles: CNC1=CC=C(C=C1)F
+      count: 5
+      example_row_indices:
+      - 257
+      - 258
+      - 259
+      - 583
+      - 584
+    - smiles: CNCCOC
+      count: 1
+      example_row_indices:
+      - 397
+    - smiles: COC(=O)C1=CC2=C(C(=C1)C3CCCN3)OC(=CC2=O)N4CCOCC4
+      count: 13
+      example_row_indices:
+      - 374
+      - 375
+      - 376
+      - 414
+      - 437
+    - smiles: COC(=O)C1CCNC1
+      count: 2
+      example_row_indices:
+      - 518
+      - 519
+    - smiles: COC(=O)C1CCNCC1
+      count: 1
+      example_row_indices:
+      - 475
+    - smiles: COC(=O)CN1CCNCC1
+      count: 1
+      example_row_indices:
+      - 474
+    - smiles: COC1=C(C=C(C=C1)[N+](=O)[O-])N
+      count: 1
+      example_row_indices:
+      - 298
+    - smiles: COC1=C(C=CC(=C1)C=O)N
+      count: 1
+      example_row_indices:
+      - 13
+    - smiles: COC1=C(C=CC(=C1)N)C#N
+      count: 1
+      example_row_indices:
+      - 266
+    - smiles: COC1=C(C=CC(=C1)N2CCN(CC2)CCO)N
+      count: 1
+      example_row_indices:
+      - 628
+    - smiles: COC1=C(C=CC(=C1)N2CCOCC2)N
+      count: 1
+      example_row_indices:
+      - 82
+    - smiles: COC1=C2C(=CC=C1)SC(=N2)N
+      count: 1
+      example_row_indices:
+      - 61
+    - smiles: COC1=CC(=CC=C1)OC2CCNCC2
+      count: 1
+      example_row_indices:
+      - 130
+    - smiles: COC1=CC=C(C=C1)CN
+      count: 1
+      example_row_indices:
+      - 642
+    - smiles: COC1=CC=CC(=C1)CN
+      count: 1
+      example_row_indices:
+      - 599
+    - smiles: COC1=CC=CC(=C1)N
+      count: 1
+      example_row_indices:
+      - 659
+    - smiles: COC1=CC=CC(=C1C(=O)NOC)N
+      count: 5
+      example_row_indices:
+      - 194
+      - 287
+      - 288
+      - 289
+      - 290
+    - smiles: COC1=CC=CC=C1CN
+      count: 2
+      example_row_indices:
+      - 528
+      - 529
+    - smiles: CONC(=O)C1=C(C=C(C=C1)F)N
+      count: 1
+      example_row_indices:
+      - 253
+    - smiles: CONC(=O)C1=C(C=CC(=C1)F)N
+      count: 4
+      example_row_indices:
+      - 252
+      - 283
+      - 284
+      - 285
+    - smiles: CONC(=O)C1=CC=CC=C1N
+      count: 5
+      example_row_indices:
+      - 25
+      - 26
+      - 192
+      - 193
+      - 229
+    - smiles: CO[C@@H]1CCNC1
+      count: 1
+      example_row_indices:
+      - 326
+    - smiles: C[C@@H]1CN(CCN1)C(=O)OC(C)(C)C
+      count: 8
+      example_row_indices:
+      - 105
+      - 106
+      - 107
+      - 108
+      - 510
+    - smiles: C[C@@H]1CNCCN1
+      count: 3
+      example_row_indices:
+      - 498
+      - 499
+      - 604
+    - smiles: C[C@@H]1CNCCN1C(=O)OC(C)(C)C
+      count: 3
+      example_row_indices:
+      - 208
+      - 652
+      - 690
+    - smiles: C[C@@H]1CNC[C@@H](N1)C
+      count: 4
+      example_row_indices:
+      - 224
+      - 225
+      - 434
+      - 435
+    - smiles: C[C@H](CN)O[Si](C)(C)C(C)(C)C
+      count: 16
+      example_row_indices:
+      - 305
+      - 306
+      - 307
+      - 327
+      - 328
+    - smiles: C[C@H]1CNCCN1C
+      count: 2
+      example_row_indices:
+      - 655
+      - 656
+  - role: aryl_halide
+    generic_symbol: Ar-X
+    unique_smiles_count: 319
+    components:
+    - smiles: B1(OC(C(O1)(C)C)(C)C)C2=CC(=CC(=C2)Cl)C(=O)OC
+      count: 2
+      example_row_indices:
+      - 500
+      - 501
+    - smiles: C/C=C(/C1=CC=C(C=C1)Cl)\N(C2=CC=C(C=C2)OC)C(=O)NC
+      count: 1
+      example_row_indices:
+      - 706
+    - smiles: C1=C(C(=CN=C1Cl)C(F)(F)F)I
+      count: 7
+      example_row_indices:
+      - 66
+      - 67
+      - 68
+      - 161
+      - 162
+    - smiles: C1=C(C(=CN=C1Cl)Cl)I
+      count: 12
+      example_row_indices:
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+    - smiles: C1=C(C=C(C(=C1F)F)Br)F
+      count: 1
+      example_row_indices:
+      - 739
+    - smiles: C1=C(C=C(C=C1Cl)Br)F
+      count: 1
+      example_row_indices:
+      - 743
+    - smiles: C1=C(C=C(C=C1F)Br)C#N
+      count: 2
+      example_row_indices:
+      - 458
+      - 707
+    - smiles: C1=C(C=C(C=C1F)Br)F
+      count: 13
+      example_row_indices:
+      - 374
+      - 375
+      - 376
+      - 391
+      - 392
+    - smiles: C1=C(C=C(N=C1Cl)Cl)C(=O)O
+      count: 1
+      example_row_indices:
+      - 147
+    - smiles: C1=C(C=NC(=C1N)Br)F
+      count: 1
+      example_row_indices:
+      - 465
+    - smiles: C1=C(C=NC=C1Br)Br
+      count: 7
+      example_row_indices:
+      - 8
+      - 258
+      - 259
+      - 300
+      - 326
+    - smiles: C1=C(C=NC=C1Br)C(F)(F)F
+      count: 4
+      example_row_indices:
+      - 180
+      - 181
+      - 446
+      - 447
+    - smiles: C1=C(C=NC=C1Br)N
+      count: 2
+      example_row_indices:
+      - 116
+      - 117
+    - smiles: C1=C(C=NC=N1)Br
+      count: 1
+      example_row_indices:
+      - 450
+    - smiles: C1=C(C=NN=C1Cl)Cl
+      count: 1
+      example_row_indices:
+      - 703
+    - smiles: C1=C(N=C(C=N1)Cl)C#N
+      count: 1
+      example_row_indices:
+      - 492
+    - smiles: C1=C(N=C(C=N1)Cl)Cl
+      count: 1
+      example_row_indices:
+      - 293
+    - smiles: C1=C(N=C(C=N1)Cl)N
+      count: 3
+      example_row_indices:
+      - 178
+      - 260
+      - 261
+    - smiles: C1=C(N=CC(=N1)Cl)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 722
+    - smiles: C1=C2C(=CC(=C1F)F)NC(=O)C=C2Cl
+      count: 3
+      example_row_indices:
+      - 532
+      - 533
+      - 638
+    - smiles: C1=CC(=C(C(=C1)F)C2=CC=C(C=C2)Br)F
+      count: 1
+      example_row_indices:
+      - 436
+    - smiles: C1=CC(=C(C=C1Br)Cl)C#N
+      count: 1
+      example_row_indices:
+      - 691
+    - smiles: C1=CC(=C(C=C1Br)F)C#N
+      count: 2
+      example_row_indices:
+      - 109
+      - 249
+    - smiles: C1=CC(=C(C=C1Br)F)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 742
+    - smiles: C1=CC(=C(C=C1Br)F)C=O
+      count: 2
+      example_row_indices:
+      - 218
+      - 219
+    - smiles: C1=CC(=C(C=C1C(=O)O)Cl)Br
+      count: 1
+      example_row_indices:
+      - 550
+    - smiles: C1=CC(=C(C=C1C(F)(F)F)Br)F
+      count: 1
+      example_row_indices:
+      - 746
+    - smiles: C1=CC(=C(C=C1C(F)(F)F)I)F
+      count: 3
+      example_row_indices:
+      - 664
+      - 728
+      - 729
+    - smiles: C1=CC(=C(C=C1CO)Br)F
+      count: 1
+      example_row_indices:
+      - 165
+    - smiles: C1=CC(=C(C=C1Cl)Br)C#N
+      count: 2
+      example_row_indices:
+      - 80
+      - 316
+    - smiles: C1=CC(=C(C=C1Cl)Cl)I
+      count: 2
+      example_row_indices:
+      - 132
+      - 133
+    - smiles: C1=CC(=C(C=C1Cl)N)C#N
+      count: 1
+      example_row_indices:
+      - 422
+    - smiles: C1=CC(=C(C=C1F)Br)C#N
+      count: 1
+      example_row_indices:
+      - 317
+    - smiles: C1=CC(=C(C=C1F)C(F)(F)F)Br
+      count: 3
+      example_row_indices:
+      - 84
+      - 498
+      - 499
+    - smiles: C1=CC(=C(C=C1F)C=O)Br
+      count: 1
+      example_row_indices:
+      - 670
+    - smiles: C1=CC(=C(C=C1F)Cl)Br
+      count: 1
+      example_row_indices:
+      - 682
+    - smiles: C1=CC(=C(C=C1N)Cl)N2C=NC=N2
+      count: 1
+      example_row_indices:
+      - 276
+    - smiles: C1=CC(=C(N=C1)Br)Cl
+      count: 5
+      example_row_indices:
+      - 553
+      - 591
+      - 625
+      - 639
+      - 644
+    - smiles: C1=CC(=C(N=C1)Cl)Cl
+      count: 1
+      example_row_indices:
+      - 622
+    - smiles: C1=CC(=CC(=C1)Br)C(F)(F)F
+      count: 4
+      example_row_indices:
+      - 659
+      - 660
+      - 661
+      - 725
+    - smiles: C1=CC(=CC(=C1)Br)F
+      count: 3
+      example_row_indices:
+      - 406
+      - 414
+      - 472
+    - smiles: C1=CC(=CC(=C1)Br)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 603
+    - smiles: C1=CC(=CC(=C1)I)Br
+      count: 1
+      example_row_indices:
+      - 522
+    - smiles: C1=CC(=CC(=C1)I)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 585
+      - 610
+    - smiles: C1=CC(=CC(=C1)OC(F)(F)F)C2=CN=C3N2N=C(C=C3)Cl
+      count: 4
+      example_row_indices:
+      - 103
+      - 120
+      - 366
+      - 367
+    - smiles: C1=CC(=CC(=C1)S(=O)(=O)N)N
+      count: 3
+      example_row_indices:
+      - 236
+      - 449
+      - 450
+    - smiles: C1=CC(=CC=C1Br)Br
+      count: 5
+      example_row_indices:
+      - 474
+      - 505
+      - 517
+      - 518
+      - 519
+    - smiles: C1=CC(=CC=C1Br)I
+      count: 4
+      example_row_indices:
+      - 434
+      - 435
+      - 643
+      - 651
+    - smiles: C1=CC(=CC=C1C#N)Br
+      count: 3
+      example_row_indices:
+      - 430
+      - 448
+      - 629
+    - smiles: C1=CC(=CC=C1C#N)C2=CSC(=N2)Br
+      count: 1
+      example_row_indices:
+      - 76
+    - smiles: C1=CC(=CC=C1C(=O)O)Br
+      count: 1
+      example_row_indices:
+      - 589
+    - smiles: C1=CC(=CC=C1C(F)(F)F)Cl
+      count: 1
+      example_row_indices:
+      - 167
+    - smiles: C1=CC(=CC=C1CC#N)Br
+      count: 1
+      example_row_indices:
+      - 451
+    - smiles: C1=CC(=CC=C1F)Br
+      count: 9
+      example_row_indices:
+      - 340
+      - 341
+      - 342
+      - 460
+      - 461
+    - smiles: C1=CC(=CC=C1N)S(=O)(=O)N
+      count: 6
+      example_row_indices:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 398
+    - smiles: C1=CC(=CC=C1NC2=NC=CC(=C2)Cl)F
+      count: 1
+      example_row_indices:
+      - 627
+    - smiles: C1=CC(=CC=C1O)Br
+      count: 3
+      example_row_indices:
+      - 242
+      - 278
+      - 663
+    - smiles: C1=CC(=CN=C1)Br
+      count: 12
+      example_row_indices:
+      - 119
+      - 454
+      - 455
+      - 456
+      - 510
+    - smiles: C1=CC(=CN=C1)CN2C=CC3=C2C=C(C=C3)Br
+      count: 2
+      example_row_indices:
+      - 507
+      - 508
+    - smiles: C1=CC(=NC(=C1)Br)Br
+      count: 2
+      example_row_indices:
+      - 671
+      - 726
+    - smiles: C1=CC(=NC(=C1)Br)C(=O)O
+      count: 1
+      example_row_indices:
+      - 696
+    - smiles: C1=CC(=NC(=C1)Cl)C(F)(F)F
+      count: 3
+      example_row_indices:
+      - 486
+      - 697
+      - 698
+    - smiles: C1=CC(=NC(=C1)Cl)Cl
+      count: 2
+      example_row_indices:
+      - 422
+      - 637
+    - smiles: C1=CC(=NC(=C1Br)Cl)Cl
+      count: 3
+      example_row_indices:
+      - 146
+      - 477
+      - 478
+    - smiles: C1=CC(=NC(=C1I)Cl)Cl
+      count: 3
+      example_row_indices:
+      - 155
+      - 156
+      - 157
+    - smiles: C1=CC(=NC=C1Br)CO
+      count: 1
+      example_row_indices:
+      - 497
+    - smiles: C1=CC(=NC=C1C(=O)N)Cl
+      count: 3
+      example_row_indices:
+      - 302
+      - 303
+      - 304
+    - smiles: C1=CC(=NC=C1C(F)(F)F)Cl
+      count: 1
+      example_row_indices:
+      - 619
+    - smiles: C1=CC(=NC=C1I)Br
+      count: 1
+      example_row_indices:
+      - 657
+    - smiles: C1=CC(=NC=C1[N+](=O)[O-])Cl
+      count: 1
+      example_row_indices:
+      - 489
+    - smiles: C1=CC2=C(C(=C1)Br)NC=C2
+      count: 1
+      example_row_indices:
+      - 562
+    - smiles: C1=CC2=C(C(=C1)Br)OC=C2
+      count: 3
+      example_row_indices:
+      - 223
+      - 279
+      - 280
+    - smiles: C1=CC2=C(C=C(O2)C(=O)N)C(=C1)Br
+      count: 1
+      example_row_indices:
+      - 216
+    - smiles: C1=CC2=C(C=C1Br)NN=C2
+      count: 2
+      example_row_indices:
+      - 240
+      - 551
+    - smiles: C1=CC2=C(C=C1Br)OC(O2)(F)F
+      count: 1
+      example_row_indices:
+      - 705
+    - smiles: C1=CC2=C(C=C1[N+](=O)[O-])SC(=N2)Br
+      count: 1
+      example_row_indices:
+      - 297
+    - smiles: C1=CC2=C(C=CC(=C2N=C1)OS(=O)(=O)C(F)(F)F)Cl
+      count: 1
+      example_row_indices:
+      - 748
+    - smiles: C1=CC2=C(C=NN2C3=CC=C(C=C3)F)C(=C1)Br
+      count: 1
+      example_row_indices:
+      - 557
+    - smiles: C1=CC2=C(C=NN2C=C1)C3=NC(=NC=C3Cl)Cl
+      count: 1
+      example_row_indices:
+      - 628
+    - smiles: C1=CC2=C(C=NN2C=C1)C3=NC(=NC=C3Cl)N
+      count: 2
+      example_row_indices:
+      - 418
+      - 419
+    - smiles: C1=CC2=NC=C(N2C=C1)C3=NC(=NC=C3Cl)Cl
+      count: 3
+      example_row_indices:
+      - 13
+      - 63
+      - 112
+    - smiles: C1=CC2=NC=CC(=C2C=C1Cl)Cl
+      count: 1
+      example_row_indices:
+      - 62
+    - smiles: C1=CC2=NC=CN2C=C1Br
+      count: 1
+      example_row_indices:
+      - 615
+    - smiles: C1=CC2=NN=C(N2C=C1Br)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 130
+      - 131
+    - smiles: C1=CC=C(C(=C1)Cl)Br
+      count: 3
+      example_row_indices:
+      - 503
+      - 504
+      - 704
+    - smiles: C1=CC=C(C(=C1)N)Br
+      count: 1
+      example_row_indices:
+      - 509
+    - smiles: C1=CC=C(C(=C1)N)Cl
+      count: 2
+      example_row_indices:
+      - 240
+      - 249
+    - smiles: C1=CC=C(C(=C1)[N+](=O)[O-])Br
+      count: 1
+      example_row_indices:
+      - 401
+    - smiles: C1=CC=C(C=C1)Br
+      count: 7
+      example_row_indices:
+      - 222
+      - 399
+      - 459
+      - 568
+      - 609
+    - smiles: C1=CC=C(C=C1)C(C2=CC=CC=C2)(C3=CC=CC=C3)N4C=NC5=C4C=CC=C5Br
+      count: 1
+      example_row_indices:
+      - 745
+    - smiles: C1=CC=C(C=C1)COC2=C(C=C(C=C2)Br)F
+      count: 13
+      example_row_indices:
+      - 198
+      - 327
+      - 328
+      - 329
+      - 330
+    - smiles: C1=CC=C(C=C1)COC2=CC(=CC=C2)Br
+      count: 2
+      example_row_indices:
+      - 428
+      - 429
+    - smiles: C1=CC=C(C=C1)COC2=CC(=CC=C2)I
+      count: 2
+      example_row_indices:
+      - 444
+      - 445
+    - smiles: C1=CC=C(C=C1)COC2=CC=C(C=C2)Br
+      count: 6
+      example_row_indices:
+      - 105
+      - 106
+      - 107
+      - 108
+      - 337
+    - smiles: C1=CC=C(C=C1)COC2=CN=C(C=C2)Cl
+      count: 1
+      example_row_indices:
+      - 102
+    - smiles: C1=CC=C(C=C1)COC2=NC(=CC=C2)Br
+      count: 1
+      example_row_indices:
+      - 121
+    - smiles: C1=CC=C(C=C1)I
+      count: 6
+      example_row_indices:
+      - 1
+      - 2
+      - 3
+      - 61
+      - 134
+    - smiles: C1=CC=C(C=C1)NC2=NC=CC(=C2)Cl
+      count: 25
+      example_row_indices:
+      - 524
+      - 528
+      - 529
+      - 534
+      - 536
+    - smiles: C1=CC=C2C(=C1)C(=CN2)C3=NC(=NC=C3Cl)Cl
+      count: 1
+      example_row_indices:
+      - 298
+    - smiles: C1=CC=C2C(=C1)C(=CN=N2)Cl
+      count: 1
+      example_row_indices:
+      - 612
+    - smiles: C1=CC=C2C(=C1)C=CC(=N2)Cl
+      count: 1
+      example_row_indices:
+      - 723
+    - smiles: C1=CC=C2C(=C1)N=CN2C3=CC(=NC=N3)Cl
+      count: 1
+      example_row_indices:
+      - 452
+    - smiles: C1=CC=NC(=C1)Br
+      count: 4
+      example_row_indices:
+      - 235
+      - 683
+      - 730
+      - 731
+    - smiles: C1=CC=NC(=C1)Cl
+      count: 5
+      example_row_indices:
+      - 488
+      - 575
+      - 576
+      - 577
+      - 600
+    - smiles: C1=CN2C(=CN=C2C(=C1)F)C3=NC(=NC=C3Cl)Cl
+      count: 1
+      example_row_indices:
+      - 160
+    - smiles: C1=CN2C=C(C=C(C2=N1)Br)Cl
+      count: 1
+      example_row_indices:
+      - 590
+    - smiles: C1=CN=C(C=C1C#N)Cl
+      count: 1
+      example_row_indices:
+      - 487
+    - smiles: C1=CN=C(C=C1C(F)(F)F)Br
+      count: 1
+      example_row_indices:
+      - 69
+    - smiles: C1=CN=C(C=C1C(F)(F)F)Cl
+      count: 3
+      example_row_indices:
+      - 623
+      - 624
+      - 747
+    - smiles: C1=CN=C(C=C1CO)Cl
+      count: 1
+      example_row_indices:
+      - 257
+    - smiles: C1=CN=C(C=C1Cl)Br
+      count: 2
+      example_row_indices:
+      - 318
+      - 319
+    - smiles: C1=CN=C(C=C1Cl)Cl
+      count: 44
+      example_row_indices:
+      - 64
+      - 148
+      - 149
+      - 150
+      - 151
+    - smiles: C1=CN=C(C=C1F)Cl
+      count: 2
+      example_row_indices:
+      - 12
+      - 159
+    - smiles: C1=CN=C(C=N1)Cl
+      count: 2
+      example_row_indices:
+      - 449
+      - 466
+    - smiles: C1=CN=C(N=C1)Cl
+      count: 1
+      example_row_indices:
+      - 256
+    - smiles: C1=CN=C(N=C1Cl)Cl
+      count: 2
+      example_row_indices:
+      - 74
+      - 236
+    - smiles: C1=CN=C(N=C1N)Cl
+      count: 2
+      example_row_indices:
+      - 165
+      - 277
+    - smiles: C1=CN=CC=C1Br
+      count: 4
+      example_row_indices:
+      - 554
+      - 570
+      - 571
+      - 572
+    - smiles: C1=CN=CC=C1C2=CC3=CN=C(N=C3C(=C2)Cl)N
+      count: 1
+      example_row_indices:
+      - 110
+    - smiles: C1=CN=CC=C1I
+      count: 1
+      example_row_indices:
+      - 277
+    - smiles: C1=CNC2=NC=C(C=C21)Br
+      count: 3
+      example_row_indices:
+      - 578
+      - 579
+      - 580
+    - smiles: C1=CSC(=C1)Cl
+      count: 1
+      example_row_indices:
+      - 301
+    - smiles: C1C(CO1)NC2=CC(=NC3=C(C=NN23)C#N)Cl
+      count: 7
+      example_row_indices:
+      - 693
+      - 694
+      - 695
+      - 727
+      - 735
+    - smiles: C1CC(C1)NC2=CC(=NC3=C(C=NN23)C#N)Cl
+      count: 1
+      example_row_indices:
+      - 721
+    - smiles: C1CC1C(=O)NC2=NC=CC(=C2)Cl
+      count: 7
+      example_row_indices:
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+    - smiles: C1CC1CNC2=CC=C(C3=CC=CC=C32)Cl
+      count: 1
+      example_row_indices:
+      - 506
+    - smiles: C1CC1NC2=CC(=NC3=C(C=NN23)C#N)Cl
+      count: 21
+      example_row_indices:
+      - 369
+      - 605
+      - 614
+      - 668
+      - 669
+    - smiles: C1CCC(CC1)NC(=O)C2=CN=C(C=C2)Cl
+      count: 1
+      example_row_indices:
+      - 72
+    - smiles: C1CCC2=C(C=NN2CC1)C3=CC(=NC=C3F)Cl
+      count: 1
+      example_row_indices:
+      - 516
+    - smiles: C1CCN2C(=C(C=N2)C3=CC(=NC=C3F)Cl)C1
+      count: 1
+      example_row_indices:
+      - 597
+    - smiles: C1CN(C(=O)OC1)C2=NC(=CC=C2)Br
+      count: 2
+      example_row_indices:
+      - 677
+      - 678
+    - smiles: C1CN(CC2=C1C(=NC=C2)Cl)S(=O)(=O)C3=CC=CO3
+      count: 1
+      example_row_indices:
+      - 666
+    - smiles: C1CNC(=O)C2=C1C=C(C=C2)Br
+      count: 4
+      example_row_indices:
+      - 244
+      - 245
+      - 246
+      - 247
+    - smiles: C1COCC(=O)N1C2=NC(=CC=C2)Br
+      count: 2
+      example_row_indices:
+      - 701
+      - 702
+    - smiles: C1COCCN1C2=CC(=O)C3=C(O2)C(=CC=C3)C4=C5C(=C(C=C4)I)C6=CC=CC=C6S5
+      count: 2
+      example_row_indices:
+      - 43
+      - 44
+    - smiles: C1COCCN1C2=CC(=O)C3=C(O2)C(=CC=C3)C4=CC=CC5=C4SC6=C5C=C(C=C6)OS(=O)(=O)C(F)(F)F
+      count: 3
+      example_row_indices:
+      - 187
+      - 188
+      - 189
+    - smiles: C1COCCN1C2=CC(=O)N3C=CC=C(C3=N2)C4=CC=CC5=C4SC6=C5C=C(C=C6)OS(=O)(=O)C(F)(F)F
+      count: 5
+      example_row_indices:
+      - 127
+      - 128
+      - 129
+      - 199
+      - 200
+    - smiles: C1COCCN1CC2=CC(=C(C=C2)Br)F
+      count: 6
+      example_row_indices:
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+    - smiles: C1COCCN1CC2=CC(=C(C=C2)Cl)F
+      count: 2
+      example_row_indices:
+      - 29
+      - 30
+    - smiles: C1COCCN1CC2=CC=C(C=C2)Br
+      count: 7
+      example_row_indices:
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+    - smiles: C1COCCN1CCNS(=O)(=O)C2=CC=C(C=C2)N
+      count: 1
+      example_row_indices:
+      - 468
+    - smiles: C1OC2=C(C(=CN=C2O1)Cl)N
+      count: 6
+      example_row_indices:
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+    - smiles: C1OC2=C(O1)C(=C(C=C2)Cl)N
+      count: 1
+      example_row_indices:
+      - 20
+    - smiles: C1[C@H](OC2=C(CN1CC#N)C=CC(=N2)Cl)C3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 254
+    - smiles: C1[C@H](OC2=C(CN1CCO)C=CC(=N2)Cl)C3=CC=CC=C3
+      count: 4
+      example_row_indices:
+      - 255
+      - 266
+      - 276
+      - 281
+    - smiles: C1[C@H](OC2=NC(=NC=C2CN1CCF)Cl)C3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 274
+    - smiles: CC(=O)C1=CC=C(C=C1)Br
+      count: 1
+      example_row_indices:
+      - 556
+    - smiles: CC(=O)N1CC(OC2=C(C1)C=CC(=N2)Cl)C3=CN=CC=C3
+      count: 1
+      example_row_indices:
+      - 10
+    - smiles: CC(=O)N1CCN(CC1)C2=CC(=C(C=C2)NC3=NC=C(C(=N3)C4=CN=C5N4C=CC(=C5)Cl)Cl)OC
+      count: 2
+      example_row_indices:
+      - 113
+      - 114
+    - smiles: CC(=O)NC1=CC(=C(C=C1)OC)Br
+      count: 1
+      example_row_indices:
+      - 520
+    - smiles: CC(=O)NC1=CN=C(C=N1)Br
+      count: 1
+      example_row_indices:
+      - 202
+    - smiles: CC(=O)NC1=NC=CC(=C1)Cl
+      count: 1
+      example_row_indices:
+      - 20
+    - smiles: CC(=O)OCC1=C2C(=CC=C1)C(=O)C=C(O2)C3=CC=C(C=C3)Br
+      count: 1
+      example_row_indices:
+      - 604
+    - smiles: CC(C)(C)OC(=O)C1=CC(=CN=C1)Br
+      count: 1
+      example_row_indices:
+      - 239
+    - smiles: CC(C)(C)OC(=O)C1=CC=C(C=C1)Br
+      count: 1
+      example_row_indices:
+      - 744
+    - smiles: CC(C)(C)OC(=O)C1=CN=C(C=C1)Br
+      count: 1
+      example_row_indices:
+      - 394
+    - smiles: CC(C)(C)OC(=O)N1C=CC2=C1C(=CC=C2)Br
+      count: 2
+      example_row_indices:
+      - 573
+      - 574
+    - smiles: CC(C)(C)OC(=O)NC1=C(C=CC(=C1)Br)Cl
+      count: 1
+      example_row_indices:
+      - 634
+    - smiles: CC(C)(C)OC(=O)NC1=CC(=CN=C1)I
+      count: 1
+      example_row_indices:
+      - 164
+    - smiles: CC(C)OC(=O)N1CCC(CC1)OC2=C(C(=NC=N2)Cl)OC
+      count: 3
+      example_row_indices:
+      - 111
+      - 423
+      - 424
+    - smiles: CC(C)OCC1CN(CC2=C(O1)N=C(C=C2)Cl)C
+      count: 1
+      example_row_indices:
+      - 227
+    - smiles: CC(C)OCC1CN(CC2=C(O1)N=C(C=C2)Cl)C(=O)C
+      count: 1
+      example_row_indices:
+      - 248
+    - smiles: CC(C1=C(C=C(C=N1)F)F)NC2=C(C(=NC(=N2)Cl)N3CCOCC3)F
+      count: 1
+      example_row_indices:
+      - 118
+    - smiles: CC(COC)NS(=O)(=O)C1=CC=C(C=C1)N
+      count: 1
+      example_row_indices:
+      - 469
+    - smiles: CC1(C2=NC(=C(N2CCN1C(=O)CNC(=O)OC(C)(C)C)Br)C3=CC=C(C=C3)F)C
+      count: 1
+      example_row_indices:
+      - 658
+    - smiles: CC1(CC2=C(C=NN2C1)C3=CC(=NC=C3F)Cl)C
+      count: 3
+      example_row_indices:
+      - 566
+      - 567
+      - 646
+    - smiles: CC1(CC2=NC=C(N2C1)C3=CC(=NC=C3F)Cl)C
+      count: 1
+      example_row_indices:
+      - 525
+    - smiles: CC1(CCN2C(=C(C=N2)C3=CC(=NC=C3F)Cl)C1)C
+      count: 1
+      example_row_indices:
+      - 564
+    - smiles: CC1=C(C(=CC=C1)Br)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 217
+    - smiles: CC1=C(C(=CC=C1)C)C(=O)NC(C2=CC(=CC=C2)Br)C34CCC(N3C)CC4
+      count: 1
+      example_row_indices:
+      - 641
+    - smiles: CC1=C(C(=CC=C1)C)C(=O)NC(C2=CC=C(C=C2)Br)C34CCC(N3C)CC4
+      count: 1
+      example_row_indices:
+      - 262
+    - smiles: CC1=C(C(=NC(=N1)/N=C/N(C)C)Cl)CC2=CC=C(C=C2)CC#N
+      count: 1
+      example_row_indices:
+      - 87
+    - smiles: CC1=C(C(=NC(=N1)N)Cl)CC2=CC=C(C=C2)CC#N
+      count: 1
+      example_row_indices:
+      - 86
+    - smiles: CC1=C(C(=NN1C)C)NC2=NC=C(C(=C2)I)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 229
+    - smiles: CC1=C(C2=C(N1C)C=CC(=C2)N)Cl
+      count: 2
+      example_row_indices:
+      - 502
+      - 531
+    - smiles: CC1=C(C=C(C=C1)Br)[N+](=O)[O-]
+      count: 2
+      example_row_indices:
+      - 719
+      - 720
+    - smiles: CC1=C(C=C(C=C1)C2=NC=CN2)NC(=O)C3=CC=C(C=C3)OCC4=C(C=CC=N4)Br
+      count: 1
+      example_row_indices:
+      - 596
+    - smiles: CC1=C(C=C(C=C1)NC(=O)C2=CC3=C(C=C2)OCCO3)NC(=O)C4=CN=C(C=C4)Cl
+      count: 4
+      example_row_indices:
+      - 322
+      - 323
+      - 324
+      - 521
+    - smiles: CC1=C(C=C(C=C1)[N+](=O)[O-])Br
+      count: 2
+      example_row_indices:
+      - 368
+      - 626
+    - smiles: CC1=C(C=C(C=N1)[N+](=O)[O-])Br
+      count: 2
+      example_row_indices:
+      - 635
+      - 636
+    - smiles: CC1=C(C=CC(=C1)Br)F
+      count: 1
+      example_row_indices:
+      - 475
+    - smiles: CC1=C(C=CC(=C1)F)Br
+      count: 1
+      example_row_indices:
+      - 83
+    - smiles: CC1=C(C=CC(=N1)Cl)F
+      count: 1
+      example_row_indices:
+      - 717
+    - smiles: CC1=C(C=CC(=N1)S(=O)(=O)C)N
+      count: 3
+      example_row_indices:
+      - 115
+      - 423
+      - 424
+    - smiles: CC1=C(C=CC=C1Br)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 70
+    - smiles: CC1=C(C=CC=C1C(F)(F)F)CN2C(=NC3=C(C=C(C=C32)Br)C(=O)OC)C
+      count: 1
+      example_row_indices:
+      - 485
+    - smiles: CC1=C(C=CC=N1)Br
+      count: 2
+      example_row_indices:
+      - 431
+      - 432
+    - smiles: CC1=C(N=CC=C1)Br
+      count: 3
+      example_row_indices:
+      - 559
+      - 560
+      - 616
+    - smiles: CC1=C(N=CN=C1Cl)N2C=NC3=CC=CC=C32
+      count: 1
+      example_row_indices:
+      - 408
+    - smiles: CC1=C(N=CN=C1Cl)OC2CCN(CC2)C(=O)OC(C)C
+      count: 1
+      example_row_indices:
+      - 115
+    - smiles: CC1=CC(=C(C(=C1)C)S(=O)(=O)N[C@H](CN)C(C)C)C
+      count: 1
+      example_row_indices:
+      - 557
+    - smiles: CC1=CC(=C(C=C1)NC2=C(N=NC3=C2C=CC(=C3)Br)C#N)F
+      count: 2
+      example_row_indices:
+      - 679
+      - 680
+    - smiles: CC1=CC(=C(N=C1)Cl)F
+      count: 2
+      example_row_indices:
+      - 514
+      - 515
+    - smiles: CC1=CC(=CC(=C1NC(=O)CC(C)(C)C)C)Br
+      count: 1
+      example_row_indices:
+      - 206
+    - smiles: CC1=CC(=CC(=C1NC(=O)CC2CCCC2)C)Br
+      count: 1
+      example_row_indices:
+      - 207
+    - smiles: CC1=CC(=CC(=N1)Cl)CO
+      count: 1
+      example_row_indices:
+      - 675
+    - smiles: CC1=CC(=NC2=C1CN(CC(O2)C3=NC(=CS3)C)C)Cl
+      count: 1
+      example_row_indices:
+      - 201
+    - smiles: CC1=CC(=NC2=C1CN(CC(O2)C3CCCO3)C)Cl
+      count: 1
+      example_row_indices:
+      - 204
+    - smiles: CC1=CC(=NC2=C1CN(CC(O2)CC(F)(F)F)C)Cl
+      count: 2
+      example_row_indices:
+      - 299
+      - 314
+    - smiles: CC1=CC(=NC=C1)C2CN(CC3=C(O2)N=C(C=C3)Cl)C
+      count: 1
+      example_row_indices:
+      - 389
+    - smiles: CC1=CC(=NC=C1Br)Cl
+      count: 2
+      example_row_indices:
+      - 526
+      - 527
+    - smiles: CC1=CC(=NC=C1C2=CC=C(C=C2)C3=NC4=C(C=CC=C4C(=O)N3)CO)Cl
+      count: 2
+      example_row_indices:
+      - 655
+      - 656
+    - smiles: CC1=CC=C(C=C1)Cl
+      count: 1
+      example_row_indices:
+      - 168
+    - smiles: CC1=CN=C(C=C1)C2CN(CC3=C(O2)N=C(C=C3)Cl)C
+      count: 1
+      example_row_indices:
+      - 390
+    - smiles: CC1=CN=C(N=C1C2=C3C=CC=CN3N=C2)Cl
+      count: 1
+      example_row_indices:
+      - 250
+    - smiles: CC1=CN=C(N=C1C2=CN(C3=CC=CC=C32)S(=O)(=O)C4=CC=CC=C4)Cl
+      count: 1
+      example_row_indices:
+      - 51
+    - smiles: CC1=CN=C(N=C1C2=CN3C[C@H](N(C(=O)C3=N2)CC4=CC(=C(C=C4)F)F)COC)Cl
+      count: 2
+      example_row_indices:
+      - 586
+      - 588
+    - smiles: CC1=CN=C(S1)C2CN(CC3=C(O2)N=C(C=C3)Cl)C
+      count: 1
+      example_row_indices:
+      - 621
+    - smiles: CC1=CSC(=N1)C2CN(CC3=C(O2)N=C(C=C3)Cl)C
+      count: 3
+      example_row_indices:
+      - 310
+      - 402
+      - 403
+    - smiles: CC1=CSC(=N1)Cl
+      count: 1
+      example_row_indices:
+      - 618
+    - smiles: CC1=NC(=C(C=C1)OC2=CC(=NC=C2)Cl)C
+      count: 7
+      example_row_indices:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 467
+    - smiles: CC1=NC(=CC=C1)Br
+      count: 1
+      example_row_indices:
+      - 692
+    - smiles: CC1=NN(C(=C1)C2CN(CC3=C(O2)N=C(C=C3)Cl)CC#N)C
+      count: 2
+      example_row_indices:
+      - 251
+      - 275
+    - smiles: CC1=NN(C(=C1)NC2=NC=C(C(=C2)I)C(F)(F)F)C
+      count: 9
+      example_row_indices:
+      - 195
+      - 196
+      - 209
+      - 210
+      - 286
+    - smiles: CC1=NN(C=C1C=O)C2=NC(=NC=C2)Cl
+      count: 1
+      example_row_indices:
+      - 531
+    - smiles: CC1=NN(C=C1CN2CC(C2)O)C3=NC(=NC=C3)Cl
+      count: 1
+      example_row_indices:
+      - 502
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)Cl)C#N)C
+      count: 1
+      example_row_indices:
+      - 81
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)I)C(F)(F)F)C
+      count: 16
+      example_row_indices:
+      - 137
+      - 138
+      - 139
+      - 140
+      - 141
+    - smiles: CC1C(OC2=C(CN1C)C=CC(=N2)Cl)C3=NC(=CS3)C
+      count: 1
+      example_row_indices:
+      - 413
+    - smiles: CC1C2=C(N=C(C=C2)Cl)OC(CN1C)C3CC3
+      count: 1
+      example_row_indices:
+      - 197
+    - smiles: CCOC(=O)C1=C(C2=CC(=C(C=C2N=C1)OC)Br)NC3=C(C=C(C=C3)Cl)Cl
+      count: 1
+      example_row_indices:
+      - 558
+    - smiles: CCOC(=O)C1=C(C2=CC(=C(C=C2N=C1)OCCOC)Br)NC3=C(C=C(C=C3)C)F
+      count: 1
+      example_row_indices:
+      - 104
+    - smiles: CCOC(=O)C1=CC(=CC=C1)Br
+      count: 1
+      example_row_indices:
+      - 606
+    - smiles: CCOC(=O)C1=CC(=CN=C1)Br
+      count: 2
+      example_row_indices:
+      - 237
+      - 238
+    - smiles: CCOC(=O)C1=CC(=O)C2=C(O1)C(=CC(=C2)OC)Br
+      count: 1
+      example_row_indices:
+      - 205
+    - smiles: CCOC(=O)C1=CC2=C(O1)C(=CC=C2)Br
+      count: 7
+      example_row_indices:
+      - 95
+      - 96
+      - 97
+      - 98
+      - 99
+    - smiles: CCOC(=O)C1=CC2=C(O1)C=CC=C2Br
+      count: 8
+      example_row_indices:
+      - 230
+      - 231
+      - 232
+      - 233
+      - 234
+    - smiles: CCOC(=O)C1=CC2=C(O1)C=CC=C2Cl
+      count: 1
+      example_row_indices:
+      - 315
+    - smiles: CCOC(=O)C1=CC=C(C=C1)Br
+      count: 1
+      example_row_indices:
+      - 393
+    - smiles: CCOC(=O)C1=CC=C(C=C1)I
+      count: 1
+      example_row_indices:
+      - 509
+    - smiles: CCOC(=O)C1=CN=C(C=C1)Cl
+      count: 1
+      example_row_indices:
+      - 491
+    - smiles: CCOC(=O)C1=CN=C2C=CC(=CC2=C1NC3=C(C=C(C=C3)F)F)Br
+      count: 1
+      example_row_indices:
+      - 561
+    - smiles: CCOC(=O)C1CC1C(=O)C2=C(C=C(C=N2)Br)OC
+      count: 2
+      example_row_indices:
+      - 506
+      - 587
+    - smiles: CCOC1=C(C=C(C=C1)Br)Cl
+      count: 1
+      example_row_indices:
+      - 647
+    - smiles: CCOC1=C(C=C(C=C1)Br)OC
+      count: 1
+      example_row_indices:
+      - 652
+    - smiles: CCOC1=C(C=C2C(=C1)N=CC(=C2NC3=C(C=C(C=C3)F)F)C(=O)OCC)Br
+      count: 1
+      example_row_indices:
+      - 0
+    - smiles: CN(C)C(=O)C1=CC2=C(O1)C(=CC=C2)Br
+      count: 1
+      example_row_indices:
+      - 221
+    - smiles: CN(C)C(=O)C1=CC=C(C=C1)Br
+      count: 1
+      example_row_indices:
+      - 457
+    - smiles: CN(C)C(=O)CC1=CC=C(C=C1)Br
+      count: 1
+      example_row_indices:
+      - 420
+    - smiles: CN(C)C1=CC=CC=C1Br
+      count: 1
+      example_row_indices:
+      - 653
+    - smiles: CN1C(=C(C=N1)C(=O)N2CCC(CC2)N)Cl
+      count: 1
+      example_row_indices:
+      - 612
+    - smiles: CN1C(=NC(=N1)Br)Br
+      count: 1
+      example_row_indices:
+      - 552
+    - smiles: CN1C=C(N=C1)NC2=C3C=CN(C3=NC(=N2)Cl)C4CC4
+      count: 1
+      example_row_indices:
+      - 598
+    - smiles: CN1C=C(N=C1)NC2=CC(=NC3=C(C=NN23)C#N)Cl
+      count: 2
+      example_row_indices:
+      - 710
+      - 711
+    - smiles: CN1C=CC(=N1)NC2=CC(=NC3=C(C=NN23)C#N)Cl
+      count: 1
+      example_row_indices:
+      - 740
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)Cl)C3=CC=CC=C3
+      count: 2
+      example_row_indices:
+      - 9
+      - 241
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)Cl)C3=CN=CC=C3
+      count: 1
+      example_row_indices:
+      - 11
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)Cl)C3CC(C3)(F)F
+      count: 1
+      example_row_indices:
+      - 421
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)Cl)C3CC3
+      count: 3
+      example_row_indices:
+      - 263
+      - 264
+      - 265
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)Cl)CC(F)(F)F
+      count: 5
+      example_row_indices:
+      - 373
+      - 409
+      - 410
+      - 411
+      - 412
+    - smiles: CN1CC(OC2=C(C1=O)C=CC(=N2)Cl)C3=CC=CC=C3
+      count: 5
+      example_row_indices:
+      - 484
+      - 493
+      - 494
+      - 495
+      - 613
+    - smiles: CN1CC2=C(C1=O)C=C(C=C2)Br
+      count: 1
+      example_row_indices:
+      - 476
+    - smiles: CN1CCC2=C(C1=O)C(=CC=C2)NC3=CC(=NC=C3C#N)Cl
+      count: 4
+      example_row_indices:
+      - 34
+      - 35
+      - 36
+      - 37
+    - smiles: CN1CCC2=C(C1=O)C(=CC=C2)NC3=CC(=NC=C3Cl)Cl
+      count: 5
+      example_row_indices:
+      - 122
+      - 123
+      - 124
+      - 125
+      - 126
+    - smiles: CN1CCN(CC1)C2=C(C=C(C(=C2)OC)N)Br
+      count: 1
+      example_row_indices:
+      - 321
+    - smiles: CN1CCN(CC1)C2=C3CN(CCC3=C(C=C2)OC)C(=O)CC4=CC=C(C=C4)Br
+      count: 1
+      example_row_indices:
+      - 611
+    - smiles: CN1C[C@@H](OC2=C(C1)C=CC(=N2)Cl)C3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 594
+    - smiles: CN1C[C@H](OC2=C(C1)C=CC(=N2)Cl)C3=CC=CC=C3
+      count: 21
+      example_row_indices:
+      - 211
+      - 212
+      - 213
+      - 214
+      - 215
+    - smiles: CN1C[C@H](OC2=NC(=NC=C2C1)Cl)C3=CC=CC=C3
+      count: 7
+      example_row_indices:
+      - 267
+      - 268
+      - 269
+      - 270
+      - 271
+    - smiles: CNC(=O)C1=C(C=C(C=C1)F)NC2=CC(=NC=C2C(F)(F)F)Cl
+      count: 2
+      example_row_indices:
+      - 291
+      - 292
+    - smiles: CNC(=O)C1=C(C=C(C=C1)F)NC2=CC(=NC=C2Cl)Cl
+      count: 1
+      example_row_indices:
+      - 77
+    - smiles: CNC(=O)C1=C(C=CC=C1OC)NC2=CC(=NC=C2C(F)(F)F)Cl
+      count: 1
+      example_row_indices:
+      - 226
+    - smiles: CNC(=O)C1=CC(=NC(=C1)Cl)Cl
+      count: 1
+      example_row_indices:
+      - 649
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2C#N)Cl
+      count: 2
+      example_row_indices:
+      - 32
+      - 33
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2C(F)(F)F)Cl
+      count: 4
+      example_row_indices:
+      - 59
+      - 65
+      - 75
+      - 179
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2Cl)Cl
+      count: 2
+      example_row_indices:
+      - 60
+      - 82
+    - smiles: COC(=O)C1=C(C=C(C=C1)Br)Cl
+      count: 1
+      example_row_indices:
+      - 734
+    - smiles: COC(=O)C1=C(C=C(C=C1)I)O
+      count: 1
+      example_row_indices:
+      - 282
+    - smiles: COC(=O)C1=C(C=CC(=C1)Br)I
+      count: 1
+      example_row_indices:
+      - 404
+    - smiles: COC(=O)C1=CC(=C(C=C1)I)Br
+      count: 1
+      example_row_indices:
+      - 405
+    - smiles: COC(=O)C1=CC(=CC(=C1)Br)Br
+      count: 1
+      example_row_indices:
+      - 480
+    - smiles: COC(=O)C1=CC(=CC(=C1)Br)C(=O)OC
+      count: 1
+      example_row_indices:
+      - 395
+    - smiles: COC(=O)C1=CC(=CC(=C1)Br)F
+      count: 1
+      example_row_indices:
+      - 645
+    - smiles: COC(=O)C1=CC(=CC(=C1)Br)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 718
+    - smiles: COC(=O)C1=CC(=CC(=C1)I)Br
+      count: 1
+      example_row_indices:
+      - 523
+    - smiles: COC(=O)C1=CC(=CC=C1)Br
+      count: 1
+      example_row_indices:
+      - 158
+    - smiles: COC(=O)C1=CC(=NC=C1)Br
+      count: 2
+      example_row_indices:
+      - 583
+      - 584
+    - smiles: COC(=O)C1=CC=C(C=C1)Br
+      count: 3
+      example_row_indices:
+      - 481
+      - 482
+      - 483
+    - smiles: COC(=O)C1=CC=C(C=C1)OCC2=C(C=CC=N2)Br
+      count: 1
+      example_row_indices:
+      - 79
+    - smiles: COC(=O)C1=NC=C(C=N1)Br
+      count: 2
+      example_row_indices:
+      - 308
+      - 309
+    - smiles: COC(=O)CC1=NC=CC(=C1)Br
+      count: 1
+      example_row_indices:
+      - 555
+    - smiles: COC1=C(C=C(C(=C1)Cl)C(=O)OC)Br
+      count: 3
+      example_row_indices:
+      - 415
+      - 416
+      - 417
+    - smiles: COC1=C(C=C(C=C1)Br)C#N
+      count: 3
+      example_row_indices:
+      - 305
+      - 306
+      - 307
+    - smiles: COC1=C(C=C(C=C1)Br)OC
+      count: 3
+      example_row_indices:
+      - 714
+      - 715
+      - 716
+    - smiles: COC1=C(C=C(C=C1)Br)[N+](=O)[O-]
+      count: 10
+      example_row_indices:
+      - 45
+      - 46
+      - 47
+      - 48
+      - 85
+    - smiles: COC1=C(C=C(C=C1)I)Br
+      count: 2
+      example_row_indices:
+      - 470
+      - 471
+    - smiles: COC1=C(C=C(C=C1)[N+](=O)[O-])Br
+      count: 2
+      example_row_indices:
+      - 418
+      - 419
+    - smiles: COC1=C(C=CC(=C1)Br)Cl
+      count: 1
+      example_row_indices:
+      - 699
+    - smiles: COC1=C(C=CC(=C1)Br)NC2=NC=C(C(=N2)C3=CN=C4N3C=CC=C4)Cl
+      count: 1
+      example_row_indices:
+      - 50
+    - smiles: COC1=C(C=CC(=C1)Br)OCC2=CC=CC=C2
+      count: 2
+      example_row_indices:
+      - 208
+      - 569
+    - smiles: COC1=C(C=CC(=C1)Cl)I
+      count: 2
+      example_row_indices:
+      - 665
+      - 700
+    - smiles: COC1=C(C=CC(=C1)Cl)[N+](=O)[O-]
+      count: 2
+      example_row_indices:
+      - 182
+      - 183
+    - smiles: COC1=C(C=CC(=C1)F)C2=NC(=NC=C2F)Cl
+      count: 2
+      example_row_indices:
+      - 496
+      - 565
+    - smiles: COC1=C(C=CC(=C1)I)Br
+      count: 2
+      example_row_indices:
+      - 631
+      - 648
+    - smiles: COC1=CC(=CC(=C1)[N+](=O)[O-])Br
+      count: 1
+      example_row_indices:
+      - 630
+    - smiles: COC1=CC(=CC=C1)Br
+      count: 6
+      example_row_indices:
+      - 294
+      - 295
+      - 296
+      - 400
+      - 433
+    - smiles: COC1=CC(=CN=C1)Br
+      count: 1
+      example_row_indices:
+      - 453
+    - smiles: COC1=CC(=NC=C1)Cl
+      count: 1
+      example_row_indices:
+      - 398
+    - smiles: COC1=CC=C(C=C1)Br
+      count: 2
+      example_row_indices:
+      - 166
+      - 535
+    - smiles: COC1=CC=C(C=C1)NC2=NC=CC(=C2)Cl
+      count: 1
+      example_row_indices:
+      - 530
+    - smiles: COC1=CC=CC=C1Br
+      count: 2
+      example_row_indices:
+      - 549
+      - 563
+    - smiles: COC1=CC=CC=C1Cl
+      count: 1
+      example_row_indices:
+      - 654
+    - smiles: COC1=NC(=CC=C1)Br
+      count: 2
+      example_row_indices:
+      - 479
+      - 706
+    - smiles: COC1=NC(=NC=C1Br)I
+      count: 2
+      example_row_indices:
+      - 632
+      - 633
+    - smiles: COC1=NC(=NC=C1Br)N
+      count: 5
+      example_row_indices:
+      - 585
+      - 610
+      - 664
+      - 728
+      - 729
+    - smiles: COC1=NC=CC(=C1)Br
+      count: 2
+      example_row_indices:
+      - 135
+      - 136
+    - smiles: COCCOC1=CC(=CC(=C1)[N+](=O)[O-])I
+      count: 3
+      example_row_indices:
+      - 184
+      - 185
+      - 186
+    - smiles: CONC(=O)C1=CC=CC=C1NC2=CC(=NC=C2C(F)(F)F)Cl
+      count: 1
+      example_row_indices:
+      - 73
+    - smiles: CONC(=O)C1=CC=CC=C1NC2=CC(=NC=C2Cl)Cl
+      count: 10
+      example_row_indices:
+      - 49
+      - 169
+      - 170
+      - 171
+      - 172
+    - smiles: CS(=O)(=O)C1=CC=C(C=C1)Br
+      count: 4
+      example_row_indices:
+      - 178
+      - 260
+      - 261
+      - 690
+    - smiles: CS(=O)(=O)C1=CC=C(C=C1)COC2=NC=C(C=C2)Br
+      count: 1
+      example_row_indices:
+      - 94
+    - smiles: CS(=O)(=O)C1=CC=C(C=C1)COC2=NC=C(C=N2)Br
+      count: 2
+      example_row_indices:
+      - 92
+      - 93
+    - smiles: CS(=O)(=O)C1=CC=C(C=C1)N
+      count: 2
+      example_row_indices:
+      - 293
+      - 467
+    - smiles: CS(=O)(=O)CC1=C(C=CC(=C1)N)Cl
+      count: 1
+      example_row_indices:
+      - 669
+    - smiles: CS(=O)(=O)CC1=CC(=CC(=C1)F)N
+      count: 1
+      example_row_indices:
+      - 565
+    - smiles: CS(=O)(=O)CC1=CC(=CC=C1)N
+      count: 1
+      example_row_indices:
+      - 496
+    - smiles: C[C@@H](C1=NC=C(C=N1)F)NC2=NC(=NC(=N2)Cl)N3CCOCC3
+      count: 1
+      example_row_indices:
+      - 31
+    - smiles: C[C@H](C1=CC=C(C=C1)Br)NC(=O)OC(C)(C)C
+      count: 1
+      example_row_indices:
+      - 110
+    - smiles: C[C@H]1C[C@@H](CCN1C(=O)C2=C(N(N=C2)C)Cl)N
+      count: 3
+      example_row_indices:
+      - 532
+      - 533
+      - 638
+  - role: base
+    generic_symbol: Base
+    unique_smiles_count: 13
+    components:
+    - smiles: C(=O)([O-])[O-].[Cs+].[Cs+]
+      count: 446
+      example_row_indices:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+    - smiles: C(=O)([O-])[O-].[K+].[K+]
+      count: 23
+      example_row_indices:
+      - 86
+      - 87
+      - 156
+      - 267
+      - 288
+    - smiles: C1=CC=C(C=C1)[O-].[Na+]
+      count: 4
+      example_row_indices:
+      - 35
+      - 318
+      - 362
+      - 365
+    - smiles: C1CCC2=NCCCN2CC1
+      count: 2
+      example_row_indices:
+      - 13
+      - 38
+    - smiles: CC(C)(C)[O-].[K+]
+      count: 21
+      example_row_indices:
+      - 29
+      - 30
+      - 72
+      - 105
+      - 107
+    - smiles: CC(C)(C)[O-].[Na+]
+      count: 216
+      example_row_indices:
+      - 49
+      - 60
+      - 61
+      - 75
+      - 91
+    - smiles: CCC(C)(C)[O-].[Na+]
+      count: 18
+      example_row_indices:
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+    - smiles: CCN(CC)CC
+      count: 1
+      example_row_indices:
+      - 301
+    - smiles: C[O-].[Na+]
+      count: 1
+      example_row_indices:
+      - 245
+    - smiles: '[H-].[Na+]'
+      count: 1
+      example_row_indices:
+      - 359
+    - smiles: '[Li+].C[Si](C)(C)[N-][Si](C)(C)C'
+      count: 7
+      example_row_indices:
+      - 242
+      - 294
+      - 295
+      - 296
+      - 551
+    - smiles: '[O-]P(=O)([O-])[O-].[K+].[K+].[K+]'
+      count: 9
+      example_row_indices:
+      - 85
+      - 147
+      - 160
+      - 200
+      - 220
+    - smiles: '[OH-].[Na+]'
+      count: 1
+      example_row_indices:
+      - 515
+  - role: ligand
+    generic_symbol: L
+    unique_smiles_count: 24
+    components:
+    - smiles: C1=CC=C(C=C1)P(C2=CC=CC=C2)C3=C(C4=CC=CC=C4C=C3)C5=C(C=CC6=CC=CC=C65)P(C7=CC=CC=C7)C8=CC=CC=C8
+      count: 185
+      example_row_indices:
+      - 0
+      - 14
+      - 31
+      - 43
+      - 72
+    - smiles: C1=CC=C(C=C1)P(C2=CC=CC=C2)C3=CC=CC=C3
+      count: 2
+      example_row_indices:
+      - 16
+      - 301
+    - smiles: C1=CC=C(C=C1)P(C2=CC=CC=C2)C3=CC=CC=C3OC4=CC=CC=C4P(C5=CC=CC=C5)C6=CC=CC=C6
+      count: 2
+      example_row_indices:
+      - 423
+      - 424
+    - smiles: C1=CC=C(C=C1)P(CCP(C2=CC=CC=C2)C3=CC=CC=C3)C4=CC=CC=C4
+      count: 1
+      example_row_indices:
+      - 245
+    - smiles: C1=COC(=C1)P(C2=CC=CO2)C3=CC=CO3
+      count: 1
+      example_row_indices:
+      - 664
+    - smiles: C1CCC(CC1)P(C2CCCCC2)C3=CC=CC=C3C4=CC=CC=C4
+      count: 54
+      example_row_indices:
+      - 9
+      - 10
+      - 11
+      - 85
+      - 156
+    - smiles: CC(C)(C)P(C(C)(C)C)C(C)(C)C
+      count: 16
+      example_row_indices:
+      - 105
+      - 107
+      - 119
+      - 202
+      - 220
+    - smiles: CC(C)(C)P(C1=CC2=CC=CC=C2N1C3=CC=CC=C3)C(C)(C)C
+      count: 1
+      example_row_indices:
+      - 576
+    - smiles: CC(C)(C)P(C1=CC=CC=C1C2=CC=CC=C2)C(C)(C)C
+      count: 6
+      example_row_indices:
+      - 231
+      - 428
+      - 429
+      - 433
+      - 444
+    - smiles: CC(C)C1=CC(=C(C(=C1)C(C)C)C2=C(C=CC(=C2P(C(C)(C)C)C(C)(C)C)OC)OC)C(C)C
+      count: 1
+      example_row_indices:
+      - 351
+    - smiles: CC(C)C1=CC(=C(C(=C1)C(C)C)C2=C(C=CC(=C2P(C3=CC(=CC(=C3)C(F)(F)F)C(F)(F)F)C4=CC(=CC(=C4)C(F)(F)F)C(F)(F)F)OC)OC)C(C)C
+      count: 3
+      example_row_indices:
+      - 352
+      - 354
+      - 357
+    - smiles: CC(C)C1=CC(=C(C(=C1)C(C)C)C2=C(C=CC(=C2P(C3CCCCC3)C4CCCCC4)OC)OC)C(C)C
+      count: 4
+      example_row_indices:
+      - 537
+      - 540
+      - 541
+      - 577
+    - smiles: CC(C)C1=CC(=C(C(=C1)C(C)C)C2=CC=CC=C2P(C(C)(C)C)C(C)(C)C)C(C)C
+      count: 12
+      example_row_indices:
+      - 350
+      - 369
+      - 605
+      - 614
+      - 693
+    - smiles: CC(C)C1=CC(=C(C(=C1)C(C)C)C2=CC=CC=C2P(C3CCCCC3)C4CCCCC4)C(C)C
+      count: 60
+      example_row_indices:
+      - 29
+      - 30
+      - 55
+      - 95
+      - 96
+    - smiles: CC(C)CN1CCN2CCN(P1N(CC2)CC(C)C)CC(C)C
+      count: 6
+      example_row_indices:
+      - 111
+      - 115
+      - 242
+      - 294
+      - 295
+    - smiles: CC(C)OC1=C(C(=CC=C1)OC(C)C)C2=CC=CC=C2P(C3CCCCC3)C4CCCCC4
+      count: 25
+      example_row_indices:
+      - 431
+      - 432
+      - 477
+      - 478
+      - 510
+    - smiles: CC(C1CCCC1P(C2CCCCC2)C3CCCCC3)P(C(C)(C)C)C(C)(C)C
+      count: 42
+      example_row_indices:
+      - 17
+      - 35
+      - 36
+      - 37
+      - 58
+    - smiles: CC1(C2=C(C(=CC=C2)P(C3=CC=CC=C3)C4=CC=CC=C4)OC5=C1C=CC=C5P(C6=CC=CC=C6)C7=CC=CC=C7)C
+      count: 309
+      example_row_indices:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    - smiles: CC1=CC=C(C=C1)P(C2=CC=C(C=C2)C)C3=CC=C(C=C3)C
+      count: 1
+      example_row_indices:
+      - 704
+    - smiles: CC1=CC=CC=C1P(C2=CC=CC=C2C)C3=CC=CC=C3C
+      count: 1
+      example_row_indices:
+      - 15
+    - smiles: CCCCP(C12CC3CC(C1)CC(C3)C2)C45CC6CC(C4)CC(C6)C5
+      count: 4
+      example_row_indices:
+      - 166
+      - 167
+      - 168
+      - 633
+    - smiles: CCCCP(CCCC)CCCC
+      count: 1
+      example_row_indices:
+      - 485
+    - smiles: CN(C)C1=CC=CC=C1C2=CC=CC=C2P(C3CCCCC3)C4CCCCC4
+      count: 12
+      example_row_indices:
+      - 103
+      - 120
+      - 206
+      - 207
+      - 237
+    - smiles: COC1=C(C(=CC=C1)OC)C2=CC=CC=C2P(C3CCCCC3)C4CCCCC4
+      count: 1
+      example_row_indices:
+      - 19
+  - role: ligand_fragment
+    generic_symbol: L_fragment
+    unique_smiles_count: 2
+    components:
+    - smiles: C1CCCC1
+      count: 42
+      example_row_indices:
+      - 17
+      - 35
+      - 36
+      - 37
+      - 58
+    - smiles: '[Fe]'
+      count: 42
+      example_row_indices:
+      - 17
+      - 35
+      - 36
+      - 37
+      - 58
+  - role: product
+    generic_symbol: Product
+    unique_smiles_count: 454
+    components:
+    - smiles: B1(OC(C(O1)(C)C)(C)C)C2=CC(=CC(=C2)NC3=CC=CC=C3)C(=O)OC
+      count: 2
+      example_row_indices:
+      - 500
+      - 501
+    - smiles: C/C=C(/C1=CC=C(C=C1)C)\N(C2=CC=C(C=C2)OC)C(=O)N(C)C3=CC=CC(=N3)C
+      count: 1
+      example_row_indices:
+      - 692
+    - smiles: C/C=C(/C1=CC=C(C=C1)Cl)\N(C2=CC=C(C=C2)OC)C(=O)N(C)C3=NC(=CC=C3)OC
+      count: 1
+      example_row_indices:
+      - 706
+    - smiles: C1=CC(=C(C=C1CO)NC2=NC(=NC=C2)Cl)F
+      count: 1
+      example_row_indices:
+      - 165
+    - smiles: C1=CC(=CC(=C1)C(F)(F)F)CNC2=NC=C(C=C2)C(=O)N
+      count: 1
+      example_row_indices:
+      - 303
+    - smiles: C1=CC(=CC(=C1)S(=O)(=O)N)NC2=CN=CN=C2
+      count: 1
+      example_row_indices:
+      - 450
+    - smiles: C1=CC(=CC(=C1)S(=O)(=O)N)NC2=NC=CC(=N2)Cl
+      count: 1
+      example_row_indices:
+      - 236
+    - smiles: C1=CC(=CC(=C1)S(=O)(=O)N)NC2=NC=CN=C2
+      count: 1
+      example_row_indices:
+      - 449
+    - smiles: C1=CC(=CC(=C1)[N+](=O)[O-])NC2=NC=CC(=C2)Cl
+      count: 1
+      example_row_indices:
+      - 320
+    - smiles: C1=CC(=CC=C1C(=O)O)NCCC(=O)N
+      count: 1
+      example_row_indices:
+      - 589
+    - smiles: C1=CC(=CC=C1CNC2=NC=C(C=C2)C(=O)N)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 304
+    - smiles: C1=CC(=CN=C1)NC2=CN=CC=C2
+      count: 3
+      example_row_indices:
+      - 454
+      - 455
+      - 456
+    - smiles: C1=CC(=CN=C1)NC2=NC=CC(=C2)Cl
+      count: 1
+      example_row_indices:
+      - 203
+    - smiles: C1=CC(=NC(=C1)Cl)NC2=C(C=CC(=C2)Cl)C#N
+      count: 1
+      example_row_indices:
+      - 422
+    - smiles: C1=CC=C(C(=C1)CNC2=NC=C(C=C2)C(=O)N)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 302
+    - smiles: C1=CC=C(C(=C1)NC2=CC(=C(C=C2)C#N)F)Cl
+      count: 1
+      example_row_indices:
+      - 249
+    - smiles: C1=CC=C(C(=C1)NC2=CC3=C(C=C2)C=NN3)Cl
+      count: 1
+      example_row_indices:
+      - 240
+    - smiles: C1=CC=C(C(=C1)NCCN)Cl
+      count: 1
+      example_row_indices:
+      - 704
+    - smiles: C1=CC=C(C=C1)C(=O)NC2=C(C=CC=N2)Cl
+      count: 1
+      example_row_indices:
+      - 622
+    - smiles: C1=CC=C(C=C1)CNC2=CC(=NC=C2)NC3=CC=C(C=C3)F
+      count: 1
+      example_row_indices:
+      - 627
+    - smiles: C1=CC=C(C=C1)CNC2=CC(=NC=C2)NC3=CC=CC=C3
+      count: 13
+      example_row_indices:
+      - 536
+      - 537
+      - 538
+      - 539
+      - 540
+    - smiles: C1=CC=C(C=C1)CNC2=NC=CC(=C2)Cl
+      count: 2
+      example_row_indices:
+      - 425
+      - 426
+    - smiles: C1=CC=C(C=C1)NC2=C(N=C(C=C2)Cl)Cl
+      count: 4
+      example_row_indices:
+      - 146
+      - 155
+      - 156
+      - 157
+    - smiles: C1=CC=C(C=C1)NC2=CC=C(C=C2)S(=O)(=O)N
+      count: 1
+      example_row_indices:
+      - 399
+    - smiles: C1=CC=C(C=C1)NC2=CC=CC(=C2)CO
+      count: 1
+      example_row_indices:
+      - 609
+    - smiles: C1=CC=C(C=C1)NC2=CC=CC=C2[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 401
+    - smiles: C1=CC=C(C=C1)NC2=CC=NC=C2
+      count: 3
+      example_row_indices:
+      - 570
+      - 571
+      - 572
+    - smiles: C1=CC=C(C=C1)NC2=NC(=CC=C2)Cl
+      count: 1
+      example_row_indices:
+      - 637
+    - smiles: C1=CC=C(C=C1)NC2=NC=CC(=C2)Cl
+      count: 1
+      example_row_indices:
+      - 64
+    - smiles: C1=CC=C(C=C1)NC2=NC=CC(=C2)NCC3=C(C=CC=C3F)F
+      count: 2
+      example_row_indices:
+      - 592
+      - 593
+    - smiles: C1=CC=C(C=C1)NC2=NC=CC(=C2)NCC3=CC(=CC=C3)F
+      count: 1
+      example_row_indices:
+      - 650
+    - smiles: C1=CC=C(C=C1)NC2=NC=CC(=C2)NCC3=CC=C(C=C3)F
+      count: 1
+      example_row_indices:
+      - 534
+    - smiles: C1=CC=C(C=C1)NC2=NC=CC(=C2)NCC3=CC=CC=C3F
+      count: 1
+      example_row_indices:
+      - 620
+    - smiles: C1=CC=C(C=C1)NC2=NC=CC(=C2)NCC3=CC=NC=C3
+      count: 2
+      example_row_indices:
+      - 601
+      - 602
+    - smiles: C1=CC=C(C=C1)NC2=NC=CC(=C2)NCC3=CN=CC=C3
+      count: 1
+      example_row_indices:
+      - 524
+    - smiles: C1=CC=NC(=C1)NC2=CN=CC=C2
+      count: 1
+      example_row_indices:
+      - 667
+    - smiles: C1=CC=NC(=C1)NC2=NC=CO2
+      count: 3
+      example_row_indices:
+      - 575
+      - 576
+      - 577
+    - smiles: C1=CN=C(C=C1Cl)NC2=NC(=CO2)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 339
+    - smiles: C1=CN=C(C=C1Cl)NC2=NC=CO2
+      count: 12
+      example_row_indices:
+      - 318
+      - 319
+      - 356
+      - 357
+      - 358
+    - smiles: C1=CN=C(C=C1F)N
+      count: 1
+      example_row_indices:
+      - 159
+    - smiles: C1=CN=C(N=C1)NC2=NC=CC(=C2)Cl
+      count: 2
+      example_row_indices:
+      - 708
+      - 709
+    - smiles: C1=CN=CC=C1NC2=NC(=NC=C2)Cl
+      count: 1
+      example_row_indices:
+      - 277
+    - smiles: C1C2=CC=CC=C2CN1C3=CC=C(C=C3)Br
+      count: 1
+      example_row_indices:
+      - 643
+    - smiles: C1CC(C1)N2CCN(CC2)C(=O)C3CC34CCN(CC4)C5=CC=CC=N5
+      count: 2
+      example_row_indices:
+      - 730
+      - 731
+    - smiles: C1CC(C1)N2CCN(CC2)C(=O)C3CC4(C3)CCN(CC4)C5=CC=CC=C5
+      count: 1
+      example_row_indices:
+      - 673
+    - smiles: C1CC(C1)N2CCN(CC2)C(=O)C3CC4(C3)CCN(CC4)C5=CC=CC=N5
+      count: 1
+      example_row_indices:
+      - 683
+    - smiles: C1CC(C1)N2CCN(CC2)C(=O)C3CC4(C3)CCN(CC4)C5=CN=CC=C5
+      count: 1
+      example_row_indices:
+      - 713
+    - smiles: C1CC(C1)NC2=C(C=CC=N2)Cl
+      count: 1
+      example_row_indices:
+      - 553
+    - smiles: C1CC(C2=NC(=NN2C1)NC3=CC=C(C=C3)CC#N)C4=CC=C(C=C4)F
+      count: 1
+      example_row_indices:
+      - 451
+    - smiles: C1CC(N(C1)C2=CC=C(C=C2)F)C3=CC(=CC4=C3OC(=CC4=O)N5CCOCC5)C(=O)N6CCOCC6
+      count: 1
+      example_row_indices:
+      - 490
+    - smiles: C1CC(N(C1)C2=CC=CC=C2)C3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 617
+    - smiles: C1CC1C(=O)NC2=NC=CC(=C2)NC3=C4C(=CC=C3)OCO4
+      count: 1
+      example_row_indices:
+      - 78
+    - smiles: C1CC1C(=O)NC2=NC=CC(=C2)NC3=C4C(=NC=C3Cl)OCO4
+      count: 6
+      example_row_indices:
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+    - smiles: C1CC1NC2=CC(=NC3=C(C=NN23)C#N)N4C=CC5=C4C=C(C=C5)CO
+      count: 1
+      example_row_indices:
+      - 732
+    - smiles: C1CC2=CC=CC=C2N(C1)C3=NC(=NC=C3)Cl
+      count: 1
+      example_row_indices:
+      - 74
+    - smiles: C1CC2=NN=C(N2C1)C3=CC=C(C=C3)NC4=NC5=C(CN(C[C@H](O5)C6=CC=CC=C6)CCO)C=C4
+      count: 1
+      example_row_indices:
+      - 281
+    - smiles: C1CCC(CC1)NC(=O)C2=CN=C(C=C2)NC3=CC=C(C=C3)C#N
+      count: 1
+      example_row_indices:
+      - 72
+    - smiles: C1CCN(C(C1)C2=CC=CC=C2)C3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 568
+    - smiles: C1CCN(C1)C2=C(C=C(C=C2)F)C=O
+      count: 1
+      example_row_indices:
+      - 670
+    - smiles: C1CCN(C1)C2=CC3=C(C=C2)C=NN3
+      count: 1
+      example_row_indices:
+      - 551
+    - smiles: C1CCN(CC1)C2=C(C=C(C=C2)C(=O)O)Cl
+      count: 1
+      example_row_indices:
+      - 550
+    - smiles: C1CCN(CC1)C2=CC(=C(C=C2)C#N)F
+      count: 1
+      example_row_indices:
+      - 109
+    - smiles: C1CCN(CC1)C2CCN(CC2)C3=CC=C(C=C3)Br
+      count: 1
+      example_row_indices:
+      - 651
+    - smiles: C1CN(C1)C2=CC=C(C=C2)C#N
+      count: 1
+      example_row_indices:
+      - 430
+    - smiles: C1CN(CC(=O)N1)C2=CC=C(C=C2)F
+      count: 2
+      example_row_indices:
+      - 340
+      - 341
+    - smiles: C1CN(CC1O)C2=CC=NC=C2
+      count: 1
+      example_row_indices:
+      - 554
+    - smiles: C1CN(CC2=C1C(=NC=C2)NC3=CC4=CC=CC=C4N=C3)S(=O)(=O)C5=CC=CO5
+      count: 1
+      example_row_indices:
+      - 666
+    - smiles: C1CN(CCC12OCCO2)C3=CC=CC=N3
+      count: 1
+      example_row_indices:
+      - 235
+    - smiles: C1CN(CCC1=O)C2=C(C=C(C=C2)F)Cl
+      count: 1
+      example_row_indices:
+      - 682
+    - smiles: C1CN(CCC1CO)C2=C(C=C(C=C2)Cl)Cl
+      count: 2
+      example_row_indices:
+      - 132
+      - 133
+    - smiles: C1CN(CCC1N)C2=C3C=C(C=CC3=NC=C2)Cl
+      count: 1
+      example_row_indices:
+      - 62
+    - smiles: C1CN(CCC1O)C2=CC=CC(=C2)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 725
+    - smiles: C1CN(CCN1)C2=C(C=CC(=C2)Cl)C#N
+      count: 1
+      example_row_indices:
+      - 316
+    - smiles: C1CN(CCN1)C2=C(C=CC(=C2)F)C#N
+      count: 1
+      example_row_indices:
+      - 317
+    - smiles: C1CN(CCN1)C2=C3C=C(OC3=CC=C2)C(=O)N
+      count: 1
+      example_row_indices:
+      - 216
+    - smiles: C1CN(CCN1)C2=CC(=C(C=C2)OCC3=CC=CC=C3)F
+      count: 1
+      example_row_indices:
+      - 198
+    - smiles: C1CN(CCN1)C2=CC3=C(C=C2)OC(O3)(F)F
+      count: 1
+      example_row_indices:
+      - 705
+    - smiles: C1CN(CCN1)C2=CC=CC3=C2N=CN3C(C4=CC=CC=C4)(C5=CC=CC=C5)C6=CC=CC=C6
+      count: 1
+      example_row_indices:
+      - 745
+    - smiles: C1CN(CCN1)C2=CC=CC=C2Cl
+      count: 2
+      example_row_indices:
+      - 503
+      - 504
+    - smiles: C1CN(CCN1)C2=CN=CC=C2
+      count: 1
+      example_row_indices:
+      - 119
+    - smiles: C1CN(CCN1CC2=CC=CC=C2)C3=CC=C(C=C3)F
+      count: 1
+      example_row_indices:
+      - 342
+    - smiles: C1CN(CCN1CCC2=CC=CC=C2)C3=CC=CC4=C3OC=C4
+      count: 1
+      example_row_indices:
+      - 223
+    - smiles: C1CNC(=O)C2=C1C=C(C=C2)NCC3=CC=CC=C3
+      count: 4
+      example_row_indices:
+      - 244
+      - 245
+      - 246
+      - 247
+    - smiles: C1COC(=O)N1C2=NC(=CS2)C3=CC=C(C=C3)C#N
+      count: 1
+      example_row_indices:
+      - 76
+    - smiles: C1COCC(=O)N1C2=NC(=CC=C2)Br
+      count: 1
+      example_row_indices:
+      - 671
+    - smiles: C1COCCC1CNC2=CC(=CC=C2)Br
+      count: 1
+      example_row_indices:
+      - 522
+    - smiles: C1COCCC1NC2=NC(=CC=C2)Br
+      count: 1
+      example_row_indices:
+      - 726
+    - smiles: C1COCCN1C2=C(N=C(C=C2)Cl)Cl
+      count: 2
+      example_row_indices:
+      - 477
+      - 478
+    - smiles: C1COCCN1C2=CC(=CN=C2)Br
+      count: 1
+      example_row_indices:
+      - 396
+    - smiles: C1COCCN1C2=CC=C(C=C2)O
+      count: 1
+      example_row_indices:
+      - 278
+    - smiles: C1COCCN1C2=CN3C=CN=C3C=C2
+      count: 1
+      example_row_indices:
+      - 615
+    - smiles: C1COCCN1C2=CN=C(C=C2)Br
+      count: 1
+      example_row_indices:
+      - 657
+    - smiles: C1COCCN1C2=CN=C(C=C2)CO
+      count: 1
+      example_row_indices:
+      - 497
+    - smiles: C1COCCN1C2=CN=C(C=C2)NC3=CC(=CN4C3=NC=C4)Cl
+      count: 1
+      example_row_indices:
+      - 590
+    - smiles: C1COCCN1C2=CN=C3C(=C2)C=CN3
+      count: 3
+      example_row_indices:
+      - 578
+      - 579
+      - 580
+    - smiles: C1COCCN1C2=CN=CC(=C2)N
+      count: 3
+      example_row_indices:
+      - 116
+      - 117
+      - 164
+    - smiles: C1COCCN1C2=NC(=CC=C2)OCC3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 121
+    - smiles: C1C[C@H](C(=O)NC1)NC2=C(C=CC=N2)Cl
+      count: 1
+      example_row_indices:
+      - 591
+    - smiles: C1[C@H](OC2=C(CN1CCO)C=CC(=N2)NC3=CC(=C(C=C3)N4C=NC=N4)Cl)C5=CC=CC=C5
+      count: 1
+      example_row_indices:
+      - 276
+    - smiles: CC(=O)C1=CC=C(C=C1)N2CCN(CC2)C(=O)OC(C)(C)C
+      count: 1
+      example_row_indices:
+      - 556
+    - smiles: CC(=O)N(C)C1=CC2=C(C=C1)C=CN2C3=NC4=C(C=NN4C(=C3)NC5CC5)C#N
+      count: 1
+      example_row_indices:
+      - 668
+    - smiles: CC(=O)N1CC2CN(CC(C1)O2)C3=CC(=C(C=C3)OC)[N+](=O)[O-]
+      count: 2
+      example_row_indices:
+      - 85
+      - 91
+    - smiles: CC(=O)N1CCN(CC1)C2=C(C=C(C(=C2)OC)NC3=NC=C(C(=N3)C4=CN=C5N4C=CC=C5)Cl)OC
+      count: 1
+      example_row_indices:
+      - 112
+    - smiles: CC(=O)N1CCN(CC1)C2=CC(=C(C=C2)NC3=NC=C(C(=N3)C4=CN=C5N4C=CC(=C5)N6CCCC6)Cl)OC
+      count: 2
+      example_row_indices:
+      - 113
+      - 114
+    - smiles: CC(=O)N1CCN(CC1)C2=CC(=C(C=C2)OC)[N+](=O)[O-]
+      count: 6
+      example_row_indices:
+      - 45
+      - 46
+      - 47
+      - 48
+      - 190
+    - smiles: CC(=O)N1CCN(CC1)C2=CC(=CN=C2)Br
+      count: 1
+      example_row_indices:
+      - 8
+    - smiles: CC(=O)NC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)N(C)CCCN(C)C
+      count: 1
+      example_row_indices:
+      - 749
+    - smiles: CC(=O)NC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)N(C)CCN(C)C
+      count: 3
+      example_row_indices:
+      - 614
+      - 684
+      - 685
+    - smiles: CC(=O)NC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)N(C)CCO
+      count: 1
+      example_row_indices:
+      - 712
+    - smiles: CC(=O)NC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)N5CCC[C@H](C5)N(C)C
+      count: 1
+      example_row_indices:
+      - 738
+    - smiles: CC(=O)NC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)N5CCN(CC5)C
+      count: 1
+      example_row_indices:
+      - 733
+    - smiles: CC(=O)NC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)N5CC[C@@H](C5)N(C)C
+      count: 1
+      example_row_indices:
+      - 674
+    - smiles: CC(=O)NC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)N5CC[C@H](C5)N
+      count: 1
+      example_row_indices:
+      - 369
+    - smiles: CC(=O)NC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4COC4)C#N)C5CC5
+      count: 3
+      example_row_indices:
+      - 735
+      - 736
+      - 737
+    - smiles: CC(=O)NC1=CC(=C(C=C1)OC)N2CCNCC2
+      count: 1
+      example_row_indices:
+      - 520
+    - smiles: CC(=O)NC1=CC(=C(C=C1C2CC2)F)NC3=NC4=C(C=NN4C(=C3)NC5COC5)C#N
+      count: 3
+      example_row_indices:
+      - 693
+      - 694
+      - 695
+    - smiles: CC(=O)NC1=CC=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N
+      count: 1
+      example_row_indices:
+      - 672
+    - smiles: CC(=O)NC1=CN=C(C=N1)N2CCN(CC2)C
+      count: 1
+      example_row_indices:
+      - 202
+    - smiles: CC(=O)NC1=NC=CC(=C1)NC2=C(C=CC3=C2OCO3)Cl
+      count: 1
+      example_row_indices:
+      - 20
+    - smiles: CC(C)(C(=O)OC)NC1=CC=C(C=C1)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 167
+    - smiles: CC(C)(C(=O)OC)NC1=CC=C(C=C1)OC
+      count: 1
+      example_row_indices:
+      - 166
+    - smiles: CC(C)(C)OC(=O)C1=CC(=CN=C1)N2CCOCC2
+      count: 1
+      example_row_indices:
+      - 239
+    - smiles: CC(C)(C)OC(=O)C1=CN=C(C=C1)N2CCCCC2
+      count: 1
+      example_row_indices:
+      - 394
+    - smiles: CC(C)(C)OC(=O)CN(C)C1=CC(=C(C=C1)NC2=NC=C(C(=N2)C3=CN=C4N3C=CC=C4F)Cl)OC
+      count: 1
+      example_row_indices:
+      - 160
+    - smiles: CC(C)(C)OC(=O)N(C)C1=CC2=C(C=C1)SC3=C2C=CC=C3C4=CC=CC5=C4OC(=CC5=O)N6CCOCC6
+      count: 3
+      example_row_indices:
+      - 187
+      - 188
+      - 189
+    - smiles: CC(C)(C)OC(=O)N(C)C1=CC2=C(C=C1)SC3=C2C=CC=C3C4=CC=CN5C4=NC(=CC5=O)N6CCOCC6
+      count: 3
+      example_row_indices:
+      - 127
+      - 128
+      - 129
+    - smiles: CC(C)(C)OC(=O)N1CC2CC1CN2C3=CC=CC(=C3)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 660
+      - 661
+    - smiles: CC(C)(C)OC(=O)N1CC2CC1CN2C3=CN=CC(=C3)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 446
+    - smiles: CC(C)(C)OC(=O)N1CC2CN(CC2C1)C3=CC(=C(C=C3)Cl)OC
+      count: 1
+      example_row_indices:
+      - 699
+    - smiles: CC(C)(C)OC(=O)N1CCC(CC1)(CN=C(C2=CC=CC=C2)C3=CC=CC=C3)C(=O)NC4=NC=CC(=C4)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 69
+    - smiles: CC(C)(C)OC(=O)N1CCC[C@H](C1)NC2=CC=CC=N2
+      count: 1
+      example_row_indices:
+      - 600
+    - smiles: CC(C)(C)OC(=O)N1CCN(C(=O)C1)C2=CC(=C(C=C2)[N+](=O)[O-])OC
+      count: 2
+      example_row_indices:
+      - 182
+      - 183
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=C(C=C(C=C2)F)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 84
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=C(C=CC(=C2)C(F)(F)F)F
+      count: 1
+      example_row_indices:
+      - 746
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=C3C(=C(C=C2)Cl)C=CC=N3
+      count: 1
+      example_row_indices:
+      - 748
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC(=C(C=C2)C#N)Cl
+      count: 1
+      example_row_indices:
+      - 691
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC(=C(C=C2)C(=O)OC)Cl
+      count: 1
+      example_row_indices:
+      - 734
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC(=C(C=C2)C(=O)OC)O
+      count: 1
+      example_row_indices:
+      - 282
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC(=C(C=C2)C(F)(F)F)F
+      count: 1
+      example_row_indices:
+      - 742
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC(=CC(=C2)C(=O)O)F
+      count: 1
+      example_row_indices:
+      - 645
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC3=C(CN(C3=O)C)C=C2
+      count: 1
+      example_row_indices:
+      - 476
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC=C(C=C2)C#N
+      count: 1
+      example_row_indices:
+      - 629
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC=CC(=N2)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 697
+      - 698
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC=CC3=C2N(C=C3)C(=O)OC(C)(C)C
+      count: 2
+      example_row_indices:
+      - 573
+      - 574
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC=CC3=C2NC=C3
+      count: 1
+      example_row_indices:
+      - 562
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC=CC3=C2OC=C3
+      count: 2
+      example_row_indices:
+      - 279
+      - 280
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC=CC=C2N(C)C
+      count: 1
+      example_row_indices:
+      - 653
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC=CC=C2OC
+      count: 2
+      example_row_indices:
+      - 563
+      - 654
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CC=CS2
+      count: 1
+      example_row_indices:
+      - 301
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CN=C(C=C2)OCC3=CC=C(C=C3)S(=O)(=O)C
+      count: 1
+      example_row_indices:
+      - 94
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CN=C(N=C2)OCC3=CC=C(C=C3)S(=O)(=O)C
+      count: 2
+      example_row_indices:
+      - 92
+      - 93
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CN=CC(=C2)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 447
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=CN=CC=C2
+      count: 2
+      example_row_indices:
+      - 607
+      - 608
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=NC3=CC=CC=C3C=C2
+      count: 1
+      example_row_indices:
+      - 723
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=NC=C(C=C2)OCC3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 102
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=NC=C(N=C2)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 722
+    - smiles: CC(C)(C)OC(=O)N1CCN(CC1)C2=NC=CC(=C2)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 747
+    - smiles: CC(C)(C)OC(=O)N1C[C@@H]2C[C@H]1CN2C3=CC=CC=C3OC
+      count: 1
+      example_row_indices:
+      - 549
+    - smiles: CC(C)(C)OC(=O)N1C[C@@H]2C[C@H]1CN2C3=CN=CC=C3
+      count: 1
+      example_row_indices:
+      - 640
+    - smiles: CC(C)(C)OC(=O)N1C[C@@H]2C[C@H]1CN2C3=NC=CC(=C3)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 623
+      - 624
+    - smiles: CC(C)(C)OC(=O)NC1=C(C=C(C(=C1)N)OC)N2CCN(CC2)C
+      count: 1
+      example_row_indices:
+      - 321
+    - smiles: CC(C)(C)OC(=O)NC1=C(C=CC(=C1)N2CCNCC2)Cl
+      count: 1
+      example_row_indices:
+      - 634
+    - smiles: CC(C)(C)OC(=O)NC1=CC(=C(C=C1)C=O)F
+      count: 2
+      example_row_indices:
+      - 218
+      - 219
+    - smiles: CC(C)(C)OC(=O)NC1=CC2=C(C=C1)C=CN2CC3=CN=CC=C3
+      count: 2
+      example_row_indices:
+      - 507
+      - 508
+    - smiles: CC(C)(C)OC(=O)NC1=CN=C(N=C1)C(=O)OC
+      count: 2
+      example_row_indices:
+      - 308
+      - 309
+    - smiles: CC(C)(C)OC(=O)NC1=NC(=CC(=C1)C(=O)O)Cl
+      count: 1
+      example_row_indices:
+      - 147
+    - smiles: CC(C)(C)OC(=O)NC1=NC=CC(=C1)F
+      count: 1
+      example_row_indices:
+      - 12
+    - smiles: CC(C)(C)OC(=O)NC1=NN=CC(=C1)Cl
+      count: 1
+      example_row_indices:
+      - 703
+    - smiles: CC(C)(C)OC(=O)NC1CCN(CC1)C2=CC(=CC=C2)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 603
+    - smiles: CC(C)(C)OC(=O)NC1CCN(CC1)C2=CC=CC(=C2)C(=O)OC
+      count: 1
+      example_row_indices:
+      - 158
+    - smiles: CC(C)(C)OC(=O)NC1CN(C1)C2=CC(=NC=C2)OC
+      count: 2
+      example_row_indices:
+      - 135
+      - 136
+    - smiles: CC(C)(C)OC(=O)NCCC1CCN(CC1)C2=CC=CC=C2
+      count: 2
+      example_row_indices:
+      - 220
+      - 222
+    - smiles: CC(C)(C)OC(=O)N[C@@H]1CCC[C@@H](C1)C(=O)NC2=NC=C(C(=C2)C3=C4CCCCCN4N=C3)F
+      count: 1
+      example_row_indices:
+      - 516
+    - smiles: CC(C)(C)OC(=O)N[C@@H]1CCC[C@@H](C1)C(=O)NC2=NC=C(C(=C2)C3=C4CCCCN4N=C3)F
+      count: 1
+      example_row_indices:
+      - 597
+    - smiles: CC(C)(C)[Si](C)(C)OCCNC1=CC(=C(C=C1)OCC2=CC=CC=C2)F
+      count: 2
+      example_row_indices:
+      - 581
+      - 582
+    - smiles: CC(C)C1=C(C=C(C=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)NC(=O)C
+      count: 1
+      example_row_indices:
+      - 676
+    - smiles: CC(C)CN(C1=CC(=C(N=C1)C(=O)[C@H]2C[C@@H]2C(=O)O)OC)C3=C(C=CC(=C3)C(F)(F)F)F
+      count: 2
+      example_row_indices:
+      - 586
+      - 587
+    - smiles: CC(C)CNC1=NC=CC(=C1)Cl
+      count: 1
+      example_row_indices:
+      - 427
+    - smiles: CC(C)[C@@H]1CN(CCN1C(=O)OC(C)(C)C)C2=CC(=C(C=C2)OC)OC
+      count: 3
+      example_row_indices:
+      - 714
+      - 715
+      - 716
+    - smiles: CC(C1=CC(=CC2=C1OC(=CC2=O)N3CCOCC3)C(=O)N(C)C)NC4=C(C(=CC(=C4)F)F)F
+      count: 1
+      example_row_indices:
+      - 739
+    - smiles: CC(C1=CC(=CC2=C1OC(=CC2=O)N3CCOCC3)C(=O)N(C)C)NC4=CC(=CC(=C4)C#N)F
+      count: 1
+      example_row_indices:
+      - 707
+    - smiles: CC(C1=CC(=CC2=C1OC(=CC2=O)N3CCOCC3)C(=O)N(C)C)NC4=CC(=CC(=C4)Cl)F
+      count: 1
+      example_row_indices:
+      - 743
+    - smiles: CC(C1=CC=CC=C1)NC2=NC=CN=C2
+      count: 1
+      example_row_indices:
+      - 466
+    - smiles: CC(C1=NC=C(C=N1)F)NC2=NC(=C3C=CN(C3=N2)C4CC4)NC5=CN(C=N5)C
+      count: 1
+      example_row_indices:
+      - 598
+    - smiles: CC1(C2=NC(=C(N2CCN1C(=O)CNC(=O)OC(C)(C)C)NC3=CC=C(C=C3)F)C4=CC=C(C=C4)F)C
+      count: 1
+      example_row_indices:
+      - 658
+    - smiles: CC1(CC2=C(C=NN2C1)C3=CC(=NC=C3F)NC(=O)[C@@H]4CCC[C@H](C4)NC(=O)OC(C)(C)C)C
+      count: 1
+      example_row_indices:
+      - 646
+    - smiles: CC1(CC2=C(C=NN2C1)C3=CC(=NC=C3F)NC(=O)[C@H]4CCC[C@H](C4)NC(=O)OC(C)(C)C)C
+      count: 2
+      example_row_indices:
+      - 566
+      - 567
+    - smiles: CC1(CC2=NC=C(N2C1)C3=CC(=NC=C3F)NC(=O)[C@H]4CCC[C@H](C4)NC(=O)OC(C)(C)C)C
+      count: 1
+      example_row_indices:
+      - 525
+    - smiles: CC1(CCN2C(=C(C=N2)C3=CC(=NC=C3F)NC(=O)[C@H]4CCC[C@H](C4)NC(=O)OC(C)(C)C)C1)C
+      count: 1
+      example_row_indices:
+      - 564
+    - smiles: CC1(COC1)CNC2=C(C=CC=N2)Cl
+      count: 1
+      example_row_indices:
+      - 639
+    - smiles: CC1=C(C(=CC=C1)C)C(=O)NC(C2=CC(=CC=C2)N3CCOCC3)C45CCC(N4C)CC5
+      count: 1
+      example_row_indices:
+      - 641
+    - smiles: CC1=C(C(=CC=C1)C)C(=O)NC(C2=CC=C(C=C2)N3CCOCC3)C45CCC(N4C)CC5
+      count: 1
+      example_row_indices:
+      - 262
+    - smiles: CC1=C(C(=CC=C1)N2CCN(CC2)C(=O)OC(C)(C)C)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 217
+    - smiles: CC1=C(C(=NN1C)C)NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NC)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 59
+    - smiles: CC1=C(C(=NN1C)C)NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NOC)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 229
+    - smiles: CC1=C(C2=C(N1C)C=CC(=C2)NC3=NC=CC(=N3)N4C=C(C(=N4)C)C=O)Cl
+      count: 1
+      example_row_indices:
+      - 531
+    - smiles: CC1=C(C2=C(N1C)C=CC(=C2)NC3=NC=CC(=N3)N4C=C(C(=N4)C)CN5CC(C5)O)Cl
+      count: 1
+      example_row_indices:
+      - 502
+    - smiles: CC1=C(C=C(C=C1)C2=NC=CN2)NC(=O)C3=CC=C(C=C3)OCC4=C(C=CC=N4)N5CCN(CC5)C
+      count: 1
+      example_row_indices:
+      - 596
+    - smiles: CC1=C(C=C(C=C1)N2CCNCC2)[N+](=O)[O-]
+      count: 2
+      example_row_indices:
+      - 719
+      - 720
+    - smiles: CC1=C(C=C(C=C1)NC(=O)C2=CC3=C(C=C2)OCCO3)NC(=O)C4=CN=C(C=C4)NC5=CC(=CC=C5)N6CCC(C6)N(C)C
+      count: 1
+      example_row_indices:
+      - 324
+    - smiles: CC1=C(C=C(C=C1)NC(=O)C2=CC3=C(C=C2)OCCO3)NC(=O)C4=CN=C(C=C4)NC5=CC(=CC=C5)OC6CCN(CC6)C
+      count: 1
+      example_row_indices:
+      - 322
+    - smiles: CC1=C(C=C(C=C1)NC(=O)C2=CC3=C(C=C2)OCCO3)NC(=O)C4=CN=C(C=C4)NC5=CC=CC(=C5)CN(C)C
+      count: 1
+      example_row_indices:
+      - 323
+    - smiles: CC1=C(C=C(C=C1)NC(=O)C2=CC3=C(C=C2)OCCO3)NC(=O)C4=CN=C(C=C4)NC5=CC=CC(=C5)CN6CCN(CC6)C
+      count: 1
+      example_row_indices:
+      - 521
+    - smiles: CC1=C(C=C(C=C1)NC2=NC3=C(C=NN3C(=C2)NC4=CN(C=N4)C)C#N)NC(=O)C
+      count: 2
+      example_row_indices:
+      - 710
+      - 711
+    - smiles: CC1=C(C=C(C=C1)NC2=NC3=C(C=NN3C(=C2)NC4=NN(C=C4)C)C#N)NC(=O)C
+      count: 1
+      example_row_indices:
+      - 740
+    - smiles: CC1=C(C=C(C=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)NC(=O)C
+      count: 4
+      example_row_indices:
+      - 686
+      - 687
+      - 688
+      - 689
+    - smiles: CC1=C(C=C(C=C1)NC2=NC3=C(C=NN3C(=C2)NC4COC4)C#N)NC(=O)C
+      count: 1
+      example_row_indices:
+      - 727
+    - smiles: CC1=C(C=C(C=C1)[N+](=O)[O-])NC(=O)C2=CC3=C(C=C2)N=C(C=C3)C
+      count: 1
+      example_row_indices:
+      - 368
+    - smiles: CC1=C(C=C(C=C1)[N+](=O)[O-])NC2COC2
+      count: 1
+      example_row_indices:
+      - 626
+    - smiles: CC1=C(C=C(C=N1)[N+](=O)[O-])NC2=NC=CC(=N2)C3=CN=CC=C3
+      count: 2
+      example_row_indices:
+      - 635
+      - 636
+    - smiles: CC1=C(C=CC(=C1)F)N2CCN(CC2)C(=O)OC(C)(C)C
+      count: 1
+      example_row_indices:
+      - 83
+    - smiles: CC1=C(C=CC(=C1)N2CCC(CC2)C(=O)OC)F
+      count: 1
+      example_row_indices:
+      - 475
+    - smiles: CC1=C(C=CC(=N1)N2C=NC=N2)NC3=C(C(=NC=N3)OC4CCN(CC4)C(=O)OC(C)C)OC
+      count: 1
+      example_row_indices:
+      - 111
+    - smiles: CC1=C(C=CC(=N1)NC(=O)OC(C)(C)C)F
+      count: 1
+      example_row_indices:
+      - 717
+    - smiles: CC1=C(C=CC(=N1)S(=O)(=O)C)NC2=C(C(=NC=N2)OC3CCN(CC3)C(=O)OC(C)C)OC
+      count: 2
+      example_row_indices:
+      - 423
+      - 424
+    - smiles: CC1=C(C=CC=C1C(F)(F)F)CN2C(=NC3=C(C=C(C=C32)N4CCOCC4)C(=O)OC)C
+      count: 1
+      example_row_indices:
+      - 485
+    - smiles: CC1=C(C=CC=C1[N+](=O)[O-])N2CCN(CC2)C(=O)C
+      count: 1
+      example_row_indices:
+      - 70
+    - smiles: CC1=C(C=CC=N1)N2CCN(CC2)C(=O)OC(C)(C)C
+      count: 2
+      example_row_indices:
+      - 431
+      - 432
+    - smiles: CC1=C(N=CC=C1)NC2CCCCC2
+      count: 1
+      example_row_indices:
+      - 616
+    - smiles: CC1=C(N=CC=C1)N[C@@H]2CCCN(C2)C(=O)OC(C)(C)C
+      count: 2
+      example_row_indices:
+      - 559
+      - 560
+    - smiles: CC1=C(N=CN=C1N2C=NC3=CC=CC=C32)NC4=NC=C(C=C4)OCCN(C)C
+      count: 1
+      example_row_indices:
+      - 408
+    - smiles: CC1=C(N=CN=C1OC2CCN(CC2)C(=O)OC(C)C)NC3=C(N=C(C=C3)S(=O)(=O)C)C
+      count: 1
+      example_row_indices:
+      - 115
+    - smiles: CC1=C(OC(=N1)NC2=NC=CC(=C2)Cl)C
+      count: 2
+      example_row_indices:
+      - 311
+      - 312
+    - smiles: CC1=CC(=C(C(=C1)C)S(=O)(=O)N[C@H](CNC2=C3C=NN(C3=CC=C2)C4=CC=C(C=C4)F)C(C)C)C
+      count: 1
+      example_row_indices:
+      - 557
+    - smiles: CC1=CC(=C(C=C1)NC2=C(N=NC3=C2C=CC(=C3)N4CCNCC4)C#N)F
+      count: 2
+      example_row_indices:
+      - 679
+      - 680
+    - smiles: CC1=CC(=C(C=C1NC(=O)C)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)F
+      count: 2
+      example_row_indices:
+      - 605
+      - 741
+    - smiles: CC1=CC(=C(C=C1NC(=O)C)NC2=NC3=C(C=NN3C(=C2)NC4CCC4)C#N)F
+      count: 1
+      example_row_indices:
+      - 721
+    - smiles: CC1=CC(=C(N=C1)NC(=O)OC(C)(C)C)F
+      count: 2
+      example_row_indices:
+      - 514
+      - 515
+    - smiles: CC1=CC(=CC(=C1NC(=O)CC(C)(C)C)C)N2CCOCC2
+      count: 1
+      example_row_indices:
+      - 206
+    - smiles: CC1=CC(=CC(=C1NC(=O)CC2CCCC2)C)N3CCOCC3
+      count: 1
+      example_row_indices:
+      - 207
+    - smiles: CC1=CC(=CC(=N1)NC(=O)OC(C)(C)C)CO
+      count: 1
+      example_row_indices:
+      - 675
+    - smiles: CC1=CC(=NC(=N1)C)NC2=NC=CC(=C2)Cl
+      count: 1
+      example_row_indices:
+      - 681
+    - smiles: CC1=CC(=NC2=C1CN(CC(O2)C3=NC(=CS3)C)C)NC4=NC(=C(C=C4)C5=CN(N=C5)C)OC
+      count: 1
+      example_row_indices:
+      - 201
+    - smiles: CC1=CC(=NC2=C1CN(CC(O2)C3CCCO3)C)NC4=NC(=C(C=C4)C5=CN(N=C5)C)OC
+      count: 1
+      example_row_indices:
+      - 204
+    - smiles: CC1=CC(=NC2=C1CN(CC(O2)CC(F)(F)F)C)NC3=NC(=C(C=C3)C4=CN(N=C4)C)OC
+      count: 1
+      example_row_indices:
+      - 299
+    - smiles: CC1=CC(=NC2=C1CN(CC(O2)CC(F)(F)F)C)NC3=NC=C(C=C3)N4C=C(N=C4)C
+      count: 1
+      example_row_indices:
+      - 314
+    - smiles: CC1=CC(=NC=C1)C2CN(CC3=C(O2)N=C(C=C3)NC4=NC(=C(C=C4)C5=CN(N=C5)C)OC)C
+      count: 1
+      example_row_indices:
+      - 389
+    - smiles: CC1=CC(=NN1)NC2=NC(=C(C(=N2)N3CCOCC3)F)NC(C)C4=C(C=C(C=N4)F)F
+      count: 1
+      example_row_indices:
+      - 118
+    - smiles: CC1=CC2=C(N1C3=CC(=CC=C3)OC)C=C(C=C2)OC(F)(F)F
+      count: 1
+      example_row_indices:
+      - 433
+    - smiles: CC1=CC2=C(N1C3=CC(=CC=C3)OCC4=CC=CC=C4)C=C(C=C2)OC(F)(F)F
+      count: 4
+      example_row_indices:
+      - 428
+      - 429
+      - 444
+      - 445
+    - smiles: CC1=CC=C(C=C1)NC(C)(C)C(=O)OC
+      count: 1
+      example_row_indices:
+      - 168
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(C=C3)C(=O)N(CC(O4)C5=CC=CC=C5)C)OC
+      count: 1
+      example_row_indices:
+      - 613
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(CC(O4)C5=CC=CC=C5)C)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 241
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(CC(O4)C5=CN=CC=C5)C(=O)C)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 10
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(CC(O4)C5=CN=CC=C5)C)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 11
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(CC(O4)C5CC5)C)C=C3)OC
+      count: 3
+      example_row_indices:
+      - 263
+      - 264
+      - 265
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(CC(O4)COC(C)C)C(=O)C)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 248
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(CC(O4)COC(C)C)C)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 227
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(C[C@@H](O4)C5=CC=CC=C5)C)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 594
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(C[C@H](O4)C5=CC=CC=C5)CC#N)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 254
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC=C4CN(C[C@H](OC4=N3)C5=CC=CC=C5)C)OC
+      count: 7
+      example_row_indices:
+      - 267
+      - 268
+      - 269
+      - 270
+      - 271
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC=C4CN(C[C@H](OC4=N3)C5=CC=CC=C5)CCF)OC
+      count: 1
+      example_row_indices:
+      - 274
+    - smiles: CC1=CN(C=N1)C2=C(C=C(C=C2)NC3=NC=CC=N3)OC
+      count: 1
+      example_row_indices:
+      - 256
+    - smiles: CC1=CN(C=N1)C2=C(N=C(C=C2)NC3=NC4=C(CN(CC(O4)C5=NC(=CS5)C)C)C=C3)OC
+      count: 2
+      example_row_indices:
+      - 402
+      - 403
+    - smiles: CC1=CN(C=N1)C2=C(N=C(C=C2)NC3=NC4=C(CN(C[C@H](O4)C5=CC=CC=C5)C)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 513
+    - smiles: CC1=CN(C=N1)C2=CN=C(C=C2)NC3=NC4=C(CN(C[C@H](O4)C5=CC=CC=C5)C)C=C3
+      count: 1
+      example_row_indices:
+      - 313
+    - smiles: CC1=CN=C(C=C1)C2CN(CC3=C(O2)N=C(C=C3)NC4=NC(=C(C=C4)C5=CN(N=C5)C)OC)C
+      count: 1
+      example_row_indices:
+      - 390
+    - smiles: CC1=CN=C(C=C1NC(=O)C)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N
+      count: 1
+      example_row_indices:
+      - 724
+    - smiles: CC1=CN=C(N=C1C2=C3C=CC=CN3N=C2)NC4=C(C=C5CCN(C5=C4)C(=O)C)OC
+      count: 1
+      example_row_indices:
+      - 250
+    - smiles: CC1=CN=C(N=C1C2=CN(C3=CC=CC=C32)S(=O)(=O)C4=CC=CC=C4)NC5=C(C=C(C=C5)N6CCN(CC6)C(=O)C)OC
+      count: 1
+      example_row_indices:
+      - 51
+    - smiles: CC1=CN=C(N=C1C2=CN3C[C@H](N(C(=O)C3=N2)CC4=CC(=C(C=C4)F)F)COC)NC5=CC=NN5C
+      count: 1
+      example_row_indices:
+      - 588
+    - smiles: CC1=CN=C(S1)C2CN(CC3=C(O2)N=C(C=C3)NC4=NC(=C(C=C4)N5C=C(N=C5)C)OC)C
+      count: 1
+      example_row_indices:
+      - 621
+    - smiles: CC1=CN=C(S1)NC2=NC(=NC(=N2)N3CCOCC3)N[C@@H](C)C4=NC=C(C=N4)F
+      count: 1
+      example_row_indices:
+      - 31
+    - smiles: CC1=COC(=N1)NC2=NC=CC(=C2)Cl
+      count: 1
+      example_row_indices:
+      - 325
+    - smiles: CC1=CSC(=N1)C2CN(CC3=C(O2)N=C(C=C3)NC4=NC(=C(C=C4)C5=CN(N=C5)C)OC)C
+      count: 1
+      example_row_indices:
+      - 310
+    - smiles: CC1=CSC(=N1)NC2=CC=CC(=N2)C(=O)O
+      count: 1
+      example_row_indices:
+      - 696
+    - smiles: CC1=CSC(=N1)NC2=NC(=CC=C2)N3CCCOC3=O
+      count: 2
+      example_row_indices:
+      - 677
+      - 678
+    - smiles: CC1=CSC(=N1)NC2=NC(=CC=C2)N3CCOCC3=O
+      count: 2
+      example_row_indices:
+      - 701
+      - 702
+    - smiles: CC1=CSC(=N1)NCC2=CC=CC=C2
+      count: 1
+      example_row_indices:
+      - 618
+    - smiles: CC1=NC(=C(C=C1)OC2=CC(=NC=C2)NC3=CC=C(C=C3)S(=O)(=O)C)C
+      count: 1
+      example_row_indices:
+      - 467
+    - smiles: CC1=NC(=C(C=C1)OC2=CC(=NC=C2)NC3=CC=C(C=C3)S(=O)(=O)N)C
+      count: 4
+      example_row_indices:
+      - 4
+      - 5
+      - 6
+      - 7
+    - smiles: CC1=NC(=C(C=C1)OC2=CC(=NC=C2)NC3=CC=C(C=C3)S(=O)(=O)NC(C)COC)C
+      count: 1
+      example_row_indices:
+      - 469
+    - smiles: CC1=NC(=C(C=C1)OC2=CC(=NC=C2)NC3=CC=C(C=C3)S(=O)(=O)NCCN4CCOCC4)C
+      count: 1
+      example_row_indices:
+      - 468
+    - smiles: CC1=NC(=NC=C1)NC2=NC=CC(=C2)Cl
+      count: 1
+      example_row_indices:
+      - 662
+    - smiles: CC1=NC=C(N1C2CCOCC2)C3=NC(=NC=C3F)NC4=C(C=C(C=C4)CN5CCOCC5)F
+      count: 8
+      example_row_indices:
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+    - smiles: CC1=NC=C(N1C2CCOCC2)C3=NC(=NC=C3F)NC4=CC=C(C=C4)CN5CCOCC5
+      count: 7
+      example_row_indices:
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+    - smiles: CC1=NC=CN1C2=CC=C(C=C2)NC3=NC4=C(C=C3)C(=O)N(CC(O4)C5=CC=CC=C5)C
+      count: 3
+      example_row_indices:
+      - 493
+      - 494
+      - 495
+    - smiles: CC1=NN(C(=C1)C2CN(CC3=C(O2)N=C(C=C3)NC4=CC(=C(C=C4)N5C=C(N=C5)C)OC)CC#N)C
+      count: 1
+      example_row_indices:
+      - 251
+    - smiles: CC1=NN(C(=C1)C2CN(CC3=C(O2)N=C(C=C3)NC4=CC=C(C=C4)N5C=CN=C5C)CC#N)C
+      count: 1
+      example_row_indices:
+      - 275
+    - smiles: CC1=NN(C(=C1)NC2=NC=C(C(=C2)NC3=C(C(=CC=C3)OC)C(=O)NC)C(F)(F)F)C
+      count: 3
+      example_row_indices:
+      - 195
+      - 196
+      - 226
+    - smiles: CC1=NN(C(=C1)NC2=NC=C(C(=C2)NC3=C(C(=CC=C3)OC)C(=O)NOC)C(F)(F)F)C
+      count: 4
+      example_row_indices:
+      - 287
+      - 288
+      - 289
+      - 290
+    - smiles: CC1=NN(C(=C1)NC2=NC=C(C(=C2)NC3=C(C=CC(=C3)F)C(=O)NC)C(F)(F)F)C
+      count: 3
+      example_row_indices:
+      - 286
+      - 291
+      - 292
+    - smiles: CC1=NN(C(=C1)NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NOC)Cl)C(C)C
+      count: 9
+      example_row_indices:
+      - 169
+      - 170
+      - 171
+      - 172
+      - 173
+    - smiles: CC1=NN(C(=C1)NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NOCCO)C(F)(F)F)C
+      count: 1
+      example_row_indices:
+      - 210
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=C(C(=CC=C3)OC)C(=O)NC)C(F)(F)F)C
+      count: 4
+      example_row_indices:
+      - 141
+      - 142
+      - 143
+      - 144
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=C(C(=CC=C3)OC)C(=O)NOC)C(F)(F)F)C
+      count: 1
+      example_row_indices:
+      - 194
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=C(C=C(C=C3)F)C(=O)NOC)C(F)(F)F)C
+      count: 3
+      example_row_indices:
+      - 283
+      - 284
+      - 285
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=C(C=CC(=C3)F)C(=O)NC)Cl)C
+      count: 1
+      example_row_indices:
+      - 77
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=C(C=CC(=C3)F)C(=O)NOC)C(F)(F)F)C
+      count: 1
+      example_row_indices:
+      - 253
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=C4C(=CC=C3)OCCN(C4=O)C)C(F)(F)F)C
+      count: 1
+      example_row_indices:
+      - 145
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=CC=CC4=C3C(=O)N(CC4)C)C#N)C
+      count: 5
+      example_row_indices:
+      - 34
+      - 35
+      - 36
+      - 37
+      - 81
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=CC=CC4=C3C(=O)N(CC4)C)C(F)(F)F)C
+      count: 1
+      example_row_indices:
+      - 137
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NC)C#N)C
+      count: 1
+      example_row_indices:
+      - 32
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NC)C(F)(F)F)C
+      count: 4
+      example_row_indices:
+      - 75
+      - 138
+      - 139
+      - 140
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NC)Cl)C
+      count: 1
+      example_row_indices:
+      - 60
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NOC)C(F)(F)F)C
+      count: 3
+      example_row_indices:
+      - 73
+      - 192
+      - 193
+    - smiles: CC1=NN(C=C1NC2=NC=C(C(=C2)NC3=CC=CC=C3C(=O)NOC)Cl)C
+      count: 1
+      example_row_indices:
+      - 49
+    - smiles: CC1=NN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(C[C@H](O4)C5=CC=CC=C5)C)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 228
+    - smiles: CC1=NN(C=N1)C2=C(C=C(C=C2)NC3=NC4=C(CN(C[C@H](O4)C5=CC=CC=C5)CCO)C=C3)OC
+      count: 1
+      example_row_indices:
+      - 255
+    - smiles: CC1=NN(C=N1)C2=CC=C(C=C2)NC3=NC4=C(CN(C[C@H](O4)C5=CC=CC=C5)C)C=C3
+      count: 5
+      example_row_indices:
+      - 211
+      - 212
+      - 213
+      - 214
+      - 215
+    - smiles: CC1C(OC2=C(CN1C)C=CC(=N2)NC3=NC(=C(C=C3)C4=CN(N=C4)C)OC)C5=NC(=CS5)C
+      count: 1
+      example_row_indices:
+      - 413
+    - smiles: CC1C2=C(N=C(C=C2)NC3=NC(=C(C=C3)C4=CN(N=C4)C)OC)OC(CN1C)C5CC5
+      count: 1
+      example_row_indices:
+      - 197
+    - smiles: CC1CN(C1)C2=CC=C(C=C2)Br
+      count: 1
+      example_row_indices:
+      - 505
+    - smiles: CC1CN(CC(N1)C)C2=CC(=C(C=C2)NC3=NC=C(C(=N3)C4=CN=C5N4C=CC=C5)Cl)OC
+      count: 1
+      example_row_indices:
+      - 50
+    - smiles: CCC[C@@H](CO)NC1=NC(=NC(=C1CC2=CC=C(C=C2)CC#N)C)N
+      count: 1
+      example_row_indices:
+      - 86
+    - smiles: CCN(C1=CC=CC=C1)C2=NC=C(C(=N2)OC)Br
+      count: 2
+      example_row_indices:
+      - 632
+      - 633
+    - smiles: CCN(CC)C1=CC=C(C=C1)C#N
+      count: 1
+      example_row_indices:
+      - 448
+    - smiles: CCN1CCN(CC1)C2=C3C4=CC=CC=C4SC3=C(C=C2)C5=CC=CC6=C5OC(=CC6=O)N7CCOCC7
+      count: 2
+      example_row_indices:
+      - 43
+      - 44
+    - smiles: CCOC(=O)C1=C(C2=CC(=C(C=C2N=C1)OC)N3CCN(CC3)C)NC4=C(C=C(C=C4)Cl)Cl
+      count: 1
+      example_row_indices:
+      - 558
+    - smiles: CCOC(=O)C1=C(C2=CC(=C(C=C2N=C1)OCCOC)N3CCOCC3)NC4=C(C=C(C=C4)C)F
+      count: 1
+      example_row_indices:
+      - 104
+    - smiles: CCOC(=O)C1=CC(=CC=C1)N2CCOCC2
+      count: 1
+      example_row_indices:
+      - 606
+    - smiles: CCOC(=O)C1=CC(=CN=C1)N2CCOCC2
+      count: 2
+      example_row_indices:
+      - 237
+      - 238
+    - smiles: CCOC(=O)C1=CC(=O)C2=C(O1)C(=CC(=C2)OC)N3CCN(CC3)CC4=CC=CC=C4
+      count: 1
+      example_row_indices:
+      - 205
+    - smiles: CCOC(=O)C1=CC2=C(C=CC=C2O1)N3CCN(CC3)C(=O)OC(C)(C)C
+      count: 4
+      example_row_indices:
+      - 315
+      - 370
+      - 371
+      - 372
+    - smiles: CCOC(=O)C1=CC2=C(C=CC=C2O1)N3CCN(CC3)CC4=CC=CC=C4
+      count: 5
+      example_row_indices:
+      - 230
+      - 231
+      - 232
+      - 233
+      - 234
+    - smiles: CCOC(=O)C1=CC2=C(O1)C(=CC=C2)N3CCN(CC3)CCC4=CC5=C(C=C4)N(CC5)C(=O)C
+      count: 2
+      example_row_indices:
+      - 95
+      - 96
+    - smiles: CCOC(=O)C1=CC2=C(O1)C(=CC=C2)N3CCN(CC3)CCC4=CC=CC=N4
+      count: 5
+      example_row_indices:
+      - 97
+      - 98
+      - 99
+      - 100
+      - 101
+    - smiles: CCOC(=O)C1=CC=C(C=C1)N2CCCCC2
+      count: 1
+      example_row_indices:
+      - 393
+    - smiles: CCOC(=O)C1=CC=C(C=C1)NC2=CC=CC=C2Br
+      count: 1
+      example_row_indices:
+      - 509
+    - smiles: CCOC(=O)C1=CN=C(C=C1)NC2=NC=C(O2)C(=O)OCC
+      count: 1
+      example_row_indices:
+      - 491
+    - smiles: CCOC(=O)C1=CN=C(O1)NC2=CC=CC(=N2)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 486
+    - smiles: CCOC(=O)C1=CN=C(O1)NC2=CC=CC=N2
+      count: 1
+      example_row_indices:
+      - 488
+    - smiles: CCOC(=O)C1=CN=C(O1)NC2=NC(=CN=C2)C#N
+      count: 1
+      example_row_indices:
+      - 492
+    - smiles: CCOC(=O)C1=CN=C(O1)NC2=NC=C(C=C2)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 619
+    - smiles: CCOC(=O)C1=CN=C(O1)NC2=NC=C(C=C2)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 489
+    - smiles: CCOC(=O)C1=CN=C(O1)NC2=NC=CC(=C2)C#N
+      count: 1
+      example_row_indices:
+      - 487
+    - smiles: CCOC(=O)C1=CN=C(O1)NC2=NC=CC(=C2)Cl
+      count: 12
+      example_row_indices:
+      - 344
+      - 345
+      - 346
+      - 347
+      - 348
+    - smiles: CCOC(=O)C1=CN=C2C=CC(=CC2=C1NC3=C(C=C(C=C3)F)F)N4CCN(CC4)C
+      count: 1
+      example_row_indices:
+      - 561
+    - smiles: CCOC(=O)C1=COC(=N1)NC2=NC=CC(=C2)Cl
+      count: 1
+      example_row_indices:
+      - 377
+    - smiles: CCOC(=O)C1CC1C(=O)C2=C(C=C(C=N2)N(CC3CC3)C4=CC=C(C5=CC=CC=C54)Cl)OC
+      count: 1
+      example_row_indices:
+      - 506
+    - smiles: CCOC(=O)C1CCN(CC1)C2=CC=C(C=C2)Br
+      count: 1
+      example_row_indices:
+      - 517
+    - smiles: CCOC(=O)C1CCN(CC1)C2=CC=C(C=C2)C(=O)OC(C)(C)C
+      count: 1
+      example_row_indices:
+      - 744
+    - smiles: CCOC(=O)C1CCN(CC1)C2=CN=C(C=C2C)Cl
+      count: 2
+      example_row_indices:
+      - 526
+      - 527
+    - smiles: CCOC(=O)CNC1=C(C=C(C=N1)F)N
+      count: 1
+      example_row_indices:
+      - 465
+    - smiles: CCOC1=C(C=C(C=C1)N2CCN(CC2)C(=O)OC(C)(C)C)Cl
+      count: 1
+      example_row_indices:
+      - 647
+    - smiles: CCOC1=C(C=C(C=C1)N2CCN[C@@H](C2)C)OC
+      count: 1
+      example_row_indices:
+      - 652
+    - smiles: CCOC1=C(C=C2C(=C1)N=CC(=C2NC3=C(C=C(C=C3)F)F)C(=O)OCC)N4CCN(CC4)C(C)C
+      count: 1
+      example_row_indices:
+      - 0
+    - smiles: CCONC(=O)C1=CC=CC=C1NC2=CC(=NC=C2C(F)(F)F)NC3=CC(=NN3C)C
+      count: 1
+      example_row_indices:
+      - 209
+    - smiles: CC[C@H]1CN(C(=O)O1)C2=NC(=NC(=C2CC3=CC=C(C=C3)CC#N)C)/N=C/N(C)C
+      count: 1
+      example_row_indices:
+      - 87
+    - smiles: CN(C)C(=O)C1=CC2=C(C(=C1)C3CCCN3C4=CC(=CC(=C4)C#N)F)OC(=CC2=O)N5CCOCC5
+      count: 1
+      example_row_indices:
+      - 458
+    - smiles: CN(C)C(=O)C1=CC2=C(C(=C1)C3CCCN3C4=CC(=CC(=C4)F)F)OC(=CC2=O)N5CCOCC5
+      count: 3
+      example_row_indices:
+      - 391
+      - 392
+      - 595
+    - smiles: CN(C)C(=O)C1=CC2=C(C(=C1)C3CCCN3C4=CC(=CC=C4)F)OC(=CC2=O)N5CCOCC5
+      count: 1
+      example_row_indices:
+      - 406
+    - smiles: CN(C)C(=O)C1=CC2=C(C(=C1)C3CCCN3C4=CC(=CC=C4)OC)OC(=CC2=O)N5CCOCC5
+      count: 1
+      example_row_indices:
+      - 400
+    - smiles: CN(C)C(=O)C1=CC2=C(C(=C1)C3CCCN3C4=CC=C(C=C4)F)OC(=CC2=O)N5CCOCC5
+      count: 5
+      example_row_indices:
+      - 460
+      - 461
+      - 462
+      - 463
+      - 464
+    - smiles: CN(C)C(=O)C1=CC2=C(C(=C1)C3CCCN3C4=CC=CC=C4)OC(=CC2=O)N5CCOCC5
+      count: 1
+      example_row_indices:
+      - 459
+    - smiles: CN(C)C(=O)C1=CC2=C(O1)C(=CC=C2)N3CCN(CC3)CC4=CC=CC=C4
+      count: 1
+      example_row_indices:
+      - 221
+    - smiles: CN(C)C(=O)C1=CC=C(C=C1)NC2=NN3CCCC(C3=N2)C4=CC=C(C=C4)F
+      count: 1
+      example_row_indices:
+      - 457
+    - smiles: CN(C)C(=O)CC1=CC=C(C=C1)NC2=NN3CCCC(C3=N2)C4=CC=C(C=C4)F
+      count: 1
+      example_row_indices:
+      - 420
+    - smiles: CN(C)CCNC1=CC(=C(C=C1)Br)OC
+      count: 1
+      example_row_indices:
+      - 648
+    - smiles: CN(C)CCNC1=CC=CC=C1
+      count: 1
+      example_row_indices:
+      - 134
+    - smiles: CN(C)[C@H]1CCN(C1)C2=C(C=CC(=C2)Cl)C#N
+      count: 1
+      example_row_indices:
+      - 80
+    - smiles: CN(C1=CC2=C(C=C1)SC3=C2C=CC=C3C4=CC=CN5C4=NC(=CC5=O)N6CCOCC6)C(=O)CN7CCOCC7
+      count: 2
+      example_row_indices:
+      - 199
+      - 200
+    - smiles: CN(C1=CC=C(C=C1)F)C2=CC(=CN=C2)Br
+      count: 2
+      example_row_indices:
+      - 258
+      - 259
+    - smiles: CN(C1=CC=C(C=C1)F)C2=NC=CC(=C2)C(=O)OC
+      count: 2
+      example_row_indices:
+      - 583
+      - 584
+    - smiles: CN(C1=CC=C(C=C1)F)C2=NC=CC(=C2)CO
+      count: 1
+      example_row_indices:
+      - 257
+    - smiles: CN(CCOC)C1=CC(=CN=C1)Br
+      count: 1
+      example_row_indices:
+      - 397
+    - smiles: CN1C(=C(C=N1)C(=O)N2CCC(CC2)NC3=CN=NC4=CC=CC=C43)Cl
+      count: 1
+      example_row_indices:
+      - 612
+    - smiles: CN1C(=CC=N1)CCOC2=CC=C(C=C2)C3CCN(CC3)C4=CN5C(=NN=C5C(F)(F)F)C=C4
+      count: 1
+      example_row_indices:
+      - 131
+    - smiles: CN1C(=CC=N1)NC2=NC=CC(=C2)Cl
+      count: 7
+      example_row_indices:
+      - 148
+      - 149
+      - 150
+      - 151
+      - 152
+    - smiles: CN1C=NC2=C1C=C(C(=C2F)NC3=CC=CC=C3)C(=O)OC
+      count: 3
+      example_row_indices:
+      - 1
+      - 2
+      - 3
+    - smiles: CN1CC(C1)NC2=C(C=CC=N2)Cl
+      count: 1
+      example_row_indices:
+      - 644
+    - smiles: CN1CC(CCC1=O)NC2=C(C=CC=N2)Cl
+      count: 1
+      example_row_indices:
+      - 625
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)NC3=CC=C(C=C3)N4C=CN=C4)C5=CC=CC=C5
+      count: 1
+      example_row_indices:
+      - 9
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)NC3=NC(=C(C=C3)C4=CN(C(=O)C=C4)C)OC)CC(F)(F)F
+      count: 1
+      example_row_indices:
+      - 373
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)NC3=NC(=C(C=C3)C4=CN(N=C4)C)OC)C5CC(C5)(F)F
+      count: 1
+      example_row_indices:
+      - 421
+    - smiles: CN1CC(OC2=C(C1)C=CC(=N2)NC3=NC(=C(C=C3)C4=CN(N=C4)C)OC)CC(F)(F)F
+      count: 4
+      example_row_indices:
+      - 409
+      - 410
+      - 411
+      - 412
+    - smiles: CN1CC(OC2=C(C1=O)C=CC(=N2)NC3=CC=C(C=C3)N4C=CN=C4)C5=CC=CC=C5
+      count: 1
+      example_row_indices:
+      - 484
+    - smiles: CN1CCC(CC1)CNC2=NN3C(=NC=C3C4=CC(=CC=C4)OC(F)(F)F)C=C2
+      count: 4
+      example_row_indices:
+      - 103
+      - 120
+      - 366
+      - 367
+    - smiles: CN1CCC2=C(C1=O)C(=CC=C2)NC3=CC(=NC=C3Cl)Cl
+      count: 4
+      example_row_indices:
+      - 21
+      - 22
+      - 23
+      - 24
+    - smiles: CN1CCC2=C(C1=O)C(=CC=C2)NC3=CC(=NC=C3Cl)NC4=CC=NN4C
+      count: 5
+      example_row_indices:
+      - 122
+      - 123
+      - 124
+      - 125
+      - 126
+    - smiles: CN1CCC[C@@H]1COC2=CN=C(C=C2)NC3=CC(=NC=N3)N4C=NC5=CC=CC=C54
+      count: 1
+      example_row_indices:
+      - 452
+    - smiles: CN1CCN(CC1)C2=C(C=C(C=C2)Cl)OC
+      count: 2
+      example_row_indices:
+      - 665
+      - 700
+    - smiles: CN1CCN(CC1)C2=C(N=CC=C2)COC3=CC=C(C=C3)C(=O)OC
+      count: 1
+      example_row_indices:
+      - 79
+    - smiles: CN1CCN(CC1)C2=C3CN(CCC3=C(C=C2)OC)C(=O)CC4=CC=C(C=C4)N5CCCCC5
+      count: 1
+      example_row_indices:
+      - 611
+    - smiles: CN1CCN(CC1)C2=CC(=CC(=C2)C(=O)OC)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 718
+    - smiles: CN1CCN(CC1)C2=CC(=CC(=C2)OC)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 630
+    - smiles: CN1CCN(CC1)C2=CC(=CN=C2)Br
+      count: 1
+      example_row_indices:
+      - 300
+    - smiles: CN1CCN(CC1)C2=CC=C(C=C2)O
+      count: 1
+      example_row_indices:
+      - 242
+    - smiles: CN1CCN(CC1)C2=NC(=NN2C)Br
+      count: 1
+      example_row_indices:
+      - 552
+    - smiles: CN1C[C@H](OC2=C(C1)C=CC(=N2)NC3=NC(=C(C=C3)C4=CN(C(=O)C=C4)C)OC)C5=CC=CC=C5
+      count: 1
+      example_row_indices:
+      - 407
+    - smiles: CN1C[C@H](OC2=C(C1)C=CC(=N2)NC3=NC(=C(C=C3)C4=CN(N=C4)C)OC)C5=CC=CC=C5
+      count: 12
+      example_row_indices:
+      - 343
+      - 378
+      - 379
+      - 380
+      - 381
+    - smiles: CNC(=O)C1=C(C=C(C=C1)F)NC2=CC(=NC=C2Cl)Cl
+      count: 3
+      example_row_indices:
+      - 88
+      - 89
+      - 90
+    - smiles: CNC(=O)C1=C(C=CC(=C1)F)NC2=CC(=NC=C2Cl)Cl
+      count: 1
+      example_row_indices:
+      - 71
+    - smiles: CNC(=O)C1=C(C=CC=C1OC)NC2=CC(=NC=C2C(F)(F)F)Cl
+      count: 3
+      example_row_indices:
+      - 161
+      - 162
+      - 163
+    - smiles: CNC(=O)C1=CC(=NC(=C1)Cl)NC2=CC=CC=C2
+      count: 1
+      example_row_indices:
+      - 649
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2C#N)NC3=CC(=NN3C)OC
+      count: 1
+      example_row_indices:
+      - 33
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2C(F)(F)F)Cl
+      count: 3
+      example_row_indices:
+      - 66
+      - 67
+      - 68
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2C(F)(F)F)NC3=CC=NN3C
+      count: 1
+      example_row_indices:
+      - 65
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2C(F)(F)F)NC3=CN(N=C3C(F)(F)F)C
+      count: 1
+      example_row_indices:
+      - 179
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2Cl)Cl
+      count: 2
+      example_row_indices:
+      - 27
+      - 28
+    - smiles: CNC(=O)C1=CC=CC=C1NC2=CC(=NC=C2Cl)NC3=C(C=C(C=C3)N4CCOCC4)OC
+      count: 1
+      example_row_indices:
+      - 82
+    - smiles: CNC1=CN=CC(=C1)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 180
+      - 181
+    - smiles: CNC1=NC2=C(S1)C=C(C=C2)[N+](=O)[O-]
+      count: 1
+      example_row_indices:
+      - 297
+    - smiles: COC(=O)C1=C(C=CC(=C1)Br)N2CCOCC2
+      count: 1
+      example_row_indices:
+      - 404
+    - smiles: COC(=O)C1=CC(=C(C=C1)N2CCOCC2)Br
+      count: 1
+      example_row_indices:
+      - 405
+    - smiles: COC(=O)C1=CC(=CC(=C1)Br)NC2=CC=CC=C2
+      count: 2
+      example_row_indices:
+      - 480
+      - 523
+    - smiles: COC(=O)C1=CC(=CC(=C1)N2CCOCC2)C(=O)OC
+      count: 1
+      example_row_indices:
+      - 395
+    - smiles: COC(=O)C1=CC2=C(C(=C1)C3CCCN3C4=CC(=CC(=C4)F)F)OC(=CC2=O)N5CCOCC5
+      count: 10
+      example_row_indices:
+      - 374
+      - 375
+      - 376
+      - 437
+      - 438
+    - smiles: COC(=O)C1=CC2=C(C(=C1)C3CCCN3C4=CC(=CC=C4)F)OC(=CC2=O)N5CCOCC5
+      count: 2
+      example_row_indices:
+      - 414
+      - 472
+    - smiles: COC(=O)C1=CC=C(C=C1)N2CCC3=CC=CC=C3C2
+      count: 1
+      example_row_indices:
+      - 483
+    - smiles: COC(=O)C1=CC=C(C=C1)NCC2=CC(=CC(=C2)F)F
+      count: 2
+      example_row_indices:
+      - 481
+      - 482
+    - smiles: COC(=O)C1CCN(C1)C2=CC=C(C=C2)Br
+      count: 2
+      example_row_indices:
+      - 518
+      - 519
+    - smiles: COC(=O)CC1=NC=CC(=C1)N2CC(C2)(F)F
+      count: 1
+      example_row_indices:
+      - 555
+    - smiles: COC(=O)CN1CCN(CC1)C2=CC=C(C=C2)Br
+      count: 1
+      example_row_indices:
+      - 474
+    - smiles: COC1=C(C=C(C(=C1)Cl)C(=O)OC)N2CCOCC2
+      count: 3
+      example_row_indices:
+      - 415
+      - 416
+      - 417
+    - smiles: COC1=C(C=C(C=C1)NCC2CCOCC2)Br
+      count: 2
+      example_row_indices:
+      - 470
+      - 471
+    - smiles: COC1=C(C=C(C=C1)[N+](=O)[O-])NC2=NC=C(C(=N2)C3=C4C=CC=CN4N=C3)Cl
+      count: 2
+      example_row_indices:
+      - 418
+      - 419
+    - smiles: COC1=C(C=C(C=C1)[N+](=O)[O-])NC2=NC=C(C(=N2)C3=CNC4=CC=CC=C43)Cl
+      count: 1
+      example_row_indices:
+      - 298
+    - smiles: COC1=C(C=CC(=C1)C=O)NC2=NC=C(C(=N2)C3=CN=C4N3C=CC=C4)Cl
+      count: 1
+      example_row_indices:
+      - 13
+    - smiles: COC1=C(C=CC(=C1)F)C2=NC(=NC=C2F)NC3=CC(=CC(=C3)CS(=O)(=O)C)F
+      count: 1
+      example_row_indices:
+      - 565
+    - smiles: COC1=C(C=CC(=C1)F)C2=NC(=NC=C2F)NC3=CC=CC(=C3)CS(=O)(=O)C
+      count: 1
+      example_row_indices:
+      - 496
+    - smiles: COC1=C(C=CC(=C1)N2CCN(CC2)CCO)NC3=NC=C(C(=N3)C4=C5C=CC=CN5N=C4)Cl
+      count: 1
+      example_row_indices:
+      - 628
+    - smiles: COC1=C(C=CC(=C1)N2CCNCC2)OCC3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 569
+    - smiles: COC1=C(C=CC(=C1)NC2=NC3=C(CN(C[C@H](O3)C4=CC=CC=C4)CCO)C=C2)C#N
+      count: 1
+      example_row_indices:
+      - 266
+    - smiles: COC1=C(C=CC(=C1)NC2COC2)Br
+      count: 1
+      example_row_indices:
+      - 631
+    - smiles: COC1=C(C=CC(=C1)OC2CNC2)NC3=NC=C(C(=N3)C4=CN=C5N4C=CC=C5)Cl
+      count: 1
+      example_row_indices:
+      - 63
+    - smiles: COC1=C2C(=CC=C1)SC(=N2)NC3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 61
+    - smiles: COC1=CC(=CC=C1)OC2CCN(CC2)C3=CN4C(=NN=C4C(F)(F)F)C=C3
+      count: 1
+      example_row_indices:
+      - 130
+    - smiles: COC1=CC(=NC=C1)NC2=CC=C(C=C2)S(=O)(=O)N
+      count: 1
+      example_row_indices:
+      - 398
+    - smiles: COC1=CC=C(C=C1)CNC2=CC(=NC=C2)NC3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 642
+    - smiles: COC1=CC=C(C=C1)NC2=NC=CC(=C2)NCC3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 530
+    - smiles: COC1=CC=C(C=C1)NCC2CCOCC2
+      count: 1
+      example_row_indices:
+      - 535
+    - smiles: COC1=CC=CC(=C1)CNC2=CC(=NC=C2)NC3=CC=CC=C3
+      count: 1
+      example_row_indices:
+      - 599
+    - smiles: COC1=CC=CC(=C1)N2CCC(CC2)C#N
+      count: 2
+      example_row_indices:
+      - 294
+      - 295
+    - smiles: COC1=CC=CC(=C1)N2CCC(CC2)C(=O)N
+      count: 1
+      example_row_indices:
+      - 296
+    - smiles: COC1=CC=CC(=C1)N2CCCC2C3=CC(=CC4=C3OC(=CC4=O)N5CCOCC5)C(=O)OC
+      count: 1
+      example_row_indices:
+      - 473
+    - smiles: COC1=CC=CC(=C1)NC2=CC=CC(=C2)C(F)(F)F
+      count: 1
+      example_row_indices:
+      - 659
+    - smiles: COC1=CC=CC(=N1)N2CCC3(CC2)OCCO3
+      count: 1
+      example_row_indices:
+      - 479
+    - smiles: COC1=CC=CC=C1CNC2=CC(=NC=C2)NC3=CC=CC=C3
+      count: 2
+      example_row_indices:
+      - 528
+      - 529
+    - smiles: COC1=CN=CC(=C1)N2CCC3(CC2)OCCO3
+      count: 1
+      example_row_indices:
+      - 453
+    - smiles: COC1=NC(=NC=C1Br)NC2=C(C=CC(=C2)C(F)(F)F)F
+      count: 3
+      example_row_indices:
+      - 664
+      - 728
+      - 729
+    - smiles: COC1=NC(=NC=C1Br)NC2=CC=CC(=C2)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 585
+      - 610
+    - smiles: COCCOC1=CC(=CC(=C1)[N+](=O)[O-])N2CCOCC2
+      count: 3
+      example_row_indices:
+      - 184
+      - 185
+      - 186
+    - smiles: CONC(=O)C1=C(C=CC(=C1)F)NC2=CC(=NC=C2C(F)(F)F)Cl
+      count: 1
+      example_row_indices:
+      - 252
+    - smiles: CONC(=O)C1=CC=CC=C1NC2=CC(=NC=C2Cl)Cl
+      count: 2
+      example_row_indices:
+      - 25
+      - 26
+    - smiles: CO[C@@H]1CCN(C1)C2=CC(=CN=C2)Br
+      count: 1
+      example_row_indices:
+      - 326
+    - smiles: CS(=O)(=O)C1=CC=C(C=C1)NC2=CN=CC(=N2)Cl
+      count: 4
+      example_row_indices:
+      - 178
+      - 260
+      - 261
+      - 293
+    - smiles: CS(=O)(=O)CC1=C(C=CC(=C1)NC2=NC3=C(C=NN3C(=C2)NC4CC4)C#N)Cl
+      count: 1
+      example_row_indices:
+      - 669
+    - smiles: C[C@@H]1CN(CCN1)C2=C(C=C(C=C2)F)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 498
+      - 499
+    - smiles: C[C@@H]1CN(CCN1)C2=CC(=C(C=C2)OCC3=CC=CC=C3)OC
+      count: 1
+      example_row_indices:
+      - 208
+    - smiles: C[C@@H]1CN(CCN1)C2=CC=C(C=C2)C3=CC(=O)C4=CC=CC(=C4O3)CO
+      count: 1
+      example_row_indices:
+      - 604
+    - smiles: C[C@@H]1CN(CCN1C(=O)OC(C)(C)C)C2=CC=C(C=C2)S(=O)(=O)C
+      count: 1
+      example_row_indices:
+      - 690
+    - smiles: C[C@@H]1CN(CCN1C2=CC=C(C=C2)O)C(=O)OC(C)(C)C
+      count: 1
+      example_row_indices:
+      - 663
+    - smiles: C[C@@H]1CN(CCN1C2=CC=C(C=C2)OCC3=CC=CC=C3)C(=O)OC(C)(C)C
+      count: 4
+      example_row_indices:
+      - 105
+      - 106
+      - 107
+      - 108
+    - smiles: C[C@@H]1CN(CCN1C2=CN=CC=C2)C(=O)OC(C)(C)C
+      count: 3
+      example_row_indices:
+      - 510
+      - 511
+      - 512
+    - smiles: C[C@@H]1CN(C[C@@H](N1)C)C2=CC(=C(C=C2)OC)[N+](=O)[O-]
+      count: 2
+      example_row_indices:
+      - 224
+      - 225
+    - smiles: C[C@@H]1CN(C[C@@H](N1)C)C2=CC=C(C=C2)Br
+      count: 2
+      example_row_indices:
+      - 434
+      - 435
+    - smiles: C[C@H](C1=CC=C(C=C1)NC2=NC=C3C=C(C=C(C3=N2)Cl)C4=CC=NC=C4)NC(=O)OC(C)(C)C
+      count: 1
+      example_row_indices:
+      - 110
+    - smiles: C[C@H](CNC1=CC(=C(C=C1)OC)C#N)O[Si](C)(C)C(C)(C)C
+      count: 3
+      example_row_indices:
+      - 305
+      - 306
+      - 307
+    - smiles: C[C@H](CNC1=CC(=C(C=C1)OCC2=CC=CC=C2)F)O[Si](C)(C)C(C)(C)C
+      count: 10
+      example_row_indices:
+      - 327
+      - 328
+      - 329
+      - 330
+      - 331
+    - smiles: C[C@H](CNC1=CC=C(C=C1)C2=C(C=CC=C2F)F)O[Si](C)(C)C(C)(C)C
+      count: 1
+      example_row_indices:
+      - 436
+    - smiles: C[C@H](CNC1=CC=C(C=C1)OCC2=CC=CC=C2)O[Si](C)(C)C(C)(C)C
+      count: 2
+      example_row_indices:
+      - 337
+      - 338
+    - smiles: C[C@H]1CN(CCN1C)C2=NC=C(C(=C2)C)C3=CC=C(C=C3)C4=NC5=C(C=CC=C5C(=O)N4)CO
+      count: 2
+      example_row_indices:
+      - 655
+      - 656
+    - smiles: C[C@H]1C[C@@H](CCN1C(=O)C2=C(N(N=C2)C)Cl)NC3=CC(=O)NC4=CC(=C(C=C43)F)F
+      count: 3
+      example_row_indices:
+      - 532
+      - 533
+      - 638
+  - role: solvent
+    generic_symbol: Solvent
+    unique_smiles_count: 15
+    components:
+    - smiles: C1=CC=C(C=C1)C(F)(F)F
+      count: 2
+      example_row_indices:
+      - 166
+      - 167
+    - smiles: C1CCOC1
+      count: 13
+      example_row_indices:
+      - 105
+      - 107
+      - 216
+      - 478
+      - 551
+    - smiles: C1COCCO1
+      count: 313
+      example_row_indices:
+      - 0
+      - 8
+      - 12
+      - 13
+      - 21
+    - smiles: CC#N
+      count: 1
+      example_row_indices:
+      - 448
+    - smiles: CC(=O)N(C)C
+      count: 70
+      example_row_indices:
+      - 4
+      - 5
+      - 6
+      - 7
+      - 20
+    - smiles: CC(C)(C)O
+      count: 2
+      example_row_indices:
+      - 477
+      - 666
+    - smiles: CC1=CC=C(C=C1)C
+      count: 3
+      example_row_indices:
+      - 119
+      - 130
+      - 131
+    - smiles: CC1=CC=CC=C1
+      count: 254
+      example_row_indices:
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+    - smiles: CC1CCCO1
+      count: 1
+      example_row_indices:
+      - 588
+    - smiles: CCCCOC(=O)C
+      count: 1
+      example_row_indices:
+      - 55
+    - smiles: CCO
+      count: 1
+      example_row_indices:
+      - 228
+    - smiles: CN(C)C=O
+      count: 10
+      example_row_indices:
+      - 134
+      - 202
+      - 244
+      - 246
+      - 247
+    - smiles: CN1CCCC1=O
+      count: 2
+      example_row_indices:
+      - 369
+      - 398
+    - smiles: COC1=CC=CC=C1
+      count: 8
+      example_row_indices:
+      - 1
+      - 2
+      - 3
+      - 113
+      - 344
+    - smiles: COCCOC
+      count: 69
+      example_row_indices:
+      - 9
+      - 10
+      - 11
+      - 35
+      - 36
+  first_three_reaction_examples:
+  - dataset_row_index: 0
+    source_id: '0'
+    concrete_components:
+      amine:
+      - CC(C)N1CCNCC1
+      aryl_halide:
+      - CCOC1=C(C=C2C(=C1)N=CC(=C2NC3=C(C=C(C=C3)F)F)C(=O)OCC)Br
+      ligand:
+      - C1=CC=C(C=C1)P(C2=CC=CC=C2)C3=C(C4=CC=CC=C4C=C3)C5=C(C=CC6=CC=CC=C65)P(C7=CC=CC=C7)C8=CC=CC=C8
+      base:
+      - C(=O)([O-])[O-].[Cs+].[Cs+]
+      solvent:
+      - C1COCCO1
+      product:
+      - CCOC1=C(C=C2C(=C1)N=CC(=C2NC3=C(C=C(C=C3)F)F)C(=O)OCC)N4CCN(CC4)C(C)C
+    generic_components:
+      amine: R-NH2_or_R2NH
+      aryl_halide: Ar-X
+      ligand: L
+      base: Base
+      solvent: Solvent
+      product: Product
+    generic_reaction_template: Ar-X.R-NH2_or_R2NH.L.Base.Solvent>>Ar-NR
+  - dataset_row_index: 1
+    source_id: '1'
+    concrete_components:
+      amine:
+      - CN1C=NC2=C1C=C(C(=C2F)N)C(=O)OC
+      aryl_halide:
+      - C1=CC=C(C=C1)I
+      ligand:
+      - CC1(C2=C(C(=CC=C2)P(C3=CC=CC=C3)C4=CC=CC=C4)OC5=C1C=CC=C5P(C6=CC=CC=C6)C7=CC=CC=C7)C
+      base:
+      - C(=O)([O-])[O-].[Cs+].[Cs+]
+      solvent:
+      - COC1=CC=CC=C1
+      product:
+      - CN1C=NC2=C1C=C(C(=C2F)NC3=CC=CC=C3)C(=O)OC
+    generic_components:
+      amine: R-NH2_or_R2NH
+      aryl_halide: Ar-X
+      ligand: L
+      base: Base
+      solvent: Solvent
+      product: Product
+    generic_reaction_template: Ar-X.R-NH2_or_R2NH.L.Base.Solvent>>Ar-NR
+  - dataset_row_index: 2
+    source_id: '3'
+    concrete_components:
+      amine:
+      - CN1C=NC2=C1C=C(C(=C2F)N)C(=O)OC
+      aryl_halide:
+      - C1=CC=C(C=C1)I
+      ligand:
+      - CC1(C2=C(C(=CC=C2)P(C3=CC=CC=C3)C4=CC=CC=C4)OC5=C1C=CC=C5P(C6=CC=CC=C6)C7=CC=CC=C7)C
+      base:
+      - C(=O)([O-])[O-].[Cs+].[Cs+]
+      solvent:
+      - COC1=CC=CC=C1
+      product:
+      - CN1C=NC2=C1C=C(C(=C2F)NC3=CC=CC=C3)C(=O)OC
+    generic_components:
+      amine: R-NH2_or_R2NH
+      aryl_halide: Ar-X
+      ligand: L
+      base: Base
+      solvent: Solvent
+      product: Product
+    generic_reaction_template: Ar-X.R-NH2_or_R2NH.L.Base.Solvent>>Ar-NR
+- dataset_key: SU_NO
+  source_path: datasets/su_no_rdkit.csv
+  file_type: csv
+  reaction_family: Suzuki-Miyaura cross-coupling
+  row_count: 4543
+  generic_reaction_template: Ar-X.Ar-B(OH)2_or_Ar-B(OR)2.L.Base.Solvent>>Ar-Ar
+  component_roles:
+  - role: aryl_halide
+    generic_symbol: Ar-X
+    unique_smiles_count: 3
+    components:
+    - smiles: Clc1ccc2ncccc2c1
+      count: 924
+      example_row_indices:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+    - smiles: Ic1ccc2ncccc2c1
+      count: 924
+      example_row_indices:
+      - 924
+      - 925
+      - 926
+      - 927
+      - 928
+    - smiles: O=S(=O)(Oc1cnc2ccccc2c1)C(F)(F)F
+      count: 924
+      example_row_indices:
+      - 616
+      - 617
+      - 618
+      - 619
+      - 620
+  - role: base
+    generic_symbol: Base
+    unique_smiles_count: 7
+    components:
+    - smiles: C(=O)(O)[O-].[Na+]
+      count: 649
+      example_row_indices:
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+    - smiles: CCN(CC)CC
+      count: 649
+      example_row_indices:
+      - 66
+      - 67
+      - 68
+      - 69
+      - 70
+    - smiles: '[F-].[Cs+]'
+      count: 649
+      example_row_indices:
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+    - smiles: '[Li+].CC(C)(C)[O-]'
+      count: 649
+      example_row_indices:
+      - 55
+      - 56
+      - 57
+      - 58
+      - 59
+    - smiles: '[O-]P(=O)([O-])[O-].[K+].[K+].[K+]'
+      count: 649
+      example_row_indices:
+      - 33
+      - 34
+      - 35
+      - 36
+      - 37
+    - smiles: '[OH-].[K+]'
+      count: 649
+      example_row_indices:
+      - 44
+      - 45
+      - 46
+      - 47
+      - 48
+    - smiles: '[OH-].[Na+]'
+      count: 649
+      example_row_indices:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+  - role: counterion
+    generic_symbol: Counterion
+    unique_smiles_count: 1
+    components:
+    - smiles: '[K+]'
+      count: 1232
+      example_row_indices:
+      - 2464
+      - 2465
+      - 2466
+      - 2467
+      - 2468
+  - role: ligand
+    generic_symbol: L
+    unique_smiles_count: 12
+    components:
+    - smiles: C1=C[C@H]2[Fe][C@@H]1[C]2P(c1ccccc1)c1ccccc1
+      count: 413
+      example_row_indices:
+      - 9
+      - 20
+      - 31
+      - 42
+      - 53
+    - smiles: C1CCC(P(C2CCCCC2)C2CCCCC2)CC1
+      count: 413
+      example_row_indices:
+      - 3
+      - 14
+      - 25
+      - 36
+      - 47
+    - smiles: CC(C)(C)P(C(C)(C)C)C(C)(C)C
+      count: 413
+      example_row_indices:
+      - 0
+      - 11
+      - 22
+      - 33
+      - 44
+    - smiles: CC(C)(C)P(C1=CCC=C1)C(C)(C)C
+      count: 413
+      example_row_indices:
+      - 9
+      - 20
+      - 31
+      - 42
+      - 53
+    - smiles: CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C
+      count: 413
+      example_row_indices:
+      - 7
+      - 18
+      - 29
+      - 40
+      - 51
+    - smiles: CC(C)c1cc(C(C)C)c(-c2ccccc2P(C2CCCCC2)C2CCCCC2)c(C(C)C)c1
+      count: 413
+      example_row_indices:
+      - 8
+      - 19
+      - 30
+      - 41
+      - 52
+    - smiles: CC1(C)c2cccc(P(c3ccccc3)c3ccccc3)c2Oc2c(P(c3ccccc3)c3ccccc3)cccc21
+      count: 413
+      example_row_indices:
+      - 10
+      - 21
+      - 32
+      - 43
+      - 54
+    - smiles: CCCCP(C12CC3CC(CC(C3)C1)C2)C12CC3CC(CC(C3)C1)C2
+      count: 413
+      example_row_indices:
+      - 5
+      - 16
+      - 27
+      - 38
+      - 49
+    - smiles: CN(C)Cc1ccc(P(C(C)(C)C)C(C)(C)C)cc1
+      count: 413
+      example_row_indices:
+      - 2
+      - 13
+      - 24
+      - 35
+      - 46
+    - smiles: COc1cccc(OC)c1-c1ccccc1P(C1CCCCC1)C1CCCCC1
+      count: 413
+      example_row_indices:
+      - 6
+      - 17
+      - 28
+      - 39
+      - 50
+    - smiles: Cc1ccccc1P(c1ccccc1C)c1ccccc1C
+      count: 413
+      example_row_indices:
+      - 4
+      - 15
+      - 26
+      - 37
+      - 48
+    - smiles: c1ccc(P(c2ccccc2)c2ccccc2)cc1
+      count: 413
+      example_row_indices:
+      - 1
+      - 12
+      - 23
+      - 34
+      - 45
+  - role: organoboron
+    generic_symbol: Ar-B(OH)2_or_Ar-B(OR)2
+    unique_smiles_count: 7
+    components:
+    - smiles: Brc1ccc2ncccc2c1
+      count: 1155
+      example_row_indices:
+      - 308
+      - 309
+      - 310
+      - 311
+      - 312
+    - smiles: CC1(C)OB(c2ccc3ncccc3c2)OC1(C)C
+      count: 308
+      example_row_indices:
+      - 4235
+      - 4236
+      - 4237
+      - 4238
+      - 4239
+    - smiles: Cc1ccc2c(cnn2C2CCCCO2)c1B(O)O
+      count: 1232
+      example_row_indices:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+    - smiles: Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1
+      count: 1232
+      example_row_indices:
+      - 1232
+      - 1233
+      - 1234
+      - 1235
+      - 1236
+    - smiles: Cc1ccc2c(cnn2C2CCCCO2)c1Br
+      count: 847
+      example_row_indices:
+      - 3696
+      - 3697
+      - 3698
+      - 3699
+      - 3700
+    - smiles: Cc1ccc2c(cnn2C2CCCCO2)c1[B-](F)(F)F
+      count: 1232
+      example_row_indices:
+      - 2464
+      - 2465
+      - 2466
+      - 2467
+      - 2468
+    - smiles: F[B-](F)(F)c1ccc2ncccc2c1
+      count: 308
+      example_row_indices:
+      - 3927
+      - 3928
+      - 3929
+      - 3930
+      - 3931
+  - role: solvent
+    generic_symbol: Solvent
+    unique_smiles_count: 4
+    components:
+    - smiles: C1CCOC1
+      count: 1078
+      example_row_indices:
+      - 77
+      - 78
+      - 79
+      - 80
+      - 81
+    - smiles: CC#N
+      count: 1155
+      example_row_indices:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+    - smiles: CN(C)C=O
+      count: 1155
+      example_row_indices:
+      - 154
+      - 155
+      - 156
+      - 157
+      - 158
+    - smiles: CO
+      count: 1155
+      example_row_indices:
+      - 231
+      - 232
+      - 233
+      - 234
+      - 235
+  first_three_reaction_examples:
+  - dataset_row_index: 0
+    source_id: '1'
+    concrete_components:
+      aryl_halide:
+      - Clc1ccc2ncccc2c1
+      organoboron:
+      - Cc1ccc2c(cnn2C2CCCCO2)c1B(O)O
+      ligand:
+      - CC(C)(C)P(C(C)(C)C)C(C)(C)C
+      base:
+      - '[OH-].[Na+]'
+      solvent:
+      - CC#N
+    generic_components:
+      aryl_halide: Ar-X
+      organoboron: Ar-B(OH)2_or_Ar-B(OR)2
+      ligand: L
+      base: Base
+      solvent: Solvent
+    generic_reaction_template: Ar-X.Ar-B(OH)2_or_Ar-B(OR)2.L.Base.Solvent>>Ar-Ar
+  - dataset_row_index: 1
+    source_id: '2'
+    concrete_components:
+      aryl_halide:
+      - Clc1ccc2ncccc2c1
+      organoboron:
+      - Cc1ccc2c(cnn2C2CCCCO2)c1B(O)O
+      ligand:
+      - c1ccc(P(c2ccccc2)c2ccccc2)cc1
+      base:
+      - '[OH-].[Na+]'
+      solvent:
+      - CC#N
+    generic_components:
+      aryl_halide: Ar-X
+      organoboron: Ar-B(OH)2_or_Ar-B(OR)2
+      ligand: L
+      base: Base
+      solvent: Solvent
+    generic_reaction_template: Ar-X.Ar-B(OH)2_or_Ar-B(OR)2.L.Base.Solvent>>Ar-Ar
+  - dataset_row_index: 2
+    source_id: '3'
+    concrete_components:
+      aryl_halide:
+      - Clc1ccc2ncccc2c1
+      organoboron:
+      - Cc1ccc2c(cnn2C2CCCCO2)c1B(O)O
+      ligand:
+      - CN(C)Cc1ccc(P(C(C)(C)C)C(C)(C)C)cc1
+      base:
+      - '[OH-].[Na+]'
+      solvent:
+      - CC#N
+    generic_components:
+      aryl_halide: Ar-X
+      organoboron: Ar-B(OH)2_or_Ar-B(OR)2
+      ligand: L
+      base: Base
+      solvent: Solvent
+    generic_reaction_template: Ar-X.Ar-B(OH)2_or_Ar-B(OR)2.L.Base.Solvent>>Ar-Ar
+- dataset_key: DY
+  source_path: datasets/dy.xlsx
+  file_type: xlsx
+  reaction_family: Buchwald-Hartwig amination
+  row_count: 3955
+  generic_reaction_template: Ar-X.L.Additive.Base>>C-N_coupling_product
+  component_roles:
+  - role: additive
+    generic_symbol: Additive
+    unique_smiles_count: 22
+    components:
+    - smiles: C1(C2=CC=CC=C2)=CC=NO1
+      count: 180
+      example_row_indices:
+      - 42
+      - 68
+      - 80
+      - 100
+      - 144
+    - smiles: C1(C2=CC=CC=C2)=CON=C1
+      count: 179
+      example_row_indices:
+      - 9
+      - 62
+      - 79
+      - 103
+      - 109
+    - smiles: C1(C2=CC=CC=C2)=NOC=C1
+      count: 178
+      example_row_indices:
+      - 11
+      - 35
+      - 40
+      - 86
+      - 90
+    - smiles: C1(N(CC2=CC=CC=C2)CC3=CC=CC=C3)=CC=NO1
+      count: 180
+      example_row_indices:
+      - 21
+      - 25
+      - 74
+      - 81
+      - 118
+    - smiles: C1(N(CC2=CC=CC=C2)CC3=CC=CC=C3)=NOC=C1
+      count: 180
+      example_row_indices:
+      - 14
+      - 17
+      - 20
+      - 33
+      - 73
+    - smiles: C12=C(C=CC=C2)ON=C1
+      count: 180
+      example_row_indices:
+      - 48
+      - 106
+      - 110
+      - 112
+      - 121
+    - smiles: C12=CON=C1C=CC=C2
+      count: 180
+      example_row_indices:
+      - 36
+      - 64
+      - 85
+      - 89
+      - 97
+    - smiles: CC1=C(C(OCC)=O)C=NO1
+      count: 180
+      example_row_indices:
+      - 6
+      - 16
+      - 75
+      - 76
+      - 122
+    - smiles: CC1=CC(C(OCC)=O)=NO1
+      count: 180
+      example_row_indices:
+      - 32
+      - 43
+      - 69
+      - 78
+      - 117
+    - smiles: CC1=CC(C)=NO1
+      count: 180
+      example_row_indices:
+      - 0
+      - 4
+      - 47
+      - 60
+      - 95
+    - smiles: CC1=CC(N2C=CC=C2)=NO1
+      count: 180
+      example_row_indices:
+      - 38
+      - 44
+      - 49
+      - 88
+      - 93
+    - smiles: CC1=CC=NO1
+      count: 180
+      example_row_indices:
+      - 26
+      - 59
+      - 91
+      - 99
+      - 101
+    - smiles: CC1=NOC(C(OCC)=O)=C1
+      count: 180
+      example_row_indices:
+      - 28
+      - 41
+      - 52
+      - 53
+      - 55
+    - smiles: CC1=NOC(C2=CC=CC=C2)=C1
+      count: 180
+      example_row_indices:
+      - 13
+      - 18
+      - 57
+      - 65
+      - 83
+    - smiles: CC1=NOC=C1
+      count: 178
+      example_row_indices:
+      - 7
+      - 27
+      - 45
+      - 54
+      - 61
+    - smiles: CCOC(C1=CON=C1)=O
+      count: 180
+      example_row_indices:
+      - 3
+      - 56
+      - 116
+      - 133
+      - 139
+    - smiles: CCOC(C1=NOC=C1)=O
+      count: 180
+      example_row_indices:
+      - 5
+      - 8
+      - 22
+      - 30
+      - 46
+    - smiles: COC1=NOC(C(OCC)=O)=C1
+      count: 180
+      example_row_indices:
+      - 19
+      - 29
+      - 72
+      - 84
+      - 107
+    - smiles: FC(C=CC=C1F)=C1C2=CC=NO2
+      count: 180
+      example_row_indices:
+      - 10
+      - 34
+      - 77
+      - 125
+      - 126
+    - smiles: O=C(OC)C1=CC=NO1
+      count: 180
+      example_row_indices:
+      - 1
+      - 2
+      - 24
+      - 66
+      - 108
+    - smiles: O=C(OC)C1=NOC(C2=CC=CO2)=C1
+      count: 180
+      example_row_indices:
+      - 15
+      - 23
+      - 31
+      - 39
+      - 51
+    - smiles: O=C(OC)C1=NOC(C2=CC=CS2)=C1
+      count: 180
+      example_row_indices:
+      - 12
+      - 37
+      - 50
+      - 63
+      - 134
+  - role: aryl_halide
+    generic_symbol: Ar-X
+    unique_smiles_count: 15
+    components:
+    - smiles: BrC1=CC=C(C(F)(F)F)C=C1
+      count: 263
+      example_row_indices:
+      - 30
+      - 43
+      - 69
+      - 93
+      - 96
+    - smiles: BrC1=CC=C(CC)C=C1
+      count: 264
+      example_row_indices:
+      - 8
+      - 38
+      - 64
+      - 86
+      - 87
+    - smiles: BrC1=CC=C(OC)C=C1
+      count: 264
+      example_row_indices:
+      - 19
+      - 57
+      - 60
+      - 61
+      - 81
+    - smiles: BrC1=CN=CC=C1
+      count: 264
+      example_row_indices:
+      - 6
+      - 22
+      - 34
+      - 46
+      - 53
+    - smiles: BrC1=NC=CC=C1
+      count: 264
+      example_row_indices:
+      - 1
+      - 9
+      - 14
+      - 20
+      - 24
+    - smiles: ClC1=CC=C(C(F)(F)F)C=C1
+      count: 264
+      example_row_indices:
+      - 3
+      - 32
+      - 39
+      - 45
+      - 76
+    - smiles: ClC1=CC=C(CC)C=C1
+      count: 262
+      example_row_indices:
+      - 12
+      - 13
+      - 23
+      - 59
+      - 94
+    - smiles: ClC1=CC=C(OC)C=C1
+      count: 264
+      example_row_indices:
+      - 4
+      - 5
+      - 36
+      - 65
+      - 79
+    - smiles: ClC1=CN=CC=C1
+      count: 264
+      example_row_indices:
+      - 10
+      - 11
+      - 15
+      - 68
+      - 134
+    - smiles: ClC1=NC=CC=C1
+      count: 264
+      example_row_indices:
+      - 0
+      - 17
+      - 109
+      - 125
+      - 145
+    - smiles: IC1=CC=C(C(F)(F)F)C=C1
+      count: 263
+      example_row_indices:
+      - 21
+      - 33
+      - 41
+      - 51
+      - 52
+    - smiles: IC1=CC=C(CC)C=C1
+      count: 264
+      example_row_indices:
+      - 2
+      - 18
+      - 44
+      - 50
+      - 54
+    - smiles: IC1=CC=C(OC)C=C1
+      count: 264
+      example_row_indices:
+      - 25
+      - 35
+      - 40
+      - 49
+      - 67
+    - smiles: IC1=CN=CC=C1
+      count: 263
+      example_row_indices:
+      - 16
+      - 29
+      - 37
+      - 47
+      - 48
+    - smiles: IC1=NC=CC=C1
+      count: 264
+      example_row_indices:
+      - 7
+      - 27
+      - 28
+      - 42
+      - 55
+  - role: base
+    generic_symbol: Base
+    unique_smiles_count: 3
+    components:
+    - smiles: CC(C)(C)/N=C(N(C)C)/N(C)C
+      count: 1317
+      example_row_indices:
+      - 5
+      - 9
+      - 12
+      - 17
+      - 21
+    - smiles: CN(C)P(N(C)C)(N(C)C)=NP(N(C)C)(N(C)C)=NCC
+      count: 1320
+      example_row_indices:
+      - 0
+      - 1
+      - 2
+      - 8
+      - 10
+    - smiles: CN1CCCN2C1=NCCC2
+      count: 1318
+      example_row_indices:
+      - 3
+      - 4
+      - 6
+      - 7
+      - 13
+  - role: ligand
+    generic_symbol: L
+    unique_smiles_count: 4
+    components:
+    - smiles: CC(C)C(C=C(C(C)C)C=C1C(C)C)=C1C2=C(P(C(C)(C)C)C(C)(C)C)C(OC)=CC=C2OC
+      count: 989
+      example_row_indices:
+      - 3
+      - 10
+      - 13
+      - 21
+      - 22
+    - smiles: CC(C)C(C=C(C(C)C)C=C1C(C)C)=C1C2=C(P(C(C)(C)C)C(C)(C)C)C=CC=C2
+      count: 986
+      example_row_indices:
+      - 5
+      - 11
+      - 15
+      - 17
+      - 20
+    - smiles: CC(C)C(C=C(C(C)C)C=C1C(C)C)=C1C2=C(P(C3CCCCC3)C4CCCCC4)C=CC=C2
+      count: 990
+      example_row_indices:
+      - 2
+      - 7
+      - 9
+      - 12
+      - 14
+    - smiles: CC(C)C(C=C(C(C)C)C=C1C(C)C)=C1C2=C(P([C@@]3(C[C@@H]4C5)C[C@H](C4)C[C@H]5C3)[C@]6(C7)C[C@@H](C[C@@H]7C8)C[C@@H]8C6)C(OC)=CC=C2OC
+      count: 990
+      example_row_indices:
+      - 0
+      - 1
+      - 4
+      - 6
+      - 8
+  first_three_reaction_examples:
+  - dataset_row_index: 0
+    source_id: null
+    concrete_components:
+      ligand:
+      - CC(C)C(C=C(C(C)C)C=C1C(C)C)=C1C2=C(P([C@@]3(C[C@@H]4C5)C[C@H](C4)C[C@H]5C3)[C@]6(C7)C[C@@H](C[C@@H]7C8)C[C@@H]8C6)C(OC)=CC=C2OC
+      additive:
+      - CC1=CC(C)=NO1
+      base:
+      - CN(C)P(N(C)C)(N(C)C)=NP(N(C)C)(N(C)C)=NCC
+      aryl_halide:
+      - ClC1=NC=CC=C1
+    generic_components:
+      ligand: L
+      additive: Additive
+      base: Base
+      aryl_halide: Ar-X
+    generic_reaction_template: Ar-X.L.Additive.Base>>C-N_coupling_product
+  - dataset_row_index: 1
+    source_id: null
+    concrete_components:
+      ligand:
+      - CC(C)C(C=C(C(C)C)C=C1C(C)C)=C1C2=C(P([C@@]3(C[C@@H]4C5)C[C@H](C4)C[C@H]5C3)[C@]6(C7)C[C@@H](C[C@@H]7C8)C[C@@H]8C6)C(OC)=CC=C2OC
+      additive:
+      - O=C(OC)C1=CC=NO1
+      base:
+      - CN(C)P(N(C)C)(N(C)C)=NP(N(C)C)(N(C)C)=NCC
+      aryl_halide:
+      - BrC1=NC=CC=C1
+    generic_components:
+      ligand: L
+      additive: Additive
+      base: Base
+      aryl_halide: Ar-X
+    generic_reaction_template: Ar-X.L.Additive.Base>>C-N_coupling_product
+  - dataset_row_index: 2
+    source_id: null
+    concrete_components:
+      ligand:
+      - CC(C)C(C=C(C(C)C)C=C1C(C)C)=C1C2=C(P(C3CCCCC3)C4CCCCC4)C=CC=C2
+      additive:
+      - O=C(OC)C1=CC=NO1
+      base:
+      - CN(C)P(N(C)C)(N(C)C)=NP(N(C)C)(N(C)C)=NCC
+      aryl_halide:
+      - IC1=CC=C(CC)C=C1
+    generic_components:
+      ligand: L
+      additive: Additive
+      base: Base
+      aryl_halide: Ar-X
+    generic_reaction_template: Ar-X.L.Additive.Base>>C-N_coupling_product

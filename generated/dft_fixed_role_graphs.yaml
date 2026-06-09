@@ -1,0 +1,3880 @@
+artifact_id: dft_fixed_role_graphs_v1
+description: Feature-ready role graphs whose atom identities are fixed by DFT atom
+  labels. MoleCode nodes are attached as structural anchors when available; descriptor
+  values are not extracted here.
+datasets:
+- dataset_key: AZ
+  roles:
+  - role: amine
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: az:amine:m0147
+    representative_source_smiles: CN
+    fixed_atoms:
+    - fixed_atom_id: az:amine:C1
+      role: amine
+      dft_atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - amine_.C1_NMR_shift
+      - amine_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: azaminem0147_C_1
+          component_id: az:amine:m0147
+          element: C
+          node_index: 1
+          display_label: CH3
+        candidate_count: 1
+    - fixed_atom_id: az:amine:N1
+      role: amine
+      dft_atom_label: N1
+      element: N
+      atom_index: 1
+      descriptor_columns:
+      - amine_.N1_NMR_shift
+      - amine_.N1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - AMINE_N
+      - AMINE_N_H
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: azaminem0147_N_1
+          component_id: az:amine:m0147
+          element: N
+          node_index: 1
+          display_label: NH2
+        candidate_count: 1
+    fixed_edges:
+    - edge_id: fixed_edge:az_amine_C1--az_amine_N1
+      source_fixed_atom_id: az:amine:C1
+      target_fixed_atom_id: az:amine:N1
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: azaminem0147_C_1
+        target_molecode_node_id: azaminem0147_N_1
+        source_component_id: az:amine:m0147
+        target_component_id: az:amine:m0147
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    descriptor_to_atom:
+      amine_.C1_NMR_shift: az:amine:C1
+      amine_.C1_electrostatic_charge: az:amine:C1
+      amine_.N1_NMR_shift: az:amine:N1
+      amine_.N1_electrostatic_charge: az:amine:N1
+    coverage:
+      fixed_atom_count: 2
+      descriptor_column_count: 4
+      molecode_anchor_summary:
+        element_and_index_match: 2
+      bond_type_summary:
+        SINGLE: 1
+      edge_count: 1
+  - role: aryl_halide
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: az:aryl_halide:m0121
+    representative_source_smiles: C1=CSC(=C1)Cl
+    fixed_atoms:
+    - fixed_atom_id: az:aryl_halide:C1
+      role: aryl_halide
+      dft_atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - halide_.C1_NMR_shift
+      - halide_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: azarylhalidem0121_C_1
+          component_id: az:aryl_halide:m0121
+          element: C
+          node_index: 1
+          display_label: CH
+        candidate_count: 4
+    - fixed_atom_id: az:aryl_halide:C2
+      role: aryl_halide
+      dft_atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - halide_.C2_NMR_shift
+      - halide_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: azarylhalidem0121_C_2
+          component_id: az:aryl_halide:m0121
+          element: C
+          node_index: 2
+          display_label: CH
+        candidate_count: 4
+    fixed_edges:
+    - edge_id: fixed_edge:az_aryl_halide_C1--az_aryl_halide_C2
+      source_fixed_atom_id: az:aryl_halide:C1
+      target_fixed_atom_id: az:aryl_halide:C2
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: azarylhalidem0121_C_1
+        target_molecode_node_id: azarylhalidem0121_C_2
+        source_component_id: az:aryl_halide:m0121
+        target_component_id: az:aryl_halide:m0121
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    descriptor_to_atom:
+      halide_.C1_NMR_shift: az:aryl_halide:C1
+      halide_.C1_electrostatic_charge: az:aryl_halide:C1
+      halide_.C2_NMR_shift: az:aryl_halide:C2
+      halide_.C2_electrostatic_charge: az:aryl_halide:C2
+    coverage:
+      fixed_atom_count: 2
+      descriptor_column_count: 4
+      molecode_anchor_summary:
+        element_and_index_match: 2
+      bond_type_summary:
+        DOUBLE: 1
+      edge_count: 1
+  - role: ligand
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: az:ligand:m0006
+    representative_source_smiles: CC(C)(C)P(C(C)(C)C)C(C)(C)C
+    fixed_atoms:
+    - fixed_atom_id: az:ligand:P1
+      role: ligand
+      dft_atom_label: P1
+      element: P
+      atom_index: 1
+      descriptor_columns:
+      - ligand_.P1_NMR_shift
+      - ligand_.P1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_DONOR_ATOM
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: azligandm0006_P_1
+          component_id: az:ligand:m0006
+          element: P
+          node_index: 1
+          display_label: P
+        candidate_count: 1
+    fixed_edges: []
+    descriptor_to_atom:
+      ligand_.P1_NMR_shift: az:ligand:P1
+      ligand_.P1_electrostatic_charge: az:ligand:P1
+    coverage:
+      fixed_atom_count: 1
+      descriptor_column_count: 2
+      molecode_anchor_summary:
+        element_and_index_match: 1
+      bond_type_summary: {}
+      edge_count: 0
+- dataset_key: SU_NO
+  roles:
+  - role: aryl_halide
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: su_no:aryl_halide:m0000
+    representative_source_smiles: Clc1ccc2ncccc2c1
+    fixed_atoms:
+    - fixed_atom_id: su_no:aryl_halide:C1
+      role: aryl_halide
+      dft_atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - halide_.C1_NMR_shift
+      - halide_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C2
+      role: aryl_halide
+      dft_atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - halide_.C2_NMR_shift
+      - halide_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_2
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 2
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C3
+      role: aryl_halide
+      dft_atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - halide_.C3_NMR_shift
+      - halide_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_3
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 3
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C4
+      role: aryl_halide
+      dft_atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - halide_.C4_NMR_shift
+      - halide_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_4
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 4
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C5
+      role: aryl_halide
+      dft_atom_label: C5
+      element: C
+      atom_index: 5
+      descriptor_columns:
+      - halide_.C5_NMR_shift
+      - halide_.C5_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_5
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 5
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C6
+      role: aryl_halide
+      dft_atom_label: C6
+      element: C
+      atom_index: 6
+      descriptor_columns:
+      - halide_.C6_NMR_shift
+      - halide_.C6_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_6
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 6
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C7
+      role: aryl_halide
+      dft_atom_label: C7
+      element: C
+      atom_index: 7
+      descriptor_columns:
+      - halide_.C7_NMR_shift
+      - halide_.C7_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_7
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 7
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C8
+      role: aryl_halide
+      dft_atom_label: C8
+      element: C
+      atom_index: 8
+      descriptor_columns:
+      - halide_.C8_NMR_shift
+      - halide_.C8_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_8
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 8
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C9
+      role: aryl_halide
+      dft_atom_label: C9
+      element: C
+      atom_index: 9
+      descriptor_columns:
+      - halide_.C9_NMR_shift
+      - halide_.C9_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_9
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 9
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C10
+      role: aryl_halide
+      dft_atom_label: C10
+      element: C
+      atom_index: 10
+      descriptor_columns:
+      - halide_.C10_NMR_shift
+      - halide_.C10_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C11
+      role: aryl_halide
+      dft_atom_label: C11
+      element: C
+      atom_index: 11
+      descriptor_columns:
+      - halide_.C11_NMR_shift
+      - halide_.C11_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C12
+      role: aryl_halide
+      dft_atom_label: C12
+      element: C
+      atom_index: 12
+      descriptor_columns:
+      - halide_.C12_NMR_shift
+      - halide_.C12_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C13
+      role: aryl_halide
+      dft_atom_label: C13
+      element: C
+      atom_index: 13
+      descriptor_columns:
+      - halide_.C13_NMR_shift
+      - halide_.C13_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C14
+      role: aryl_halide
+      dft_atom_label: C14
+      element: C
+      atom_index: 14
+      descriptor_columns:
+      - halide_.C14_NMR_shift
+      - halide_.C14_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C15
+      role: aryl_halide
+      dft_atom_label: C15
+      element: C
+      atom_index: 15
+      descriptor_columns:
+      - halide_.C15_NMR_shift
+      - halide_.C15_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C16
+      role: aryl_halide
+      dft_atom_label: C16
+      element: C
+      atom_index: 16
+      descriptor_columns:
+      - halide_.C16_NMR_shift
+      - halide_.C16_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:C17
+      role: aryl_halide
+      dft_atom_label: C17
+      element: C
+      atom_index: 17
+      descriptor_columns:
+      - halide_.C17_NMR_shift
+      - halide_.C17_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_C_1
+          component_id: su_no:aryl_halide:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:aryl_halide:N3
+      role: aryl_halide
+      dft_atom_label: N3
+      element: N
+      atom_index: 3
+      descriptor_columns:
+      - halide_.N3_NMR_shift
+      - halide_.N3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_N_1
+          component_id: su_no:aryl_halide:m0000
+          element: N
+          node_index: 1
+          display_label: N
+        candidate_count: 1
+    - fixed_atom_id: su_no:aryl_halide:N4
+      role: aryl_halide
+      dft_atom_label: N4
+      element: N
+      atom_index: 4
+      descriptor_columns:
+      - halide_.N4_NMR_shift
+      - halide_.N4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoarylhalidem0000_N_1
+          component_id: su_no:aryl_halide:m0000
+          element: N
+          node_index: 1
+          display_label: N
+        candidate_count: 1
+    fixed_edges:
+    - edge_id: fixed_edge:su_no_aryl_halide_C1--su_no_aryl_halide_C2
+      source_fixed_atom_id: su_no:aryl_halide:C1
+      target_fixed_atom_id: su_no:aryl_halide:C2
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C1--su_no_aryl_halide_C9
+      source_fixed_atom_id: su_no:aryl_halide:C1
+      target_fixed_atom_id: su_no:aryl_halide:C9
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C3
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C3
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_2
+        target_molecode_node_id: sunoarylhalidem0000_C_3
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C10
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C10
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C11
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C11
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C12
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C12
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C13
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C13
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C14
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C14
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C15
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C15
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C16
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C16
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C2--su_no_aryl_halide_C17
+      source_fixed_atom_id: su_no:aryl_halide:C2
+      target_fixed_atom_id: su_no:aryl_halide:C17
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_2
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C3--su_no_aryl_halide_C4
+      source_fixed_atom_id: su_no:aryl_halide:C3
+      target_fixed_atom_id: su_no:aryl_halide:C4
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_3
+        target_molecode_node_id: sunoarylhalidem0000_C_4
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C4--su_no_aryl_halide_C8
+      source_fixed_atom_id: su_no:aryl_halide:C4
+      target_fixed_atom_id: su_no:aryl_halide:C8
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_4
+        target_molecode_node_id: sunoarylhalidem0000_C_8
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C4--su_no_aryl_halide_N3
+      source_fixed_atom_id: su_no:aryl_halide:C4
+      target_fixed_atom_id: su_no:aryl_halide:N3
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_4
+        target_molecode_node_id: sunoarylhalidem0000_N_1
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C4--su_no_aryl_halide_N4
+      source_fixed_atom_id: su_no:aryl_halide:C4
+      target_fixed_atom_id: su_no:aryl_halide:N4
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_4
+        target_molecode_node_id: sunoarylhalidem0000_N_1
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C5--su_no_aryl_halide_C6
+      source_fixed_atom_id: su_no:aryl_halide:C5
+      target_fixed_atom_id: su_no:aryl_halide:C6
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_5
+        target_molecode_node_id: sunoarylhalidem0000_C_6
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C5--su_no_aryl_halide_N3
+      source_fixed_atom_id: su_no:aryl_halide:C5
+      target_fixed_atom_id: su_no:aryl_halide:N3
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_5
+        target_molecode_node_id: sunoarylhalidem0000_N_1
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C5--su_no_aryl_halide_N4
+      source_fixed_atom_id: su_no:aryl_halide:C5
+      target_fixed_atom_id: su_no:aryl_halide:N4
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_5
+        target_molecode_node_id: sunoarylhalidem0000_N_1
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C6--su_no_aryl_halide_C7
+      source_fixed_atom_id: su_no:aryl_halide:C6
+      target_fixed_atom_id: su_no:aryl_halide:C7
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_6
+        target_molecode_node_id: sunoarylhalidem0000_C_7
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C7--su_no_aryl_halide_C8
+      source_fixed_atom_id: su_no:aryl_halide:C7
+      target_fixed_atom_id: su_no:aryl_halide:C8
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_7
+        target_molecode_node_id: sunoarylhalidem0000_C_8
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C8--su_no_aryl_halide_C9
+      source_fixed_atom_id: su_no:aryl_halide:C8
+      target_fixed_atom_id: su_no:aryl_halide:C9
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_8
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C9--su_no_aryl_halide_C10
+      source_fixed_atom_id: su_no:aryl_halide:C9
+      target_fixed_atom_id: su_no:aryl_halide:C10
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C9--su_no_aryl_halide_C11
+      source_fixed_atom_id: su_no:aryl_halide:C9
+      target_fixed_atom_id: su_no:aryl_halide:C11
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C9--su_no_aryl_halide_C12
+      source_fixed_atom_id: su_no:aryl_halide:C9
+      target_fixed_atom_id: su_no:aryl_halide:C12
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C9--su_no_aryl_halide_C13
+      source_fixed_atom_id: su_no:aryl_halide:C9
+      target_fixed_atom_id: su_no:aryl_halide:C13
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C9--su_no_aryl_halide_C14
+      source_fixed_atom_id: su_no:aryl_halide:C9
+      target_fixed_atom_id: su_no:aryl_halide:C14
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C9--su_no_aryl_halide_C15
+      source_fixed_atom_id: su_no:aryl_halide:C9
+      target_fixed_atom_id: su_no:aryl_halide:C15
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C9--su_no_aryl_halide_C16
+      source_fixed_atom_id: su_no:aryl_halide:C9
+      target_fixed_atom_id: su_no:aryl_halide:C16
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_aryl_halide_C9--su_no_aryl_halide_C17
+      source_fixed_atom_id: su_no:aryl_halide:C9
+      target_fixed_atom_id: su_no:aryl_halide:C17
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoarylhalidem0000_C_1
+        target_molecode_node_id: sunoarylhalidem0000_C_9
+        source_component_id: su_no:aryl_halide:m0000
+        target_component_id: su_no:aryl_halide:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    descriptor_to_atom:
+      halide_.C10_NMR_shift: su_no:aryl_halide:C10
+      halide_.C10_electrostatic_charge: su_no:aryl_halide:C10
+      halide_.C11_NMR_shift: su_no:aryl_halide:C11
+      halide_.C11_electrostatic_charge: su_no:aryl_halide:C11
+      halide_.C12_NMR_shift: su_no:aryl_halide:C12
+      halide_.C12_electrostatic_charge: su_no:aryl_halide:C12
+      halide_.C13_NMR_shift: su_no:aryl_halide:C13
+      halide_.C13_electrostatic_charge: su_no:aryl_halide:C13
+      halide_.C14_NMR_shift: su_no:aryl_halide:C14
+      halide_.C14_electrostatic_charge: su_no:aryl_halide:C14
+      halide_.C15_NMR_shift: su_no:aryl_halide:C15
+      halide_.C15_electrostatic_charge: su_no:aryl_halide:C15
+      halide_.C16_NMR_shift: su_no:aryl_halide:C16
+      halide_.C16_electrostatic_charge: su_no:aryl_halide:C16
+      halide_.C17_NMR_shift: su_no:aryl_halide:C17
+      halide_.C17_electrostatic_charge: su_no:aryl_halide:C17
+      halide_.C1_NMR_shift: su_no:aryl_halide:C1
+      halide_.C1_electrostatic_charge: su_no:aryl_halide:C1
+      halide_.C2_NMR_shift: su_no:aryl_halide:C2
+      halide_.C2_electrostatic_charge: su_no:aryl_halide:C2
+      halide_.C3_NMR_shift: su_no:aryl_halide:C3
+      halide_.C3_electrostatic_charge: su_no:aryl_halide:C3
+      halide_.C4_NMR_shift: su_no:aryl_halide:C4
+      halide_.C4_electrostatic_charge: su_no:aryl_halide:C4
+      halide_.C5_NMR_shift: su_no:aryl_halide:C5
+      halide_.C5_electrostatic_charge: su_no:aryl_halide:C5
+      halide_.C6_NMR_shift: su_no:aryl_halide:C6
+      halide_.C6_electrostatic_charge: su_no:aryl_halide:C6
+      halide_.C7_NMR_shift: su_no:aryl_halide:C7
+      halide_.C7_electrostatic_charge: su_no:aryl_halide:C7
+      halide_.C8_NMR_shift: su_no:aryl_halide:C8
+      halide_.C8_electrostatic_charge: su_no:aryl_halide:C8
+      halide_.C9_NMR_shift: su_no:aryl_halide:C9
+      halide_.C9_electrostatic_charge: su_no:aryl_halide:C9
+      halide_.N3_NMR_shift: su_no:aryl_halide:N3
+      halide_.N3_electrostatic_charge: su_no:aryl_halide:N3
+      halide_.N4_NMR_shift: su_no:aryl_halide:N4
+      halide_.N4_electrostatic_charge: su_no:aryl_halide:N4
+    coverage:
+      fixed_atom_count: 19
+      descriptor_column_count: 38
+      molecode_anchor_summary:
+        element_and_index_match: 9
+        first_candidate_fallback: 10
+      bond_type_summary:
+        DOUBLE: 14
+        SINGLE: 15
+      edge_count: 29
+  - role: ligand
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: su_no:ligand:m0002
+    representative_source_smiles: CC(C)(C)P(C(C)(C)C)C(C)(C)C
+    fixed_atoms:
+    - fixed_atom_id: su_no:ligand:P1
+      role: ligand
+      dft_atom_label: P1
+      element: P
+      atom_index: 1
+      descriptor_columns:
+      - ligand_.P1_NMR_shift
+      - ligand_.P1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_DONOR_ATOM
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoligandm0002_P_1
+          component_id: su_no:ligand:m0002
+          element: P
+          node_index: 1
+          display_label: P
+        candidate_count: 1
+    fixed_edges: []
+    descriptor_to_atom:
+      ligand_.P1_NMR_shift: su_no:ligand:P1
+      ligand_.P1_electrostatic_charge: su_no:ligand:P1
+    coverage:
+      fixed_atom_count: 1
+      descriptor_column_count: 2
+      molecode_anchor_summary:
+        element_and_index_match: 1
+      bond_type_summary: {}
+      edge_count: 0
+  - role: organoboron
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: su_no:organoboron:m0000
+    representative_source_smiles: Brc1ccc2ncccc2c1
+    fixed_atoms:
+    - fixed_atom_id: su_no:organoboron:B1
+      role: organoboron
+      dft_atom_label: B1
+      element: B
+      atom_index: 1
+      descriptor_columns:
+      - boronic Acid_.B1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_SITE
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_dft_only
+        anchor_method: no_molecode_candidate
+        confidence: none
+        fixed_molecode_node: null
+        candidate_count: 0
+    - fixed_atom_id: su_no:organoboron:C1
+      role: organoboron
+      dft_atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - boronic Acid_.C1_NMR_shift
+      - boronic Acid_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_1
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C2
+      role: organoboron
+      dft_atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - boronic Acid_.C2_NMR_shift
+      - boronic Acid_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_2
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 2
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C3
+      role: organoboron
+      dft_atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - boronic Acid_.C3_NMR_shift
+      - boronic Acid_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_3
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 3
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C4
+      role: organoboron
+      dft_atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - boronic Acid_.C4_NMR_shift
+      - boronic Acid_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_4
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 4
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C5
+      role: organoboron
+      dft_atom_label: C5
+      element: C
+      atom_index: 5
+      descriptor_columns:
+      - boronic Acid_.C5_NMR_shift
+      - boronic Acid_.C5_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_5
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 5
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C6
+      role: organoboron
+      dft_atom_label: C6
+      element: C
+      atom_index: 6
+      descriptor_columns:
+      - boronic Acid_.C6_NMR_shift
+      - boronic Acid_.C6_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_6
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 6
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C7
+      role: organoboron
+      dft_atom_label: C7
+      element: C
+      atom_index: 7
+      descriptor_columns:
+      - boronic Acid_.C7_NMR_shift
+      - boronic Acid_.C7_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_7
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 7
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C8
+      role: organoboron
+      dft_atom_label: C8
+      element: C
+      atom_index: 8
+      descriptor_columns:
+      - boronic Acid_.C8_NMR_shift
+      - boronic Acid_.C8_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_8
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 8
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C9
+      role: organoboron
+      dft_atom_label: C9
+      element: C
+      atom_index: 9
+      descriptor_columns:
+      - boronic Acid_.C9_NMR_shift
+      - boronic Acid_.C9_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_9
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 9
+          display_label: CH
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C10
+      role: organoboron
+      dft_atom_label: C10
+      element: C
+      atom_index: 10
+      descriptor_columns:
+      - boronic Acid_.C10_NMR_shift
+      - boronic Acid_.C10_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_1
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C11
+      role: organoboron
+      dft_atom_label: C11
+      element: C
+      atom_index: 11
+      descriptor_columns:
+      - boronic Acid_.C11_NMR_shift
+      - boronic Acid_.C11_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_1
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C12
+      role: organoboron
+      dft_atom_label: C12
+      element: C
+      atom_index: 12
+      descriptor_columns:
+      - boronic Acid_.C12_NMR_shift
+      - boronic Acid_.C12_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_1
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C13
+      role: organoboron
+      dft_atom_label: C13
+      element: C
+      atom_index: 13
+      descriptor_columns:
+      - boronic Acid_.C13_NMR_shift
+      - boronic Acid_.C13_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_1
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C14
+      role: organoboron
+      dft_atom_label: C14
+      element: C
+      atom_index: 14
+      descriptor_columns:
+      - boronic Acid_.C14_NMR_shift
+      - boronic Acid_.C14_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_1
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C15
+      role: organoboron
+      dft_atom_label: C15
+      element: C
+      atom_index: 15
+      descriptor_columns:
+      - boronic Acid_.C15_NMR_shift
+      - boronic Acid_.C15_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_1
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:C16
+      role: organoboron
+      dft_atom_label: C16
+      element: C
+      atom_index: 16
+      descriptor_columns:
+      - boronic Acid_.C16_NMR_shift
+      - boronic Acid_.C16_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - BORON_ATTACHED_CARBON
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_C_1
+          component_id: su_no:organoboron:m0000
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 9
+    - fixed_atom_id: su_no:organoboron:N1
+      role: organoboron
+      dft_atom_label: N1
+      element: N
+      atom_index: 1
+      descriptor_columns:
+      - boronic Acid_.N1_NMR_shift
+      - boronic Acid_.N1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_N_1
+          component_id: su_no:organoboron:m0000
+          element: N
+          node_index: 1
+          display_label: N
+        candidate_count: 1
+    - fixed_atom_id: su_no:organoboron:N2
+      role: organoboron
+      dft_atom_label: N2
+      element: N
+      atom_index: 2
+      descriptor_columns:
+      - boronic Acid_.N2_NMR_shift
+      - boronic Acid_.N2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: sunoorganoboronm0000_N_1
+          component_id: su_no:organoboron:m0000
+          element: N
+          node_index: 1
+          display_label: N
+        candidate_count: 1
+    fixed_edges:
+    - edge_id: fixed_edge:su_no_organoboron_C1--su_no_organoboron_C2
+      source_fixed_atom_id: su_no:organoboron:C1
+      target_fixed_atom_id: su_no:organoboron:C2
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_2
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C1--su_no_organoboron_C9
+      source_fixed_atom_id: su_no:organoboron:C1
+      target_fixed_atom_id: su_no:organoboron:C9
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C2--su_no_organoboron_C3
+      source_fixed_atom_id: su_no:organoboron:C2
+      target_fixed_atom_id: su_no:organoboron:C3
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_2
+        target_molecode_node_id: sunoorganoboronm0000_C_3
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C2--su_no_organoboron_C10
+      source_fixed_atom_id: su_no:organoboron:C2
+      target_fixed_atom_id: su_no:organoboron:C10
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_2
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C2--su_no_organoboron_C11
+      source_fixed_atom_id: su_no:organoboron:C2
+      target_fixed_atom_id: su_no:organoboron:C11
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_2
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C2--su_no_organoboron_C12
+      source_fixed_atom_id: su_no:organoboron:C2
+      target_fixed_atom_id: su_no:organoboron:C12
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_2
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C2--su_no_organoboron_C13
+      source_fixed_atom_id: su_no:organoboron:C2
+      target_fixed_atom_id: su_no:organoboron:C13
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_2
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C2--su_no_organoboron_C14
+      source_fixed_atom_id: su_no:organoboron:C2
+      target_fixed_atom_id: su_no:organoboron:C14
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_2
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C2--su_no_organoboron_C15
+      source_fixed_atom_id: su_no:organoboron:C2
+      target_fixed_atom_id: su_no:organoboron:C15
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_2
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C2--su_no_organoboron_C16
+      source_fixed_atom_id: su_no:organoboron:C2
+      target_fixed_atom_id: su_no:organoboron:C16
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_2
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C3--su_no_organoboron_C4
+      source_fixed_atom_id: su_no:organoboron:C3
+      target_fixed_atom_id: su_no:organoboron:C4
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_3
+        target_molecode_node_id: sunoorganoboronm0000_C_4
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C4--su_no_organoboron_C8
+      source_fixed_atom_id: su_no:organoboron:C4
+      target_fixed_atom_id: su_no:organoboron:C8
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_4
+        target_molecode_node_id: sunoorganoboronm0000_C_8
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C4--su_no_organoboron_N1
+      source_fixed_atom_id: su_no:organoboron:C4
+      target_fixed_atom_id: su_no:organoboron:N1
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_4
+        target_molecode_node_id: sunoorganoboronm0000_N_1
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C4--su_no_organoboron_N2
+      source_fixed_atom_id: su_no:organoboron:C4
+      target_fixed_atom_id: su_no:organoboron:N2
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_4
+        target_molecode_node_id: sunoorganoboronm0000_N_1
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C5--su_no_organoboron_C6
+      source_fixed_atom_id: su_no:organoboron:C5
+      target_fixed_atom_id: su_no:organoboron:C6
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_5
+        target_molecode_node_id: sunoorganoboronm0000_C_6
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C5--su_no_organoboron_N1
+      source_fixed_atom_id: su_no:organoboron:C5
+      target_fixed_atom_id: su_no:organoboron:N1
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_5
+        target_molecode_node_id: sunoorganoboronm0000_N_1
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C5--su_no_organoboron_N2
+      source_fixed_atom_id: su_no:organoboron:C5
+      target_fixed_atom_id: su_no:organoboron:N2
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_5
+        target_molecode_node_id: sunoorganoboronm0000_N_1
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C6--su_no_organoboron_C7
+      source_fixed_atom_id: su_no:organoboron:C6
+      target_fixed_atom_id: su_no:organoboron:C7
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_6
+        target_molecode_node_id: sunoorganoboronm0000_C_7
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C7--su_no_organoboron_C8
+      source_fixed_atom_id: su_no:organoboron:C7
+      target_fixed_atom_id: su_no:organoboron:C8
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_7
+        target_molecode_node_id: sunoorganoboronm0000_C_8
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C8--su_no_organoboron_C9
+      source_fixed_atom_id: su_no:organoboron:C8
+      target_fixed_atom_id: su_no:organoboron:C9
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_8
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:su_no_organoboron_C9--su_no_organoboron_C10
+      source_fixed_atom_id: su_no:organoboron:C9
+      target_fixed_atom_id: su_no:organoboron:C10
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C9--su_no_organoboron_C11
+      source_fixed_atom_id: su_no:organoboron:C9
+      target_fixed_atom_id: su_no:organoboron:C11
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C9--su_no_organoboron_C12
+      source_fixed_atom_id: su_no:organoboron:C9
+      target_fixed_atom_id: su_no:organoboron:C12
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C9--su_no_organoboron_C13
+      source_fixed_atom_id: su_no:organoboron:C9
+      target_fixed_atom_id: su_no:organoboron:C13
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C9--su_no_organoboron_C14
+      source_fixed_atom_id: su_no:organoboron:C9
+      target_fixed_atom_id: su_no:organoboron:C14
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C9--su_no_organoboron_C15
+      source_fixed_atom_id: su_no:organoboron:C9
+      target_fixed_atom_id: su_no:organoboron:C15
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:su_no_organoboron_C9--su_no_organoboron_C16
+      source_fixed_atom_id: su_no:organoboron:C9
+      target_fixed_atom_id: su_no:organoboron:C16
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: low
+      bond_records:
+      - source_molecode_node_id: sunoorganoboronm0000_C_1
+        target_molecode_node_id: sunoorganoboronm0000_C_9
+        source_component_id: su_no:organoboron:m0000
+        target_component_id: su_no:organoboron:m0000
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    descriptor_to_atom:
+      boronic Acid_.B1_electrostatic_charge: su_no:organoboron:B1
+      boronic Acid_.C10_NMR_shift: su_no:organoboron:C10
+      boronic Acid_.C10_electrostatic_charge: su_no:organoboron:C10
+      boronic Acid_.C11_NMR_shift: su_no:organoboron:C11
+      boronic Acid_.C11_electrostatic_charge: su_no:organoboron:C11
+      boronic Acid_.C12_NMR_shift: su_no:organoboron:C12
+      boronic Acid_.C12_electrostatic_charge: su_no:organoboron:C12
+      boronic Acid_.C13_NMR_shift: su_no:organoboron:C13
+      boronic Acid_.C13_electrostatic_charge: su_no:organoboron:C13
+      boronic Acid_.C14_NMR_shift: su_no:organoboron:C14
+      boronic Acid_.C14_electrostatic_charge: su_no:organoboron:C14
+      boronic Acid_.C15_NMR_shift: su_no:organoboron:C15
+      boronic Acid_.C15_electrostatic_charge: su_no:organoboron:C15
+      boronic Acid_.C16_NMR_shift: su_no:organoboron:C16
+      boronic Acid_.C16_electrostatic_charge: su_no:organoboron:C16
+      boronic Acid_.C1_NMR_shift: su_no:organoboron:C1
+      boronic Acid_.C1_electrostatic_charge: su_no:organoboron:C1
+      boronic Acid_.C2_NMR_shift: su_no:organoboron:C2
+      boronic Acid_.C2_electrostatic_charge: su_no:organoboron:C2
+      boronic Acid_.C3_NMR_shift: su_no:organoboron:C3
+      boronic Acid_.C3_electrostatic_charge: su_no:organoboron:C3
+      boronic Acid_.C4_NMR_shift: su_no:organoboron:C4
+      boronic Acid_.C4_electrostatic_charge: su_no:organoboron:C4
+      boronic Acid_.C5_NMR_shift: su_no:organoboron:C5
+      boronic Acid_.C5_electrostatic_charge: su_no:organoboron:C5
+      boronic Acid_.C6_NMR_shift: su_no:organoboron:C6
+      boronic Acid_.C6_electrostatic_charge: su_no:organoboron:C6
+      boronic Acid_.C7_NMR_shift: su_no:organoboron:C7
+      boronic Acid_.C7_electrostatic_charge: su_no:organoboron:C7
+      boronic Acid_.C8_NMR_shift: su_no:organoboron:C8
+      boronic Acid_.C8_electrostatic_charge: su_no:organoboron:C8
+      boronic Acid_.C9_NMR_shift: su_no:organoboron:C9
+      boronic Acid_.C9_electrostatic_charge: su_no:organoboron:C9
+      boronic Acid_.N1_NMR_shift: su_no:organoboron:N1
+      boronic Acid_.N1_electrostatic_charge: su_no:organoboron:N1
+      boronic Acid_.N2_NMR_shift: su_no:organoboron:N2
+      boronic Acid_.N2_electrostatic_charge: su_no:organoboron:N2
+    coverage:
+      fixed_atom_count: 19
+      descriptor_column_count: 37
+      molecode_anchor_summary:
+        element_and_index_match: 10
+        first_candidate_fallback: 8
+        no_molecode_candidate: 1
+      bond_type_summary:
+        DOUBLE: 13
+        SINGLE: 14
+      edge_count: 27
+- dataset_key: DY
+  roles:
+  - role: additive
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: dy:additive:m0011
+    representative_source_smiles: CC1=CC=NO1
+    fixed_atoms:
+    - fixed_atom_id: dy:additive:C3
+      role: additive
+      dft_atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - additive_.C3_NMR_shift
+      - additive_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyadditivem0011_C_3
+          component_id: dy:additive:m0011
+          element: C
+          node_index: 3
+          display_label: CH
+        candidate_count: 4
+    - fixed_atom_id: dy:additive:C4
+      role: additive
+      dft_atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - additive_.C4_NMR_shift
+      - additive_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyadditivem0011_C_4
+          component_id: dy:additive:m0011
+          element: C
+          node_index: 4
+          display_label: CH
+        candidate_count: 4
+    - fixed_atom_id: dy:additive:C5
+      role: additive
+      dft_atom_label: C5
+      element: C
+      atom_index: 5
+      descriptor_columns:
+      - additive_.C5_NMR_shift
+      - additive_.C5_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: first_candidate_fallback
+        confidence: low
+        fixed_molecode_node:
+          node_id: dyadditivem0011_C_1
+          component_id: dy:additive:m0011
+          element: C
+          node_index: 1
+          display_label: CH3
+        candidate_count: 4
+    - fixed_atom_id: dy:additive:N1
+      role: additive
+      dft_atom_label: N1
+      element: N
+      atom_index: 1
+      descriptor_columns:
+      - additive_.N1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyadditivem0011_N_1
+          component_id: dy:additive:m0011
+          element: N
+          node_index: 1
+          display_label: N
+        candidate_count: 1
+    - fixed_atom_id: dy:additive:O1
+      role: additive
+      dft_atom_label: O1
+      element: O
+      atom_index: 1
+      descriptor_columns:
+      - additive_.O1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyadditivem0011_O_1
+          component_id: dy:additive:m0011
+          element: O
+          node_index: 1
+          display_label: O
+        candidate_count: 1
+    fixed_edges:
+    - edge_id: fixed_edge:dy_additive_C3--dy_additive_C4
+      source_fixed_atom_id: dy:additive:C3
+      target_fixed_atom_id: dy:additive:C4
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyadditivem0011_C_3
+        target_molecode_node_id: dyadditivem0011_C_4
+        source_component_id: dy:additive:m0011
+        target_component_id: dy:additive:m0011
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_additive_C4--dy_additive_N1
+      source_fixed_atom_id: dy:additive:C4
+      target_fixed_atom_id: dy:additive:N1
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyadditivem0011_C_4
+        target_molecode_node_id: dyadditivem0011_N_1
+        source_component_id: dy:additive:m0011
+        target_component_id: dy:additive:m0011
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:dy_additive_N1--dy_additive_O1
+      source_fixed_atom_id: dy:additive:N1
+      target_fixed_atom_id: dy:additive:O1
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyadditivem0011_N_1
+        target_molecode_node_id: dyadditivem0011_O_1
+        source_component_id: dy:additive:m0011
+        target_component_id: dy:additive:m0011
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    descriptor_to_atom:
+      additive_.C3_NMR_shift: dy:additive:C3
+      additive_.C3_electrostatic_charge: dy:additive:C3
+      additive_.C4_NMR_shift: dy:additive:C4
+      additive_.C4_electrostatic_charge: dy:additive:C4
+      additive_.C5_NMR_shift: dy:additive:C5
+      additive_.C5_electrostatic_charge: dy:additive:C5
+      additive_.N1_electrostatic_charge: dy:additive:N1
+      additive_.O1_electrostatic_charge: dy:additive:O1
+    coverage:
+      fixed_atom_count: 5
+      descriptor_column_count: 8
+      molecode_anchor_summary:
+        element_and_index_match: 4
+        first_candidate_fallback: 1
+      bond_type_summary:
+        DOUBLE: 1
+        SINGLE: 2
+      edge_count: 3
+  - role: aryl_halide
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: dy:aryl_halide:m0003
+    representative_source_smiles: BrC1=CN=CC=C1
+    fixed_atoms:
+    - fixed_atom_id: dy:aryl_halide:C1
+      role: aryl_halide
+      dft_atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - aryl_halide_.C1_NMR_shift
+      - aryl_halide_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyarylhalidem0003_C_1
+          component_id: dy:aryl_halide:m0003
+          element: C
+          node_index: 1
+          display_label: C
+        candidate_count: 5
+    - fixed_atom_id: dy:aryl_halide:C2
+      role: aryl_halide
+      dft_atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - aryl_halide_.C2_NMR_shift
+      - aryl_halide_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyarylhalidem0003_C_2
+          component_id: dy:aryl_halide:m0003
+          element: C
+          node_index: 2
+          display_label: CH
+        candidate_count: 5
+    - fixed_atom_id: dy:aryl_halide:C3
+      role: aryl_halide
+      dft_atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - aryl_halide_.C3_NMR_shift
+      - aryl_halide_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyarylhalidem0003_C_3
+          component_id: dy:aryl_halide:m0003
+          element: C
+          node_index: 3
+          display_label: CH
+        candidate_count: 5
+    - fixed_atom_id: dy:aryl_halide:C4
+      role: aryl_halide
+      dft_atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - aryl_halide_.C4_NMR_shift
+      - aryl_halide_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - ARYL_C_IPSO
+      - ARYL_ELECTRONIC_SUBSTITUENT
+      - ARYL_STERIC_SUBSTITUENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyarylhalidem0003_C_4
+          component_id: dy:aryl_halide:m0003
+          element: C
+          node_index: 4
+          display_label: CH
+        candidate_count: 5
+    - fixed_atom_id: dy:aryl_halide:H2
+      role: aryl_halide
+      dft_atom_label: H2
+      element: H
+      atom_index: 2
+      descriptor_columns:
+      - aryl_halide_.H2_NMR_shift
+      - aryl_halide_.H2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_dft_only
+        anchor_method: no_molecode_candidate
+        confidence: none
+        fixed_molecode_node: null
+        candidate_count: 0
+    - fixed_atom_id: dy:aryl_halide:H3
+      role: aryl_halide
+      dft_atom_label: H3
+      element: H
+      atom_index: 3
+      descriptor_columns:
+      - aryl_halide_.H3_NMR_shift
+      - aryl_halide_.H3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types: []
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_dft_only
+        anchor_method: no_molecode_candidate
+        confidence: none
+        fixed_molecode_node: null
+        candidate_count: 0
+    fixed_edges:
+    - edge_id: fixed_edge:dy_aryl_halide_C1--dy_aryl_halide_C2
+      source_fixed_atom_id: dy:aryl_halide:C1
+      target_fixed_atom_id: dy:aryl_halide:C2
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyarylhalidem0003_C_1
+        target_molecode_node_id: dyarylhalidem0003_C_2
+        source_component_id: dy:aryl_halide:m0003
+        target_component_id: dy:aryl_halide:m0003
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_aryl_halide_C3--dy_aryl_halide_C4
+      source_fixed_atom_id: dy:aryl_halide:C3
+      target_fixed_atom_id: dy:aryl_halide:C4
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyarylhalidem0003_C_3
+        target_molecode_node_id: dyarylhalidem0003_C_4
+        source_component_id: dy:aryl_halide:m0003
+        target_component_id: dy:aryl_halide:m0003
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    descriptor_to_atom:
+      aryl_halide_.C1_NMR_shift: dy:aryl_halide:C1
+      aryl_halide_.C1_electrostatic_charge: dy:aryl_halide:C1
+      aryl_halide_.C2_NMR_shift: dy:aryl_halide:C2
+      aryl_halide_.C2_electrostatic_charge: dy:aryl_halide:C2
+      aryl_halide_.C3_NMR_shift: dy:aryl_halide:C3
+      aryl_halide_.C3_electrostatic_charge: dy:aryl_halide:C3
+      aryl_halide_.C4_NMR_shift: dy:aryl_halide:C4
+      aryl_halide_.C4_electrostatic_charge: dy:aryl_halide:C4
+      aryl_halide_.H2_NMR_shift: dy:aryl_halide:H2
+      aryl_halide_.H2_electrostatic_charge: dy:aryl_halide:H2
+      aryl_halide_.H3_NMR_shift: dy:aryl_halide:H3
+      aryl_halide_.H3_electrostatic_charge: dy:aryl_halide:H3
+    coverage:
+      fixed_atom_count: 6
+      descriptor_column_count: 12
+      molecode_anchor_summary:
+        element_and_index_match: 4
+        no_molecode_candidate: 2
+      bond_type_summary:
+        DOUBLE: 1
+        SINGLE: 1
+      edge_count: 2
+  - role: base
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: dy:base:m0002
+    representative_source_smiles: CN1CCCN2C1=NCCC2
+    fixed_atoms:
+    - fixed_atom_id: dy:base:N1
+      role: base
+      dft_atom_label: N1
+      element: N
+      atom_index: 1
+      descriptor_columns:
+      - base_.N1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+      likely_site_types:
+      - BASE_BASIC_SITE
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dybasem0002_N_1
+          component_id: dy:base:m0002
+          element: N
+          node_index: 1
+          display_label: N
+        candidate_count: 3
+    fixed_edges: []
+    descriptor_to_atom:
+      base_.N1_electrostatic_charge: dy:base:N1
+    coverage:
+      fixed_atom_count: 1
+      descriptor_column_count: 1
+      molecode_anchor_summary:
+        element_and_index_match: 1
+      bond_type_summary: {}
+      edge_count: 0
+  - role: ligand
+    graph_identity_policy: dft_atom_label_is_primary_atom_id
+    representative_component_id: dy:ligand:m0001
+    representative_source_smiles: CC(C)C(C=C(C(C)C)C=C1C(C)C)=C1C2=C(P(C(C)(C)C)C(C)(C)C)C=CC=C2
+    fixed_atoms:
+    - fixed_atom_id: dy:ligand:C1
+      role: ligand
+      dft_atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - ligand_.C1_NMR_shift
+      - ligand_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_1
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 1
+          display_label: CH3
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C2
+      role: ligand
+      dft_atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - ligand_.C2_NMR_shift
+      - ligand_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_2
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 2
+          display_label: CH
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C3
+      role: ligand
+      dft_atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - ligand_.C3_NMR_shift
+      - ligand_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_3
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 3
+          display_label: CH3
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C4
+      role: ligand
+      dft_atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - ligand_.C4_NMR_shift
+      - ligand_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_4
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 4
+          display_label: C
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C5
+      role: ligand
+      dft_atom_label: C5
+      element: C
+      atom_index: 5
+      descriptor_columns:
+      - ligand_.C5_NMR_shift
+      - ligand_.C5_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_5
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 5
+          display_label: CH
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C6
+      role: ligand
+      dft_atom_label: C6
+      element: C
+      atom_index: 6
+      descriptor_columns:
+      - ligand_.C6_NMR_shift
+      - ligand_.C6_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_6
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 6
+          display_label: C
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C7
+      role: ligand
+      dft_atom_label: C7
+      element: C
+      atom_index: 7
+      descriptor_columns:
+      - ligand_.C7_NMR_shift
+      - ligand_.C7_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_7
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 7
+          display_label: CH
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C8
+      role: ligand
+      dft_atom_label: C8
+      element: C
+      atom_index: 8
+      descriptor_columns:
+      - ligand_.C8_NMR_shift
+      - ligand_.C8_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_8
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 8
+          display_label: CH3
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C9
+      role: ligand
+      dft_atom_label: C9
+      element: C
+      atom_index: 9
+      descriptor_columns:
+      - ligand_.C9_NMR_shift
+      - ligand_.C9_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_9
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 9
+          display_label: CH3
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C10
+      role: ligand
+      dft_atom_label: C10
+      element: C
+      atom_index: 10
+      descriptor_columns:
+      - ligand_.C10_NMR_shift
+      - ligand_.C10_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_10
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 10
+          display_label: CH
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C11
+      role: ligand
+      dft_atom_label: C11
+      element: C
+      atom_index: 11
+      descriptor_columns:
+      - ligand_.C11_NMR_shift
+      - ligand_.C11_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_11
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 11
+          display_label: C
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C12
+      role: ligand
+      dft_atom_label: C12
+      element: C
+      atom_index: 12
+      descriptor_columns:
+      - ligand_.C12_NMR_shift
+      - ligand_.C12_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_12
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 12
+          display_label: CH
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C13
+      role: ligand
+      dft_atom_label: C13
+      element: C
+      atom_index: 13
+      descriptor_columns:
+      - ligand_.C13_NMR_shift
+      - ligand_.C13_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_13
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 13
+          display_label: CH3
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C14
+      role: ligand
+      dft_atom_label: C14
+      element: C
+      atom_index: 14
+      descriptor_columns:
+      - ligand_.C14_NMR_shift
+      - ligand_.C14_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_14
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 14
+          display_label: CH3
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C15
+      role: ligand
+      dft_atom_label: C15
+      element: C
+      atom_index: 15
+      descriptor_columns:
+      - ligand_.C15_NMR_shift
+      - ligand_.C15_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_15
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 15
+          display_label: C
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C16
+      role: ligand
+      dft_atom_label: C16
+      element: C
+      atom_index: 16
+      descriptor_columns:
+      - ligand_.C16_NMR_shift
+      - ligand_.C16_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_16
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 16
+          display_label: C
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:C17
+      role: ligand
+      dft_atom_label: C17
+      element: C
+      atom_index: 17
+      descriptor_columns:
+      - ligand_.C17_NMR_shift
+      - ligand_.C17_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_C_17
+          component_id: dy:ligand:m0001
+          element: C
+          node_index: 17
+          display_label: C
+        candidate_count: 29
+    - fixed_atom_id: dy:ligand:H3
+      role: ligand
+      dft_atom_label: H3
+      element: H
+      atom_index: 3
+      descriptor_columns:
+      - ligand_.H3_NMR_shift
+      - ligand_.H3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_dft_only
+        anchor_method: no_molecode_candidate
+        confidence: none
+        fixed_molecode_node: null
+        candidate_count: 0
+    - fixed_atom_id: dy:ligand:H4
+      role: ligand
+      dft_atom_label: H4
+      element: H
+      atom_index: 4
+      descriptor_columns:
+      - ligand_.H4_NMR_shift
+      - ligand_.H4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_dft_only
+        anchor_method: no_molecode_candidate
+        confidence: none
+        fixed_molecode_node: null
+        candidate_count: 0
+    - fixed_atom_id: dy:ligand:H9
+      role: ligand
+      dft_atom_label: H9
+      element: H
+      atom_index: 9
+      descriptor_columns:
+      - ligand_.H9_NMR_shift
+      - ligand_.H9_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_dft_only
+        anchor_method: no_molecode_candidate
+        confidence: none
+        fixed_molecode_node: null
+        candidate_count: 0
+    - fixed_atom_id: dy:ligand:H11
+      role: ligand
+      dft_atom_label: H11
+      element: H
+      atom_index: 11
+      descriptor_columns:
+      - ligand_.H11_NMR_shift
+      - ligand_.H11_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_STERIC_ENVIRONMENT
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_dft_only
+        anchor_method: no_molecode_candidate
+        confidence: none
+        fixed_molecode_node: null
+        candidate_count: 0
+    - fixed_atom_id: dy:ligand:P1
+      role: ligand
+      dft_atom_label: P1
+      element: P
+      atom_index: 1
+      descriptor_columns:
+      - ligand_.P1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+      likely_site_types:
+      - LIGAND_DONOR_ATOM
+      feature_anchor_status: fixed_by_dft_atom_label
+      molecode_anchor:
+        anchor_status: fixed_to_molecode
+        anchor_method: element_and_index_match
+        confidence: high
+        fixed_molecode_node:
+          node_id: dyligandm0001_P_1
+          component_id: dy:ligand:m0001
+          element: P
+          node_index: 1
+          display_label: P
+        candidate_count: 1
+    fixed_edges:
+    - edge_id: fixed_edge:dy_ligand_C1--dy_ligand_C2
+      source_fixed_atom_id: dy:ligand:C1
+      target_fixed_atom_id: dy:ligand:C2
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_1
+        target_molecode_node_id: dyligandm0001_C_2
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C2--dy_ligand_C3
+      source_fixed_atom_id: dy:ligand:C2
+      target_fixed_atom_id: dy:ligand:C3
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_2
+        target_molecode_node_id: dyligandm0001_C_3
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C2--dy_ligand_C4
+      source_fixed_atom_id: dy:ligand:C2
+      target_fixed_atom_id: dy:ligand:C4
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_2
+        target_molecode_node_id: dyligandm0001_C_4
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C4--dy_ligand_C5
+      source_fixed_atom_id: dy:ligand:C4
+      target_fixed_atom_id: dy:ligand:C5
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_4
+        target_molecode_node_id: dyligandm0001_C_5
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C4--dy_ligand_C15
+      source_fixed_atom_id: dy:ligand:C4
+      target_fixed_atom_id: dy:ligand:C15
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_4
+        target_molecode_node_id: dyligandm0001_C_15
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:dy_ligand_C5--dy_ligand_C6
+      source_fixed_atom_id: dy:ligand:C5
+      target_fixed_atom_id: dy:ligand:C6
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_5
+        target_molecode_node_id: dyligandm0001_C_6
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:dy_ligand_C6--dy_ligand_C7
+      source_fixed_atom_id: dy:ligand:C6
+      target_fixed_atom_id: dy:ligand:C7
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_6
+        target_molecode_node_id: dyligandm0001_C_7
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C6--dy_ligand_C10
+      source_fixed_atom_id: dy:ligand:C6
+      target_fixed_atom_id: dy:ligand:C10
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_6
+        target_molecode_node_id: dyligandm0001_C_10
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C7--dy_ligand_C8
+      source_fixed_atom_id: dy:ligand:C7
+      target_fixed_atom_id: dy:ligand:C8
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_7
+        target_molecode_node_id: dyligandm0001_C_8
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C7--dy_ligand_C9
+      source_fixed_atom_id: dy:ligand:C7
+      target_fixed_atom_id: dy:ligand:C9
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_7
+        target_molecode_node_id: dyligandm0001_C_9
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C10--dy_ligand_C11
+      source_fixed_atom_id: dy:ligand:C10
+      target_fixed_atom_id: dy:ligand:C11
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_10
+        target_molecode_node_id: dyligandm0001_C_11
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: ===
+        bond_type: DOUBLE
+        bond_order: 2.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - DOUBLE
+      bond_orders:
+      - 2.0
+    - edge_id: fixed_edge:dy_ligand_C11--dy_ligand_C12
+      source_fixed_atom_id: dy:ligand:C11
+      target_fixed_atom_id: dy:ligand:C12
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_11
+        target_molecode_node_id: dyligandm0001_C_12
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C11--dy_ligand_C15
+      source_fixed_atom_id: dy:ligand:C11
+      target_fixed_atom_id: dy:ligand:C15
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_11
+        target_molecode_node_id: dyligandm0001_C_15
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C12--dy_ligand_C13
+      source_fixed_atom_id: dy:ligand:C12
+      target_fixed_atom_id: dy:ligand:C13
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_12
+        target_molecode_node_id: dyligandm0001_C_13
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C12--dy_ligand_C14
+      source_fixed_atom_id: dy:ligand:C12
+      target_fixed_atom_id: dy:ligand:C14
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_12
+        target_molecode_node_id: dyligandm0001_C_14
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C15--dy_ligand_C16
+      source_fixed_atom_id: dy:ligand:C15
+      target_fixed_atom_id: dy:ligand:C16
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_15
+        target_molecode_node_id: dyligandm0001_C_16
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C16--dy_ligand_C17
+      source_fixed_atom_id: dy:ligand:C16
+      target_fixed_atom_id: dy:ligand:C17
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_16
+        target_molecode_node_id: dyligandm0001_C_17
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    - edge_id: fixed_edge:dy_ligand_C17--dy_ligand_P1
+      source_fixed_atom_id: dy:ligand:C17
+      target_fixed_atom_id: dy:ligand:P1
+      edge_category: COVALENT_BOND
+      edge_status: fixed_from_selected_molecode_anchors
+      confidence: high
+      bond_records:
+      - source_molecode_node_id: dyligandm0001_C_17
+        target_molecode_node_id: dyligandm0001_P_1
+        source_component_id: dy:ligand:m0001
+        target_component_id: dy:ligand:m0001
+        molecode_operator: '---'
+        bond_type: SINGLE
+        bond_order: 1.0
+        is_aromatic: false
+        stereochemistry: null
+      bond_types:
+      - SINGLE
+      bond_orders:
+      - 1.0
+    descriptor_to_atom:
+      ligand_.C10_NMR_shift: dy:ligand:C10
+      ligand_.C10_electrostatic_charge: dy:ligand:C10
+      ligand_.C11_NMR_shift: dy:ligand:C11
+      ligand_.C11_electrostatic_charge: dy:ligand:C11
+      ligand_.C12_NMR_shift: dy:ligand:C12
+      ligand_.C12_electrostatic_charge: dy:ligand:C12
+      ligand_.C13_NMR_shift: dy:ligand:C13
+      ligand_.C13_electrostatic_charge: dy:ligand:C13
+      ligand_.C14_NMR_shift: dy:ligand:C14
+      ligand_.C14_electrostatic_charge: dy:ligand:C14
+      ligand_.C15_NMR_shift: dy:ligand:C15
+      ligand_.C15_electrostatic_charge: dy:ligand:C15
+      ligand_.C16_NMR_shift: dy:ligand:C16
+      ligand_.C16_electrostatic_charge: dy:ligand:C16
+      ligand_.C17_NMR_shift: dy:ligand:C17
+      ligand_.C17_electrostatic_charge: dy:ligand:C17
+      ligand_.C1_NMR_shift: dy:ligand:C1
+      ligand_.C1_electrostatic_charge: dy:ligand:C1
+      ligand_.C2_NMR_shift: dy:ligand:C2
+      ligand_.C2_electrostatic_charge: dy:ligand:C2
+      ligand_.C3_NMR_shift: dy:ligand:C3
+      ligand_.C3_electrostatic_charge: dy:ligand:C3
+      ligand_.C4_NMR_shift: dy:ligand:C4
+      ligand_.C4_electrostatic_charge: dy:ligand:C4
+      ligand_.C5_NMR_shift: dy:ligand:C5
+      ligand_.C5_electrostatic_charge: dy:ligand:C5
+      ligand_.C6_NMR_shift: dy:ligand:C6
+      ligand_.C6_electrostatic_charge: dy:ligand:C6
+      ligand_.C7_NMR_shift: dy:ligand:C7
+      ligand_.C7_electrostatic_charge: dy:ligand:C7
+      ligand_.C8_NMR_shift: dy:ligand:C8
+      ligand_.C8_electrostatic_charge: dy:ligand:C8
+      ligand_.C9_NMR_shift: dy:ligand:C9
+      ligand_.C9_electrostatic_charge: dy:ligand:C9
+      ligand_.H11_NMR_shift: dy:ligand:H11
+      ligand_.H11_electrostatic_charge: dy:ligand:H11
+      ligand_.H3_NMR_shift: dy:ligand:H3
+      ligand_.H3_electrostatic_charge: dy:ligand:H3
+      ligand_.H4_NMR_shift: dy:ligand:H4
+      ligand_.H4_electrostatic_charge: dy:ligand:H4
+      ligand_.H9_NMR_shift: dy:ligand:H9
+      ligand_.H9_electrostatic_charge: dy:ligand:H9
+      ligand_.P1_electrostatic_charge: dy:ligand:P1
+    coverage:
+      fixed_atom_count: 22
+      descriptor_column_count: 43
+      molecode_anchor_summary:
+        element_and_index_match: 18
+        no_molecode_candidate: 4
+      bond_type_summary:
+        DOUBLE: 3
+        SINGLE: 15
+      edge_count: 18

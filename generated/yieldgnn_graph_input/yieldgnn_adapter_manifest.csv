@@ -1,0 +1,4 @@
+dataset_key,n_node,n_directed_edge,node_feature_dim,edge_feature_dim,role_graph_position,product_graph
+AZ,5,8,155,8,0,dummy
+SU_NO,39,118,155,8,0,dummy
+DY,34,48,155,8,0,dummy

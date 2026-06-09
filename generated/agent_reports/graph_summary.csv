@@ -1,0 +1,22 @@
+dataset_key,node_count,edge_count,component_count,isolated_node_count,role_counts,edge_scope_counts,edge_feature_counts,isolated_nodes
+AZ,5,4,1,0,"amine: 2
+aryl_halide: 2
+ligand: 1","cross_role: 2
+intra_role: 2","CROSS_ROLE_FORMING_BOND: 1
+CROSS_ROLE_METAL_COORDINATION: 1
+INTRA_ROLE_COVALENT_DOUBLE_BOND: 1
+INTRA_ROLE_COVALENT_SINGLE_BOND: 1",
+SU_NO,39,59,1,0,"aryl_halide: 19
+ligand: 1
+organoboron: 19","cross_role: 3
+intra_role: 56","CROSS_ROLE_FORMING_BOND: 1
+CROSS_ROLE_METAL_COORDINATION: 2
+INTRA_ROLE_COVALENT_DOUBLE_BOND: 27
+INTRA_ROLE_COVALENT_SINGLE_BOND: 29",
+DY,34,24,11,8,"additive: 5
+aryl_halide: 6
+base: 1
+ligand: 22","cross_role: 1
+intra_role: 23","CROSS_ROLE_METAL_COORDINATION: 1
+INTRA_ROLE_COVALENT_DOUBLE_BOND: 5
+INTRA_ROLE_COVALENT_SINGLE_BOND: 18",dy:additive:C5;dy:aryl_halide:H2;dy:aryl_halide:H3;dy:base:N1;dy:ligand:H3;dy:ligand:H4;dy:ligand:H9;dy:ligand:H11
