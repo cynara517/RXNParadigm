@@ -1,4 +1,0 @@
-dataset_key,nodes_csv,edges_csv,adjacency_csv,node_edge_features_csv,node_count,positive_edge_count
-AZ,AZ_nodes.csv,AZ_edges.csv,AZ_adjacency.csv,AZ_node_edge_feature_names.csv,5,4
-SU_NO,SU_NO_nodes.csv,SU_NO_edges.csv,SU_NO_adjacency.csv,SU_NO_node_edge_feature_names.csv,39,59
-DY,DY_nodes.csv,DY_edges.csv,DY_adjacency.csv,DY_node_edge_feature_names.csv,34,24

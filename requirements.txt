@@ -1,8 +1,0 @@
-numpy
-pandas
-PyYAML
-pydantic>=1.10,<2
-pytest
-rdkit
-networkx
-openpyxl

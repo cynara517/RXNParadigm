@@ -1,6 +1,0 @@
-node_index,node_id,dataset_key,role,dft_atom_label,element,node_feature_full_names,descriptor_names,likely_site_types
-0,az:amine:C1,AZ,amine,C1,C,amine_.C1_NMR_shift;amine_.C1_electrostatic_charge,NMR_shift;electrostatic_charge,
-1,az:amine:N1,AZ,amine,N1,N,amine_.N1_NMR_shift;amine_.N1_electrostatic_charge,NMR_shift;electrostatic_charge,AMINE_N;AMINE_N_H
-2,az:aryl_halide:C1,AZ,aryl_halide,C1,C,halide_.C1_NMR_shift;halide_.C1_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
-3,az:aryl_halide:C2,AZ,aryl_halide,C2,C,halide_.C2_NMR_shift;halide_.C2_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
-4,az:ligand:P1,AZ,ligand,P1,P,ligand_.P1_NMR_shift;ligand_.P1_electrostatic_charge,NMR_shift;electrostatic_charge,LIGAND_DONOR_ATOM
