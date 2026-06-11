@@ -1,0 +1,16 @@
+edge_feature_name,edge_feature_full_name,weight,description
+no_edge,NO_EDGE,0.0,No relation or bond between the two fixed atoms.
+intra_role_covalent_single_bond,INTRA_ROLE_COVALENT_SINGLE_BOND,0.33,Single covalent bond recorded by MoleCode within one role graph.
+intra_role_covalent_double_bond,INTRA_ROLE_COVALENT_DOUBLE_BOND,0.67,Double covalent bond recorded by MoleCode within one role graph.
+intra_role_covalent_triple_bond,INTRA_ROLE_COVALENT_TRIPLE_BOND,1.0,Triple covalent bond recorded by MoleCode within one role graph.
+intra_role_covalent_aromatic_bond,INTRA_ROLE_COVALENT_AROMATIC_BOND,0.5,Aromatic covalent bond recorded by MoleCode within one role graph.
+intra_role_dative_bond,INTRA_ROLE_DATIVE_BOND,0.5,Dative/coordination bond recorded by MoleCode within one role graph.
+cross_role_forming_bond,CROSS_ROLE_FORMING_BOND,0.5,Literature-grounded cross-role forming bond proposal.
+cross_role_breaking_bond,CROSS_ROLE_BREAKING_BOND,0.5,Literature-grounded cross-role breaking bond proposal.
+cross_role_metal_coordination,CROSS_ROLE_METAL_COORDINATION,0.5,Literature-grounded cross-role metal coordination proposal.
+cross_role_acid_base_interaction,CROSS_ROLE_ACID_BASE_INTERACTION,0.5,Literature-grounded cross-role acid/base interaction proposal.
+cross_role_electronic_effect,CROSS_ROLE_ELECTRONIC_EFFECT,0.5,Literature-grounded cross-role electronic effect proposal.
+cross_role_steric_effect,CROSS_ROLE_STERIC_EFFECT,0.5,Literature-grounded cross-role steric effect proposal.
+cross_role_solvent_effect,CROSS_ROLE_SOLVENT_EFFECT,0.5,Literature-grounded cross-role solvent effect proposal.
+cross_role_additive_effect,CROSS_ROLE_ADDITIVE_EFFECT,0.5,Literature-grounded cross-role additive effect proposal.
+cross_role_user_defined_relation,CROSS_ROLE_USER_DEFINED_RELATION,0.5,Literature-grounded cross-role user-defined relation proposal.

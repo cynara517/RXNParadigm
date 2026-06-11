@@ -1,0 +1,4 @@
+dataset_key,source_csv,output_npz,sample_count,node_count,undirected_edge_count,directed_edge_count,node_feature_dim,edge_feature_dim,missing_source_column_count,yield_mean,yield_std
+AZ,/Users/shifanchen/Documents/2026ReactionGraphBuildAgent/datasets/az_no_rdkit.csv,/Users/shifanchen/Documents/2026ReactionGraphBuildAgent/generated/sample_graph_dataset/AZ_samples.npz,750,5,4,8,2,17,0,38.54926681518555,29.409461975097656
+SU_NO,/Users/shifanchen/Documents/2026ReactionGraphBuildAgent/datasets/su_no_rdkit.csv,/Users/shifanchen/Documents/2026ReactionGraphBuildAgent/generated/sample_graph_dataset/SU_NO_samples.npz,4543,39,59,118,2,17,0,42.06221008300781,28.81205177307129
+DY,/Users/shifanchen/Documents/2026ReactionGraphBuildAgent/datasets/dy_dft.csv,/Users/shifanchen/Documents/2026ReactionGraphBuildAgent/generated/sample_graph_dataset/DY_samples.npz,3955,34,24,48,2,17,0,33.08529281616211,27.2911319732666

@@ -1,0 +1,896 @@
+artifact_id: reaction_graph_agent_quality_report_v1
+description: Controlled graph-construction report. Review items mark graph decisions
+  that require human approval before being treated as locked.
+datasets:
+- dataset_key: AZ
+  source_profile:
+    dataset_key: AZ
+    source_csv: /Users/shifanchen/Documents/2026ReactionGraphBuildAgent/datasets/az_no_rdkit.csv
+    column_count: 56
+    has_yield: true
+    role_profiles:
+    - role_prefix: amine
+      total_column_count: 14
+      atom_descriptor_column_count: 4
+      global_descriptor_column_count: 10
+      atom_descriptor_sample:
+      - amine_.N1_electrostatic_charge
+      - amine_.N1_NMR_shift
+      - amine_.C1_electrostatic_charge
+      - amine_.C1_NMR_shift
+      global_descriptor_sample:
+      - amine_amount
+      - amine_molecular_weight
+      - amine_molecular_volume
+      - amine_surface_area
+      - amine_ovality
+      - amine_hardness
+      - amine_dipole_moment
+      - amine_electronegativity
+      - amine_E_HOMO
+      - amine_E_LOMO
+    - role_prefix: base
+      total_column_count: 2
+      atom_descriptor_column_count: 0
+      global_descriptor_column_count: 2
+      atom_descriptor_sample: []
+      global_descriptor_sample:
+      - base_smiles
+      - base_amount
+    - role_prefix: halide
+      total_column_count: 20
+      atom_descriptor_column_count: 4
+      global_descriptor_column_count: 16
+      atom_descriptor_sample:
+      - halide_.C1_electrostatic_charge
+      - halide_.C1_NMR_shift
+      - halide_.C2_electrostatic_charge
+      - halide_.C2_NMR_shift
+      global_descriptor_sample:
+      - halide_amount
+      - halide_molecular_weight
+      - halide_molecular_volume
+      - halide_surface_area
+      - halide_ovality
+      - halide_hardness
+      - halide_dipole_moment
+      - halide_electronegativity
+      - halide_E_HOMO
+      - halide_E_LOMO
+      - halide_V0_frequency
+      - halide_V0_intensity
+    - role_prefix: ligand
+      total_column_count: 9
+      atom_descriptor_column_count: 2
+      global_descriptor_column_count: 7
+      atom_descriptor_sample:
+      - ligand_.P1_electrostatic_charge
+      - ligand_.P1_NMR_shift
+      global_descriptor_sample:
+      - ligand_amount
+      - ligand_molecular_weight
+      - ligand_hardness
+      - ligand_dipole_moment
+      - ligand_electronegativity
+      - ligand_E_HOMO
+      - ligand_E_LOMO
+    - role_prefix: solvent
+      total_column_count: 3
+      atom_descriptor_column_count: 0
+      global_descriptor_column_count: 3
+      atom_descriptor_sample: []
+      global_descriptor_sample:
+      - solvent_smiles
+      - solvent_1
+      - solvent_2
+  graph_summary:
+    dataset_key: AZ
+    node_count: 5
+    edge_count: 4
+    role_counts:
+      amine: 2
+      aryl_halide: 2
+      ligand: 1
+    element_counts:
+      C: 3
+      N: 1
+      P: 1
+    edge_scope_counts:
+      intra_role: 2
+      cross_role: 2
+    edge_feature_counts:
+      INTRA_ROLE_COVALENT_SINGLE_BOND: 1
+      INTRA_ROLE_COVALENT_DOUBLE_BOND: 1
+      CROSS_ROLE_FORMING_BOND: 1
+      CROSS_ROLE_METAL_COORDINATION: 1
+    isolated_nodes: []
+    component_count: 1
+    components:
+    - size: 5
+      roles:
+        amine: 2
+        aryl_halide: 2
+        ligand: 1
+      nodes:
+      - az:amine:C1
+      - az:amine:N1
+      - az:aryl_halide:C1
+      - az:aryl_halide:C2
+      - az:ligand:P1
+    top_degree_nodes:
+    - node_id: az:aryl_halide:C1
+      role: aryl_halide
+      element: C
+      degree: 3
+    - node_id: az:amine:N1
+      role: amine
+      element: N
+      degree: 2
+    - node_id: az:amine:C1
+      role: amine
+      element: C
+      degree: 1
+    - node_id: az:aryl_halide:C2
+      role: aryl_halide
+      element: C
+      degree: 1
+    - node_id: az:ligand:P1
+      role: ligand
+      element: P
+      degree: 1
+    cross_role_edges:
+    - edge_index: '2'
+      source_node_id: az:aryl_halide:C1
+      target_node_id: az:amine:N1
+      relation_type: FORMING_BOND
+      weight: '0.5'
+      evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic
+    - edge_index: '3'
+      source_node_id: az:ligand:P1
+      target_node_id: az:aryl_halide:C1
+      relation_type: METAL_COORDINATION
+      weight: '0.5'
+      evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic
+- dataset_key: SU_NO
+  source_profile:
+    dataset_key: SU_NO
+    source_csv: /Users/shifanchen/Documents/2026ReactionGraphBuildAgent/datasets/su_no_rdkit.csv
+    column_count: 124
+    has_yield: true
+    role_profiles:
+    - role_prefix: base
+      total_column_count: 1
+      atom_descriptor_column_count: 0
+      global_descriptor_column_count: 1
+      atom_descriptor_sample: []
+      global_descriptor_sample:
+      - base_smiles
+    - role_prefix: boronic Acid
+      total_column_count: 52
+      atom_descriptor_column_count: 37
+      global_descriptor_column_count: 15
+      atom_descriptor_sample:
+      - boronic Acid_.C1_electrostatic_charge
+      - boronic Acid_.C1_NMR_shift
+      - boronic Acid_.C2_electrostatic_charge
+      - boronic Acid_.C2_NMR_shift
+      - boronic Acid_.C3_electrostatic_charge
+      - boronic Acid_.C3_NMR_shift
+      - boronic Acid_.C4_electrostatic_charge
+      - boronic Acid_.C4_NMR_shift
+      - boronic Acid_.C5_electrostatic_charge
+      - boronic Acid_.C5_NMR_shift
+      - boronic Acid_.C6_electrostatic_charge
+      - boronic Acid_.C6_NMR_shift
+      global_descriptor_sample:
+      - boronic Acid_molecular_weight
+      - boronic Acid_molecular_volume
+      - boronic Acid_surface_area
+      - boronic Acid_ovality
+      - boronic Acid_hardness
+      - boronic Acid_dipole_moment
+      - boronic Acid_electronegativity
+      - boronic Acid_E_HOMO
+      - boronic Acid_E_LOMO
+      - boronic Acid_V0_frequency
+      - boronic Acid_V0_intensity
+      - boronic Acid_V1_frequency
+    - role_prefix: halide
+      total_column_count: 53
+      atom_descriptor_column_count: 38
+      global_descriptor_column_count: 15
+      atom_descriptor_sample:
+      - halide_.C1_electrostatic_charge
+      - halide_.C1_NMR_shift
+      - halide_.C2_electrostatic_charge
+      - halide_.C2_NMR_shift
+      - halide_.C3_electrostatic_charge
+      - halide_.C3_NMR_shift
+      - halide_.C4_electrostatic_charge
+      - halide_.C4_NMR_shift
+      - halide_.C5_electrostatic_charge
+      - halide_.C5_NMR_shift
+      - halide_.C6_electrostatic_charge
+      - halide_.C6_NMR_shift
+      global_descriptor_sample:
+      - halide_molecular_weight
+      - halide_molecular_volume
+      - halide_surface_area
+      - halide_ovality
+      - halide_hardness
+      - halide_dipole_moment
+      - halide_electronegativity
+      - halide_E_HOMO
+      - halide_E_LOMO
+      - halide_V0_frequency
+      - halide_V0_intensity
+      - halide_V1_frequency
+    - role_prefix: ligand
+      total_column_count: 8
+      atom_descriptor_column_count: 2
+      global_descriptor_column_count: 6
+      atom_descriptor_sample:
+      - ligand_.P1_electrostatic_charge
+      - ligand_.P1_NMR_shift
+      global_descriptor_sample:
+      - ligand_molecular_weight
+      - ligand_hardness
+      - ligand_dipole_moment
+      - ligand_electronegativity
+      - ligand_E_HOMO
+      - ligand_E_LOMO
+    - role_prefix: solvent
+      total_column_count: 4
+      atom_descriptor_column_count: 0
+      global_descriptor_column_count: 4
+      atom_descriptor_sample: []
+      global_descriptor_sample:
+      - solvent_smiles
+      - solvent_1
+      - solvent_2
+      - solvent_3
+  graph_summary:
+    dataset_key: SU_NO
+    node_count: 39
+    edge_count: 59
+    role_counts:
+      aryl_halide: 19
+      ligand: 1
+      organoboron: 19
+    element_counts:
+      C: 33
+      N: 4
+      P: 1
+      B: 1
+    edge_scope_counts:
+      intra_role: 56
+      cross_role: 3
+    edge_feature_counts:
+      INTRA_ROLE_COVALENT_SINGLE_BOND: 29
+      INTRA_ROLE_COVALENT_DOUBLE_BOND: 27
+      CROSS_ROLE_FORMING_BOND: 1
+      CROSS_ROLE_METAL_COORDINATION: 2
+    isolated_nodes: []
+    component_count: 1
+    components:
+    - size: 39
+      roles:
+        aryl_halide: 19
+        organoboron: 19
+        ligand: 1
+      nodes:
+      - su_no:aryl_halide:C1
+      - su_no:aryl_halide:C2
+      - su_no:aryl_halide:C9
+      - su_no:organoboron:C1
+      - su_no:organoboron:B1
+      - su_no:ligand:P1
+      - su_no:aryl_halide:C3
+      - su_no:aryl_halide:C10
+      - su_no:aryl_halide:C11
+      - su_no:aryl_halide:C12
+      - su_no:aryl_halide:C13
+      - su_no:aryl_halide:C14
+      - su_no:aryl_halide:C15
+      - su_no:aryl_halide:C16
+      - su_no:aryl_halide:C17
+      - su_no:aryl_halide:C8
+      - su_no:organoboron:C2
+      - su_no:organoboron:C9
+      - su_no:aryl_halide:C4
+      - su_no:aryl_halide:C7
+      - su_no:organoboron:C3
+      - su_no:organoboron:C10
+      - su_no:organoboron:C11
+      - su_no:organoboron:C12
+      - su_no:organoboron:C13
+      - su_no:organoboron:C14
+      - su_no:organoboron:C15
+      - su_no:organoboron:C16
+      - su_no:organoboron:C8
+      - su_no:aryl_halide:N3
+      - su_no:aryl_halide:N4
+      - su_no:aryl_halide:C6
+      - su_no:organoboron:C4
+      - su_no:organoboron:C7
+      - su_no:aryl_halide:C5
+      - su_no:organoboron:N1
+      - su_no:organoboron:N2
+      - su_no:organoboron:C6
+      - su_no:organoboron:C5
+    top_degree_nodes:
+    - node_id: su_no:aryl_halide:C2
+      role: aryl_halide
+      element: C
+      degree: 10
+    - node_id: su_no:aryl_halide:C9
+      role: aryl_halide
+      element: C
+      degree: 10
+    - node_id: su_no:organoboron:C2
+      role: organoboron
+      element: C
+      degree: 9
+    - node_id: su_no:organoboron:C9
+      role: organoboron
+      element: C
+      degree: 9
+    - node_id: su_no:aryl_halide:C1
+      role: aryl_halide
+      element: C
+      degree: 5
+    - node_id: su_no:aryl_halide:C4
+      role: aryl_halide
+      element: C
+      degree: 4
+    - node_id: su_no:organoboron:C4
+      role: organoboron
+      element: C
+      degree: 4
+    - node_id: su_no:aryl_halide:C5
+      role: aryl_halide
+      element: C
+      degree: 3
+    - node_id: su_no:aryl_halide:C8
+      role: aryl_halide
+      element: C
+      degree: 3
+    - node_id: su_no:organoboron:C1
+      role: organoboron
+      element: C
+      degree: 3
+    - node_id: su_no:organoboron:C5
+      role: organoboron
+      element: C
+      degree: 3
+    - node_id: su_no:organoboron:C8
+      role: organoboron
+      element: C
+      degree: 3
+    cross_role_edges:
+    - edge_index: '56'
+      source_node_id: su_no:aryl_halide:C1
+      target_node_id: su_no:organoboron:C1
+      relation_type: FORMING_BOND
+      weight: '0.5'
+      evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013
+    - edge_index: '57'
+      source_node_id: su_no:organoboron:B1
+      target_node_id: su_no:aryl_halide:C1
+      relation_type: METAL_COORDINATION
+      weight: '0.5'
+      evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013
+    - edge_index: '58'
+      source_node_id: su_no:ligand:P1
+      target_node_id: su_no:aryl_halide:C1
+      relation_type: METAL_COORDINATION
+      weight: '0.5'
+      evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013
+- dataset_key: DY
+  source_profile:
+    dataset_key: DY
+    source_csv: /Users/shifanchen/Documents/2026ReactionGraphBuildAgent/datasets/dy_dft.csv
+    column_count: 121
+    has_yield: true
+    role_profiles:
+    - role_prefix: additive
+      total_column_count: 19
+      atom_descriptor_column_count: 8
+      global_descriptor_column_count: 11
+      atom_descriptor_sample:
+      - additive_.C3_NMR_shift
+      - additive_.C3_electrostatic_charge
+      - additive_.C4_NMR_shift
+      - additive_.C4_electrostatic_charge
+      - additive_.C5_NMR_shift
+      - additive_.C5_electrostatic_charge
+      - additive_.N1_electrostatic_charge
+      - additive_.O1_electrostatic_charge
+      global_descriptor_sample:
+      - additive_E_HOMO
+      - additive_E_LUMO
+      - additive_V1_frequency
+      - additive_V1_intensity
+      - additive_dipole_moment
+      - additive_electronegativity
+      - additive_hardness
+      - additive_molecular_volume
+      - additive_molecular_weight
+      - additive_ovality
+      - additive_surface_area
+    - role_prefix: aryl_halide
+      total_column_count: 27
+      atom_descriptor_column_count: 12
+      global_descriptor_column_count: 15
+      atom_descriptor_sample:
+      - aryl_halide_.C1_NMR_shift
+      - aryl_halide_.C1_electrostatic_charge
+      - aryl_halide_.C2_NMR_shift
+      - aryl_halide_.C2_electrostatic_charge
+      - aryl_halide_.C3_NMR_shift
+      - aryl_halide_.C3_electrostatic_charge
+      - aryl_halide_.C4_NMR_shift
+      - aryl_halide_.C4_electrostatic_charge
+      - aryl_halide_.H2_NMR_shift
+      - aryl_halide_.H2_electrostatic_charge
+      - aryl_halide_.H3_NMR_shift
+      - aryl_halide_.H3_electrostatic_charge
+      global_descriptor_sample:
+      - aryl_halide_E_HOMO
+      - aryl_halide_E_LUMO
+      - aryl_halide_V1_frequency
+      - aryl_halide_V1_intensity
+      - aryl_halide_V2_frequency
+      - aryl_halide_V2_intensity
+      - aryl_halide_V3_frequency
+      - aryl_halide_V3_intensity
+      - aryl_halide_dipole_moment
+      - aryl_halide_electronegativity
+      - aryl_halide_hardness
+      - aryl_halide_molecular_volume
+    - role_prefix: base
+      total_column_count: 10
+      atom_descriptor_column_count: 1
+      global_descriptor_column_count: 9
+      atom_descriptor_sample:
+      - base_.N1_electrostatic_charge
+      global_descriptor_sample:
+      - base_E_HOMO
+      - base_E_LUMO
+      - base_dipole_moment
+      - base_electronegativity
+      - base_hardness
+      - base_molecular_volume
+      - base_molecular_weight
+      - base_ovality
+      - base_surface_area
+    - role_prefix: ligand
+      total_column_count: 64
+      atom_descriptor_column_count: 43
+      global_descriptor_column_count: 21
+      atom_descriptor_sample:
+      - ligand_.C10_NMR_shift
+      - ligand_.C10_electrostatic_charge
+      - ligand_.C11_NMR_shift
+      - ligand_.C11_electrostatic_charge
+      - ligand_.C12_NMR_shift
+      - ligand_.C12_electrostatic_charge
+      - ligand_.C13_NMR_shift
+      - ligand_.C13_electrostatic_charge
+      - ligand_.C14_NMR_shift
+      - ligand_.C14_electrostatic_charge
+      - ligand_.C15_NMR_shift
+      - ligand_.C15_electrostatic_charge
+      global_descriptor_sample:
+      - ligand_V10_frequency
+      - ligand_V10_intensity
+      - ligand_V1_frequency
+      - ligand_V1_intensity
+      - ligand_V2_frequency
+      - ligand_V2_intensity
+      - ligand_V3_frequency
+      - ligand_V3_intensity
+      - ligand_V4_frequency
+      - ligand_V4_intensity
+      - ligand_V5_frequency
+      - ligand_V5_intensity
+  graph_summary:
+    dataset_key: DY
+    node_count: 34
+    edge_count: 24
+    role_counts:
+      additive: 5
+      aryl_halide: 6
+      base: 1
+      ligand: 22
+    element_counts:
+      C: 24
+      N: 2
+      O: 1
+      H: 6
+      P: 1
+    edge_scope_counts:
+      intra_role: 23
+      cross_role: 1
+    edge_feature_counts:
+      INTRA_ROLE_COVALENT_SINGLE_BOND: 18
+      INTRA_ROLE_COVALENT_DOUBLE_BOND: 5
+      CROSS_ROLE_METAL_COORDINATION: 1
+    isolated_nodes:
+    - dy:additive:C5
+    - dy:aryl_halide:H2
+    - dy:aryl_halide:H3
+    - dy:base:N1
+    - dy:ligand:H3
+    - dy:ligand:H4
+    - dy:ligand:H9
+    - dy:ligand:H11
+    component_count: 11
+    components:
+    - size: 4
+      roles:
+        additive: 4
+      nodes:
+      - dy:additive:C3
+      - dy:additive:C4
+      - dy:additive:N1
+      - dy:additive:O1
+    - size: 1
+      roles:
+        additive: 1
+      nodes:
+      - dy:additive:C5
+    - size: 20
+      roles:
+        aryl_halide: 2
+        ligand: 18
+      nodes:
+      - dy:aryl_halide:C1
+      - dy:aryl_halide:C2
+      - dy:ligand:P1
+      - dy:ligand:C17
+      - dy:ligand:C16
+      - dy:ligand:C15
+      - dy:ligand:C4
+      - dy:ligand:C11
+      - dy:ligand:C2
+      - dy:ligand:C5
+      - dy:ligand:C10
+      - dy:ligand:C12
+      - dy:ligand:C1
+      - dy:ligand:C3
+      - dy:ligand:C6
+      - dy:ligand:C13
+      - dy:ligand:C14
+      - dy:ligand:C7
+      - dy:ligand:C8
+      - dy:ligand:C9
+    - size: 2
+      roles:
+        aryl_halide: 2
+      nodes:
+      - dy:aryl_halide:C3
+      - dy:aryl_halide:C4
+    - size: 1
+      roles:
+        aryl_halide: 1
+      nodes:
+      - dy:aryl_halide:H2
+    - size: 1
+      roles:
+        aryl_halide: 1
+      nodes:
+      - dy:aryl_halide:H3
+    - size: 1
+      roles:
+        base: 1
+      nodes:
+      - dy:base:N1
+    - size: 1
+      roles:
+        ligand: 1
+      nodes:
+      - dy:ligand:H3
+    - size: 1
+      roles:
+        ligand: 1
+      nodes:
+      - dy:ligand:H4
+    - size: 1
+      roles:
+        ligand: 1
+      nodes:
+      - dy:ligand:H9
+    - size: 1
+      roles:
+        ligand: 1
+      nodes:
+      - dy:ligand:H11
+    top_degree_nodes:
+    - node_id: dy:ligand:C11
+      role: ligand
+      element: C
+      degree: 3
+    - node_id: dy:ligand:C12
+      role: ligand
+      element: C
+      degree: 3
+    - node_id: dy:ligand:C15
+      role: ligand
+      element: C
+      degree: 3
+    - node_id: dy:ligand:C2
+      role: ligand
+      element: C
+      degree: 3
+    - node_id: dy:ligand:C4
+      role: ligand
+      element: C
+      degree: 3
+    - node_id: dy:ligand:C6
+      role: ligand
+      element: C
+      degree: 3
+    - node_id: dy:ligand:C7
+      role: ligand
+      element: C
+      degree: 3
+    - node_id: dy:additive:C4
+      role: additive
+      element: C
+      degree: 2
+    - node_id: dy:additive:N1
+      role: additive
+      element: N
+      degree: 2
+    - node_id: dy:aryl_halide:C1
+      role: aryl_halide
+      element: C
+      degree: 2
+    - node_id: dy:ligand:C10
+      role: ligand
+      element: C
+      degree: 2
+    - node_id: dy:ligand:C16
+      role: ligand
+      element: C
+      degree: 2
+    cross_role_edges:
+    - edge_index: '23'
+      source_node_id: dy:ligand:P1
+      target_node_id: dy:aryl_halide:C1
+      relation_type: METAL_COORDINATION
+      weight: '0.5'
+      evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic
+review_queue:
+- review_item_id: AZ:cross_role_edge:az:aryl_halide:C1--az:amine:N1
+  dataset_key: AZ
+  item_type: cross_role_edge
+  severity: high
+  target_id: az:aryl_halide:C1--az:amine:N1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''2''
+
+    source_node_id: az:aryl_halide:C1
+
+    target_node_id: az:amine:N1
+
+    relation_type: FORMING_BOND
+
+    weight: ''0.5''
+
+    evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic'
+- review_item_id: AZ:cross_role_edge:az:ligand:P1--az:aryl_halide:C1
+  dataset_key: AZ
+  item_type: cross_role_edge
+  severity: high
+  target_id: az:ligand:P1--az:aryl_halide:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''3''
+
+    source_node_id: az:ligand:P1
+
+    target_node_id: az:aryl_halide:C1
+
+    relation_type: METAL_COORDINATION
+
+    weight: ''0.5''
+
+    evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic'
+- review_item_id: AZ:minimal_reaction_center_graph:AZ:node_count
+  dataset_key: AZ
+  item_type: minimal_reaction_center_graph
+  severity: medium
+  target_id: AZ:node_count
+  review_required: true
+  review_status: pending
+  review_reason: Graph is very small and may miss substituent or ligand environment.
+  recommended_action: Consider expanding topology with MoleCode/RDKit structural nodes
+    and missing-DFT masks.
+  human_decision: ''
+  locked: false
+  payload: 'node_count: 5'
+- review_item_id: AZ:sparse_role_topology:AZ:ligand
+  dataset_key: AZ
+  item_type: sparse_role_topology
+  severity: medium
+  target_id: AZ:ligand
+  review_required: true
+  review_status: pending
+  review_reason: Role ligand has only 1 graph node(s), but source data contains global
+    descriptors for this role.
+  recommended_action: Decide whether to add role-level/global descriptor nodes, or
+    expand topology with missing-DFT atom nodes.
+  human_decision: ''
+  locked: false
+  payload: "role: ligand\ngraph_node_count: 1\nsource_profile:\n  role_prefix: ligand\n\
+    \  total_column_count: 9\n  atom_descriptor_column_count: 2\n  global_descriptor_column_count:\
+    \ 7\n  atom_descriptor_sample:\n  - ligand_.P1_electrostatic_charge\n  - ligand_.P1_NMR_shift\n\
+    \  global_descriptor_sample:\n  - ligand_amount\n  - ligand_molecular_weight\n\
+    \  - ligand_hardness\n  - ligand_dipole_moment\n  - ligand_electronegativity\n\
+    \  - ligand_E_HOMO\n  - ligand_E_LOMO"
+- review_item_id: SU_NO:cross_role_edge:su_no:aryl_halide:C1--su_no:organoboron:C1
+  dataset_key: SU_NO
+  item_type: cross_role_edge
+  severity: high
+  target_id: su_no:aryl_halide:C1--su_no:organoboron:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''56''
+
+    source_node_id: su_no:aryl_halide:C1
+
+    target_node_id: su_no:organoboron:C1
+
+    relation_type: FORMING_BOND
+
+    weight: ''0.5''
+
+    evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013'
+- review_item_id: SU_NO:cross_role_edge:su_no:organoboron:B1--su_no:aryl_halide:C1
+  dataset_key: SU_NO
+  item_type: cross_role_edge
+  severity: high
+  target_id: su_no:organoboron:B1--su_no:aryl_halide:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''57''
+
+    source_node_id: su_no:organoboron:B1
+
+    target_node_id: su_no:aryl_halide:C1
+
+    relation_type: METAL_COORDINATION
+
+    weight: ''0.5''
+
+    evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013'
+- review_item_id: SU_NO:cross_role_edge:su_no:ligand:P1--su_no:aryl_halide:C1
+  dataset_key: SU_NO
+  item_type: cross_role_edge
+  severity: high
+  target_id: su_no:ligand:P1--su_no:aryl_halide:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''58''
+
+    source_node_id: su_no:ligand:P1
+
+    target_node_id: su_no:aryl_halide:C1
+
+    relation_type: METAL_COORDINATION
+
+    weight: ''0.5''
+
+    evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013'
+- review_item_id: SU_NO:sparse_role_topology:SU_NO:ligand
+  dataset_key: SU_NO
+  item_type: sparse_role_topology
+  severity: medium
+  target_id: SU_NO:ligand
+  review_required: true
+  review_status: pending
+  review_reason: Role ligand has only 1 graph node(s), but source data contains global
+    descriptors for this role.
+  recommended_action: Decide whether to add role-level/global descriptor nodes, or
+    expand topology with missing-DFT atom nodes.
+  human_decision: ''
+  locked: false
+  payload: "role: ligand\ngraph_node_count: 1\nsource_profile:\n  role_prefix: ligand\n\
+    \  total_column_count: 8\n  atom_descriptor_column_count: 2\n  global_descriptor_column_count:\
+    \ 6\n  atom_descriptor_sample:\n  - ligand_.P1_electrostatic_charge\n  - ligand_.P1_NMR_shift\n\
+    \  global_descriptor_sample:\n  - ligand_molecular_weight\n  - ligand_hardness\n\
+    \  - ligand_dipole_moment\n  - ligand_electronegativity\n  - ligand_E_HOMO\n \
+    \ - ligand_E_LOMO"
+- review_item_id: DY:cross_role_edge:dy:ligand:P1--dy:aryl_halide:C1
+  dataset_key: DY
+  item_type: cross_role_edge
+  severity: high
+  target_id: dy:ligand:P1--dy:aryl_halide:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''23''
+
+    source_node_id: dy:ligand:P1
+
+    target_node_id: dy:aryl_halide:C1
+
+    relation_type: METAL_COORDINATION
+
+    weight: ''0.5''
+
+    evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic'
+- review_item_id: DY:isolated_nodes:DY:isolated_nodes
+  dataset_key: DY
+  item_type: isolated_nodes
+  severity: medium
+  target_id: DY:isolated_nodes
+  review_required: true
+  review_status: pending
+  review_reason: Some feature-bearing atoms do not pass messages to other atoms.
+  recommended_action: Confirm they should remain readout-only nodes, or add reviewed
+    role/cross-role relations.
+  human_decision: ''
+  locked: false
+  payload: 'isolated_nodes:
+
+    - dy:additive:C5
+
+    - dy:aryl_halide:H2
+
+    - dy:aryl_halide:H3
+
+    - dy:base:N1
+
+    - dy:ligand:H3
+
+    - dy:ligand:H4
+
+    - dy:ligand:H9
+
+    - dy:ligand:H11'
+- review_item_id: DY:sparse_role_topology:DY:base
+  dataset_key: DY
+  item_type: sparse_role_topology
+  severity: medium
+  target_id: DY:base
+  review_required: true
+  review_status: pending
+  review_reason: Role base has only 1 graph node(s), but source data contains global
+    descriptors for this role.
+  recommended_action: Decide whether to add role-level/global descriptor nodes, or
+    expand topology with missing-DFT atom nodes.
+  human_decision: ''
+  locked: false
+  payload: "role: base\ngraph_node_count: 1\nsource_profile:\n  role_prefix: base\n\
+    \  total_column_count: 10\n  atom_descriptor_column_count: 1\n  global_descriptor_column_count:\
+    \ 9\n  atom_descriptor_sample:\n  - base_.N1_electrostatic_charge\n  global_descriptor_sample:\n\
+    \  - base_E_HOMO\n  - base_E_LUMO\n  - base_dipole_moment\n  - base_electronegativity\n\
+    \  - base_hardness\n  - base_molecular_volume\n  - base_molecular_weight\n  -\
+    \ base_ovality\n  - base_surface_area"

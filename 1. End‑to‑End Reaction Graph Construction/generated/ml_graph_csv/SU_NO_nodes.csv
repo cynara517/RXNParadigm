@@ -1,0 +1,40 @@
+node_index,node_id,dataset_key,role,dft_atom_label,element,node_feature_full_names,descriptor_names,likely_site_types
+0,su_no:aryl_halide:C1,SU_NO,aryl_halide,C1,C,halide_.C1_NMR_shift;halide_.C1_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+1,su_no:aryl_halide:C2,SU_NO,aryl_halide,C2,C,halide_.C2_NMR_shift;halide_.C2_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+2,su_no:aryl_halide:C3,SU_NO,aryl_halide,C3,C,halide_.C3_NMR_shift;halide_.C3_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+3,su_no:aryl_halide:C4,SU_NO,aryl_halide,C4,C,halide_.C4_NMR_shift;halide_.C4_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+4,su_no:aryl_halide:C5,SU_NO,aryl_halide,C5,C,halide_.C5_NMR_shift;halide_.C5_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+5,su_no:aryl_halide:C6,SU_NO,aryl_halide,C6,C,halide_.C6_NMR_shift;halide_.C6_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+6,su_no:aryl_halide:C7,SU_NO,aryl_halide,C7,C,halide_.C7_NMR_shift;halide_.C7_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+7,su_no:aryl_halide:C8,SU_NO,aryl_halide,C8,C,halide_.C8_NMR_shift;halide_.C8_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+8,su_no:aryl_halide:C9,SU_NO,aryl_halide,C9,C,halide_.C9_NMR_shift;halide_.C9_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+9,su_no:aryl_halide:C10,SU_NO,aryl_halide,C10,C,halide_.C10_NMR_shift;halide_.C10_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+10,su_no:aryl_halide:C11,SU_NO,aryl_halide,C11,C,halide_.C11_NMR_shift;halide_.C11_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+11,su_no:aryl_halide:C12,SU_NO,aryl_halide,C12,C,halide_.C12_NMR_shift;halide_.C12_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+12,su_no:aryl_halide:C13,SU_NO,aryl_halide,C13,C,halide_.C13_NMR_shift;halide_.C13_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+13,su_no:aryl_halide:C14,SU_NO,aryl_halide,C14,C,halide_.C14_NMR_shift;halide_.C14_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+14,su_no:aryl_halide:C15,SU_NO,aryl_halide,C15,C,halide_.C15_NMR_shift;halide_.C15_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+15,su_no:aryl_halide:C16,SU_NO,aryl_halide,C16,C,halide_.C16_NMR_shift;halide_.C16_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+16,su_no:aryl_halide:C17,SU_NO,aryl_halide,C17,C,halide_.C17_NMR_shift;halide_.C17_electrostatic_charge,NMR_shift;electrostatic_charge,ARYL_C_IPSO;ARYL_ELECTRONIC_SUBSTITUENT;ARYL_STERIC_SUBSTITUENT
+17,su_no:aryl_halide:N3,SU_NO,aryl_halide,N3,N,halide_.N3_NMR_shift;halide_.N3_electrostatic_charge,NMR_shift;electrostatic_charge,
+18,su_no:aryl_halide:N4,SU_NO,aryl_halide,N4,N,halide_.N4_NMR_shift;halide_.N4_electrostatic_charge,NMR_shift;electrostatic_charge,
+19,su_no:ligand:P1,SU_NO,ligand,P1,P,ligand_.P1_NMR_shift;ligand_.P1_electrostatic_charge,NMR_shift;electrostatic_charge,LIGAND_DONOR_ATOM
+20,su_no:organoboron:B1,SU_NO,organoboron,B1,B,boronic Acid_.B1_electrostatic_charge,electrostatic_charge,BORON_SITE
+21,su_no:organoboron:C1,SU_NO,organoboron,C1,C,boronic Acid_.C1_NMR_shift;boronic Acid_.C1_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+22,su_no:organoboron:C2,SU_NO,organoboron,C2,C,boronic Acid_.C2_NMR_shift;boronic Acid_.C2_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+23,su_no:organoboron:C3,SU_NO,organoboron,C3,C,boronic Acid_.C3_NMR_shift;boronic Acid_.C3_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+24,su_no:organoboron:C4,SU_NO,organoboron,C4,C,boronic Acid_.C4_NMR_shift;boronic Acid_.C4_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+25,su_no:organoboron:C5,SU_NO,organoboron,C5,C,boronic Acid_.C5_NMR_shift;boronic Acid_.C5_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+26,su_no:organoboron:C6,SU_NO,organoboron,C6,C,boronic Acid_.C6_NMR_shift;boronic Acid_.C6_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+27,su_no:organoboron:C7,SU_NO,organoboron,C7,C,boronic Acid_.C7_NMR_shift;boronic Acid_.C7_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+28,su_no:organoboron:C8,SU_NO,organoboron,C8,C,boronic Acid_.C8_NMR_shift;boronic Acid_.C8_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+29,su_no:organoboron:C9,SU_NO,organoboron,C9,C,boronic Acid_.C9_NMR_shift;boronic Acid_.C9_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+30,su_no:organoboron:C10,SU_NO,organoboron,C10,C,boronic Acid_.C10_NMR_shift;boronic Acid_.C10_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+31,su_no:organoboron:C11,SU_NO,organoboron,C11,C,boronic Acid_.C11_NMR_shift;boronic Acid_.C11_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+32,su_no:organoboron:C12,SU_NO,organoboron,C12,C,boronic Acid_.C12_NMR_shift;boronic Acid_.C12_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+33,su_no:organoboron:C13,SU_NO,organoboron,C13,C,boronic Acid_.C13_NMR_shift;boronic Acid_.C13_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+34,su_no:organoboron:C14,SU_NO,organoboron,C14,C,boronic Acid_.C14_NMR_shift;boronic Acid_.C14_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+35,su_no:organoboron:C15,SU_NO,organoboron,C15,C,boronic Acid_.C15_NMR_shift;boronic Acid_.C15_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+36,su_no:organoboron:C16,SU_NO,organoboron,C16,C,boronic Acid_.C16_NMR_shift;boronic Acid_.C16_electrostatic_charge,NMR_shift;electrostatic_charge,BORON_ATTACHED_CARBON
+37,su_no:organoboron:N1,SU_NO,organoboron,N1,N,boronic Acid_.N1_NMR_shift;boronic Acid_.N1_electrostatic_charge,NMR_shift;electrostatic_charge,
+38,su_no:organoboron:N2,SU_NO,organoboron,N2,N,boronic Acid_.N2_NMR_shift;boronic Acid_.N2_electrostatic_charge,NMR_shift;electrostatic_charge,

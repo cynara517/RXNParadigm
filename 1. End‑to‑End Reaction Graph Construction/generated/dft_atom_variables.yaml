@@ -1,0 +1,728 @@
+artifact_id: dft_atom_variables_v1
+description: Atom-level DFT descriptor variables grouped by dataset, role, and atom
+  label. Descriptor values are intentionally not extracted here.
+datasets:
+- dataset_key: AZ
+  source_path: datasets/az_no_rdkit.csv
+  row_count: 750
+  roles:
+  - role: amine
+    atoms:
+    - atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - amine_.C1_NMR_shift
+      - amine_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: N1
+      element: N
+      atom_index: 1
+      descriptor_columns:
+      - amine_.N1_NMR_shift
+      - amine_.N1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+  - role: aryl_halide
+    atoms:
+    - atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - halide_.C1_NMR_shift
+      - halide_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - halide_.C2_NMR_shift
+      - halide_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+  - role: ligand
+    atoms:
+    - atom_label: P1
+      element: P
+      atom_index: 1
+      descriptor_columns:
+      - ligand_.P1_NMR_shift
+      - ligand_.P1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+- dataset_key: SU_NO
+  source_path: datasets/su_no_rdkit.csv
+  row_count: 4543
+  roles:
+  - role: aryl_halide
+    atoms:
+    - atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - halide_.C1_NMR_shift
+      - halide_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - halide_.C2_NMR_shift
+      - halide_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - halide_.C3_NMR_shift
+      - halide_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - halide_.C4_NMR_shift
+      - halide_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C5
+      element: C
+      atom_index: 5
+      descriptor_columns:
+      - halide_.C5_NMR_shift
+      - halide_.C5_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C6
+      element: C
+      atom_index: 6
+      descriptor_columns:
+      - halide_.C6_NMR_shift
+      - halide_.C6_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C7
+      element: C
+      atom_index: 7
+      descriptor_columns:
+      - halide_.C7_NMR_shift
+      - halide_.C7_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C8
+      element: C
+      atom_index: 8
+      descriptor_columns:
+      - halide_.C8_NMR_shift
+      - halide_.C8_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C9
+      element: C
+      atom_index: 9
+      descriptor_columns:
+      - halide_.C9_NMR_shift
+      - halide_.C9_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C10
+      element: C
+      atom_index: 10
+      descriptor_columns:
+      - halide_.C10_NMR_shift
+      - halide_.C10_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C11
+      element: C
+      atom_index: 11
+      descriptor_columns:
+      - halide_.C11_NMR_shift
+      - halide_.C11_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C12
+      element: C
+      atom_index: 12
+      descriptor_columns:
+      - halide_.C12_NMR_shift
+      - halide_.C12_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C13
+      element: C
+      atom_index: 13
+      descriptor_columns:
+      - halide_.C13_NMR_shift
+      - halide_.C13_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C14
+      element: C
+      atom_index: 14
+      descriptor_columns:
+      - halide_.C14_NMR_shift
+      - halide_.C14_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C15
+      element: C
+      atom_index: 15
+      descriptor_columns:
+      - halide_.C15_NMR_shift
+      - halide_.C15_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C16
+      element: C
+      atom_index: 16
+      descriptor_columns:
+      - halide_.C16_NMR_shift
+      - halide_.C16_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C17
+      element: C
+      atom_index: 17
+      descriptor_columns:
+      - halide_.C17_NMR_shift
+      - halide_.C17_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: N3
+      element: N
+      atom_index: 3
+      descriptor_columns:
+      - halide_.N3_NMR_shift
+      - halide_.N3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: N4
+      element: N
+      atom_index: 4
+      descriptor_columns:
+      - halide_.N4_NMR_shift
+      - halide_.N4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+  - role: ligand
+    atoms:
+    - atom_label: P1
+      element: P
+      atom_index: 1
+      descriptor_columns:
+      - ligand_.P1_NMR_shift
+      - ligand_.P1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+  - role: organoboron
+    atoms:
+    - atom_label: B1
+      element: B
+      atom_index: 1
+      descriptor_columns:
+      - boronic Acid_.B1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+    - atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - boronic Acid_.C1_NMR_shift
+      - boronic Acid_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - boronic Acid_.C2_NMR_shift
+      - boronic Acid_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - boronic Acid_.C3_NMR_shift
+      - boronic Acid_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - boronic Acid_.C4_NMR_shift
+      - boronic Acid_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C5
+      element: C
+      atom_index: 5
+      descriptor_columns:
+      - boronic Acid_.C5_NMR_shift
+      - boronic Acid_.C5_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C6
+      element: C
+      atom_index: 6
+      descriptor_columns:
+      - boronic Acid_.C6_NMR_shift
+      - boronic Acid_.C6_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C7
+      element: C
+      atom_index: 7
+      descriptor_columns:
+      - boronic Acid_.C7_NMR_shift
+      - boronic Acid_.C7_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C8
+      element: C
+      atom_index: 8
+      descriptor_columns:
+      - boronic Acid_.C8_NMR_shift
+      - boronic Acid_.C8_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C9
+      element: C
+      atom_index: 9
+      descriptor_columns:
+      - boronic Acid_.C9_NMR_shift
+      - boronic Acid_.C9_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C10
+      element: C
+      atom_index: 10
+      descriptor_columns:
+      - boronic Acid_.C10_NMR_shift
+      - boronic Acid_.C10_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C11
+      element: C
+      atom_index: 11
+      descriptor_columns:
+      - boronic Acid_.C11_NMR_shift
+      - boronic Acid_.C11_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C12
+      element: C
+      atom_index: 12
+      descriptor_columns:
+      - boronic Acid_.C12_NMR_shift
+      - boronic Acid_.C12_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C13
+      element: C
+      atom_index: 13
+      descriptor_columns:
+      - boronic Acid_.C13_NMR_shift
+      - boronic Acid_.C13_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C14
+      element: C
+      atom_index: 14
+      descriptor_columns:
+      - boronic Acid_.C14_NMR_shift
+      - boronic Acid_.C14_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C15
+      element: C
+      atom_index: 15
+      descriptor_columns:
+      - boronic Acid_.C15_NMR_shift
+      - boronic Acid_.C15_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C16
+      element: C
+      atom_index: 16
+      descriptor_columns:
+      - boronic Acid_.C16_NMR_shift
+      - boronic Acid_.C16_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: N1
+      element: N
+      atom_index: 1
+      descriptor_columns:
+      - boronic Acid_.N1_NMR_shift
+      - boronic Acid_.N1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: N2
+      element: N
+      atom_index: 2
+      descriptor_columns:
+      - boronic Acid_.N2_NMR_shift
+      - boronic Acid_.N2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+- dataset_key: DY
+  source_path: datasets/dy_dft.csv
+  row_count: 3955
+  roles:
+  - role: additive
+    atoms:
+    - atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - additive_.C3_NMR_shift
+      - additive_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - additive_.C4_NMR_shift
+      - additive_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C5
+      element: C
+      atom_index: 5
+      descriptor_columns:
+      - additive_.C5_NMR_shift
+      - additive_.C5_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: N1
+      element: N
+      atom_index: 1
+      descriptor_columns:
+      - additive_.N1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+    - atom_label: O1
+      element: O
+      atom_index: 1
+      descriptor_columns:
+      - additive_.O1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+  - role: aryl_halide
+    atoms:
+    - atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - aryl_halide_.C1_NMR_shift
+      - aryl_halide_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - aryl_halide_.C2_NMR_shift
+      - aryl_halide_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - aryl_halide_.C3_NMR_shift
+      - aryl_halide_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - aryl_halide_.C4_NMR_shift
+      - aryl_halide_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: H2
+      element: H
+      atom_index: 2
+      descriptor_columns:
+      - aryl_halide_.H2_NMR_shift
+      - aryl_halide_.H2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: H3
+      element: H
+      atom_index: 3
+      descriptor_columns:
+      - aryl_halide_.H3_NMR_shift
+      - aryl_halide_.H3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+  - role: base
+    atoms:
+    - atom_label: N1
+      element: N
+      atom_index: 1
+      descriptor_columns:
+      - base_.N1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge
+  - role: ligand
+    atoms:
+    - atom_label: C1
+      element: C
+      atom_index: 1
+      descriptor_columns:
+      - ligand_.C1_NMR_shift
+      - ligand_.C1_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C2
+      element: C
+      atom_index: 2
+      descriptor_columns:
+      - ligand_.C2_NMR_shift
+      - ligand_.C2_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C3
+      element: C
+      atom_index: 3
+      descriptor_columns:
+      - ligand_.C3_NMR_shift
+      - ligand_.C3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C4
+      element: C
+      atom_index: 4
+      descriptor_columns:
+      - ligand_.C4_NMR_shift
+      - ligand_.C4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C5
+      element: C
+      atom_index: 5
+      descriptor_columns:
+      - ligand_.C5_NMR_shift
+      - ligand_.C5_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C6
+      element: C
+      atom_index: 6
+      descriptor_columns:
+      - ligand_.C6_NMR_shift
+      - ligand_.C6_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C7
+      element: C
+      atom_index: 7
+      descriptor_columns:
+      - ligand_.C7_NMR_shift
+      - ligand_.C7_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C8
+      element: C
+      atom_index: 8
+      descriptor_columns:
+      - ligand_.C8_NMR_shift
+      - ligand_.C8_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C9
+      element: C
+      atom_index: 9
+      descriptor_columns:
+      - ligand_.C9_NMR_shift
+      - ligand_.C9_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C10
+      element: C
+      atom_index: 10
+      descriptor_columns:
+      - ligand_.C10_NMR_shift
+      - ligand_.C10_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C11
+      element: C
+      atom_index: 11
+      descriptor_columns:
+      - ligand_.C11_NMR_shift
+      - ligand_.C11_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C12
+      element: C
+      atom_index: 12
+      descriptor_columns:
+      - ligand_.C12_NMR_shift
+      - ligand_.C12_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C13
+      element: C
+      atom_index: 13
+      descriptor_columns:
+      - ligand_.C13_NMR_shift
+      - ligand_.C13_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C14
+      element: C
+      atom_index: 14
+      descriptor_columns:
+      - ligand_.C14_NMR_shift
+      - ligand_.C14_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C15
+      element: C
+      atom_index: 15
+      descriptor_columns:
+      - ligand_.C15_NMR_shift
+      - ligand_.C15_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C16
+      element: C
+      atom_index: 16
+      descriptor_columns:
+      - ligand_.C16_NMR_shift
+      - ligand_.C16_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: C17
+      element: C
+      atom_index: 17
+      descriptor_columns:
+      - ligand_.C17_NMR_shift
+      - ligand_.C17_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: H3
+      element: H
+      atom_index: 3
+      descriptor_columns:
+      - ligand_.H3_NMR_shift
+      - ligand_.H3_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: H4
+      element: H
+      atom_index: 4
+      descriptor_columns:
+      - ligand_.H4_NMR_shift
+      - ligand_.H4_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: H9
+      element: H
+      atom_index: 9
+      descriptor_columns:
+      - ligand_.H9_NMR_shift
+      - ligand_.H9_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: H11
+      element: H
+      atom_index: 11
+      descriptor_columns:
+      - ligand_.H11_NMR_shift
+      - ligand_.H11_electrostatic_charge
+      descriptor_names:
+      - NMR_shift
+      - electrostatic_charge
+    - atom_label: P1
+      element: P
+      atom_index: 1
+      descriptor_columns:
+      - ligand_.P1_electrostatic_charge
+      descriptor_names:
+      - electrostatic_charge

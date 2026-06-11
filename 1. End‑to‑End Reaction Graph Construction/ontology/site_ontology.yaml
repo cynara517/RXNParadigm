@@ -1,0 +1,197 @@
+```yaml
+ontology_id: site_ontology_v0_1
+version: 0.1
+status: draft
+
+description: >
+  Site ontology for simple cross-coupling reaction graph construction.
+  This ontology defines chemically meaningful atom-level sites that can be
+  matched from MoleCode/RDKit graphs and used by reaction-family Skills.
+
+site_types:
+
+  ARYL_C_IPSO:
+    component_class: aryl_halide
+    description: >
+      The aryl or heteroaryl carbon atom directly bonded to a leaving group.
+      This site is typically involved in oxidative addition and later bond formation.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: "[c,CX3]-[Cl,Br,I,OTf,OTs]"
+    aliases:
+      - ipso_carbon
+      - aryl_ipso_carbon
+      - electrophilic_aryl_carbon
+      - aryl_coupling_carbon
+    required: false
+    editable: true
+
+  LEAVING_GROUP_X:
+    component_class: aryl_halide
+    description: >
+      The leaving group attached to the aryl or heteroaryl carbon, commonly
+      Cl, Br, I, or pseudohalides such as OTf or OTs.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: "Cl, Br, I, OTf, OTs or related leaving group attached to ARYL_C_IPSO"
+    aliases:
+      - halide
+      - leaving_group
+      - aryl_halide_x
+      - pseudohalide
+    required: false
+    editable: true
+
+  BORON_SITE:
+    component_class: boronic_acid
+    description: >
+      The boron atom in boronic acid, boronate ester, or related organoboron
+      coupling partner.
+    matching_strategy: ELEMENT_PATTERN
+    pattern_hint: "B"
+    aliases:
+      - boron_atom
+      - boronic_acid_boron
+      - boronate_boron
+    required: false
+    editable: true
+
+  BORON_ATTACHED_CARBON:
+    component_class: boronic_acid
+    description: >
+      The carbon atom directly bonded to boron that is transferred during
+      Suzuki-Miyaura type cross-coupling.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: "[C,c]-B"
+    aliases:
+      - organoboron_carbon
+      - boron_bound_carbon
+      - transferred_carbon
+      - nucleophilic_carbon
+    required: false
+    editable: true
+
+  AMINE_N:
+    component_class: amine
+    description: >
+      The nitrogen atom of an amine coupling partner. This site is commonly
+      involved in coordination, activation, and C-N bond formation.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: "[N;H0,H1,H2,H3;!$(N=*)]"
+    aliases:
+      - amine_nitrogen
+      - nucleophilic_nitrogen
+      - amine_donor_atom
+      - amine_site
+    required: false
+    editable: true
+
+  AMINE_N_H:
+    component_class: amine
+    description: >
+      Hydrogen-bearing amine nitrogen or the N-H site involved in deprotonation
+      or acid-base activation. This site only exists when the amine has at
+      least one N-H bond.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: "[N;H1,H2,H3]"
+    aliases:
+      - amine_nh
+      - n_h_site
+      - deprotonation_site
+      - amine_proton
+    required: false
+    editable: true
+
+  METAL_CENTER:
+    component_class: catalyst
+    description: >
+      The catalytic metal center, most commonly Pd in cross-coupling reactions.
+      This site is involved in oxidative addition, transmetallation, coordination,
+      and reductive elimination steps.
+    matching_strategy: ELEMENT_PATTERN
+    pattern_hint: "Pd, Ni, Cu or other catalytic metal"
+    aliases:
+      - palladium_center
+      - metal_atom
+      - catalyst_center
+      - pd_center
+    required: false
+    editable: true
+
+  LIGAND_DONOR_ATOM:
+    component_class: ligand
+    description: >
+      The ligand donor atom that coordinates to the catalytic metal center,
+      commonly phosphorus or nitrogen in phosphine or nitrogen ligands.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: "P, N, O, S donor atoms in ligand environment"
+    aliases:
+      - ligand_donor
+      - phosphine_p
+      - nitrogen_ligand_donor
+      - donor_atom
+    required: false
+    editable: true
+
+  BASE_BASIC_SITE:
+    component_class: base
+    description: >
+      The basic atom or anionic center of the base, involved in proton abstraction,
+      acid neutralization, boron activation, or reaction condition modulation.
+    matching_strategy: SMARTS_OR_MOLECODE_PATTERN
+    pattern_hint: "basic O, N, carbonate, phosphate, alkoxide, hydroxide, amide"
+    aliases:
+      - basic_atom
+      - base_site
+      - proton_acceptor
+      - anionic_center
+    required: false
+    editable: true
+
+  ARYL_ELECTRONIC_SUBSTITUENT:
+    component_class: aryl_halide
+    description: >
+      Substituent or substituent attachment site on the aryl halide that may
+      influence the reaction center through electronic effects.
+    matching_strategy: TOPOLOGICAL_OR_USER_DEFINED
+    pattern_hint: "non-leaving-group substituent attached to aryl ring"
+    aliases:
+      - electronic_substituent
+      - aryl_substituent
+      - electronic_effect_site
+    required: false
+    editable: true
+
+  ARYL_STERIC_SUBSTITUENT:
+    component_class: aryl_halide
+    description: >
+      Substituent near the reaction center, especially ortho substituents, that
+      may influence oxidative addition or bond formation through steric effects.
+    matching_strategy: TOPOLOGICAL_OR_USER_DEFINED
+    pattern_hint: "ortho or nearby substituent relative to ARYL_C_IPSO"
+    aliases:
+      - steric_substituent
+      - ortho_substituent
+      - steric_effect_site
+    required: false
+    editable: true
+
+  LIGAND_STERIC_ENVIRONMENT:
+    component_class: ligand
+    description: >
+      Steric environment around the ligand donor atom that may influence metal
+      coordination, oxidative addition, or reductive elimination.
+    matching_strategy: TOPOLOGICAL_OR_DESCRIPTOR_BASED
+    pattern_hint: "atoms within ligand environment around LIGAND_DONOR_ATOM"
+    aliases:
+      - ligand_steric_site
+      - bulky_ligand_environment
+      - ligand_cone_angle_environment
+    required: false
+    editable: true
+
+metadata:
+  notes:
+    - This ontology intentionally excludes solvent sites in v0.1.
+    - Site definitions are site-level abstractions, not atom-level edges.
+    - Actual atom IDs must be resolved later by SiteMatchingNode using MoleCode/RDKit outputs.
+    - LLMs may help draft or explain site definitions, but graph construction must use deterministic site matching whenever possible.
+```

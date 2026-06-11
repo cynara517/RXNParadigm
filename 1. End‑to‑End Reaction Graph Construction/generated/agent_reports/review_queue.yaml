@@ -1,0 +1,233 @@
+artifact_id: reaction_graph_agent_review_queue_v1
+review_items:
+- review_item_id: AZ:cross_role_edge:az:aryl_halide:C1--az:amine:N1
+  dataset_key: AZ
+  item_type: cross_role_edge
+  severity: high
+  target_id: az:aryl_halide:C1--az:amine:N1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''2''
+
+    source_node_id: az:aryl_halide:C1
+
+    target_node_id: az:amine:N1
+
+    relation_type: FORMING_BOND
+
+    weight: ''0.5''
+
+    evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic'
+- review_item_id: AZ:cross_role_edge:az:ligand:P1--az:aryl_halide:C1
+  dataset_key: AZ
+  item_type: cross_role_edge
+  severity: high
+  target_id: az:ligand:P1--az:aryl_halide:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''3''
+
+    source_node_id: az:ligand:P1
+
+    target_node_id: az:aryl_halide:C1
+
+    relation_type: METAL_COORDINATION
+
+    weight: ''0.5''
+
+    evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic'
+- review_item_id: AZ:minimal_reaction_center_graph:AZ:node_count
+  dataset_key: AZ
+  item_type: minimal_reaction_center_graph
+  severity: medium
+  target_id: AZ:node_count
+  review_required: true
+  review_status: pending
+  review_reason: Graph is very small and may miss substituent or ligand environment.
+  recommended_action: Consider expanding topology with MoleCode/RDKit structural nodes
+    and missing-DFT masks.
+  human_decision: ''
+  locked: false
+  payload: 'node_count: 5'
+- review_item_id: AZ:sparse_role_topology:AZ:ligand
+  dataset_key: AZ
+  item_type: sparse_role_topology
+  severity: medium
+  target_id: AZ:ligand
+  review_required: true
+  review_status: pending
+  review_reason: Role ligand has only 1 graph node(s), but source data contains global
+    descriptors for this role.
+  recommended_action: Decide whether to add role-level/global descriptor nodes, or
+    expand topology with missing-DFT atom nodes.
+  human_decision: ''
+  locked: false
+  payload: "role: ligand\ngraph_node_count: 1\nsource_profile:\n  role_prefix: ligand\n\
+    \  total_column_count: 9\n  atom_descriptor_column_count: 2\n  global_descriptor_column_count:\
+    \ 7\n  atom_descriptor_sample:\n  - ligand_.P1_electrostatic_charge\n  - ligand_.P1_NMR_shift\n\
+    \  global_descriptor_sample:\n  - ligand_amount\n  - ligand_molecular_weight\n\
+    \  - ligand_hardness\n  - ligand_dipole_moment\n  - ligand_electronegativity\n\
+    \  - ligand_E_HOMO\n  - ligand_E_LOMO"
+- review_item_id: SU_NO:cross_role_edge:su_no:aryl_halide:C1--su_no:organoboron:C1
+  dataset_key: SU_NO
+  item_type: cross_role_edge
+  severity: high
+  target_id: su_no:aryl_halide:C1--su_no:organoboron:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''56''
+
+    source_node_id: su_no:aryl_halide:C1
+
+    target_node_id: su_no:organoboron:C1
+
+    relation_type: FORMING_BOND
+
+    weight: ''0.5''
+
+    evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013'
+- review_item_id: SU_NO:cross_role_edge:su_no:organoboron:B1--su_no:aryl_halide:C1
+  dataset_key: SU_NO
+  item_type: cross_role_edge
+  severity: high
+  target_id: su_no:organoboron:B1--su_no:aryl_halide:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''57''
+
+    source_node_id: su_no:organoboron:B1
+
+    target_node_id: su_no:aryl_halide:C1
+
+    relation_type: METAL_COORDINATION
+
+    weight: ''0.5''
+
+    evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013'
+- review_item_id: SU_NO:cross_role_edge:su_no:ligand:P1--su_no:aryl_halide:C1
+  dataset_key: SU_NO
+  item_type: cross_role_edge
+  severity: high
+  target_id: su_no:ligand:P1--su_no:aryl_halide:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''58''
+
+    source_node_id: su_no:ligand:P1
+
+    target_node_id: su_no:aryl_halide:C1
+
+    relation_type: METAL_COORDINATION
+
+    weight: ''0.5''
+
+    evidence_sources: suzuki_miyaura_intramolecular_review_pmc_2024;suzuki_miyaura_recent_developments_pmc_2014;suzuki_transmetalation_pubmed_2013'
+- review_item_id: SU_NO:sparse_role_topology:SU_NO:ligand
+  dataset_key: SU_NO
+  item_type: sparse_role_topology
+  severity: medium
+  target_id: SU_NO:ligand
+  review_required: true
+  review_status: pending
+  review_reason: Role ligand has only 1 graph node(s), but source data contains global
+    descriptors for this role.
+  recommended_action: Decide whether to add role-level/global descriptor nodes, or
+    expand topology with missing-DFT atom nodes.
+  human_decision: ''
+  locked: false
+  payload: "role: ligand\ngraph_node_count: 1\nsource_profile:\n  role_prefix: ligand\n\
+    \  total_column_count: 8\n  atom_descriptor_column_count: 2\n  global_descriptor_column_count:\
+    \ 6\n  atom_descriptor_sample:\n  - ligand_.P1_electrostatic_charge\n  - ligand_.P1_NMR_shift\n\
+    \  global_descriptor_sample:\n  - ligand_molecular_weight\n  - ligand_hardness\n\
+    \  - ligand_dipole_moment\n  - ligand_electronegativity\n  - ligand_E_HOMO\n \
+    \ - ligand_E_LOMO"
+- review_item_id: DY:cross_role_edge:dy:ligand:P1--dy:aryl_halide:C1
+  dataset_key: DY
+  item_type: cross_role_edge
+  severity: high
+  target_id: dy:ligand:P1--dy:aryl_halide:C1
+  review_required: true
+  review_status: pending
+  review_reason: Cross-role candidate relation requires human/mechanistic approval.
+  recommended_action: Approve, reject, or adjust relation_type/weight.
+  human_decision: ''
+  locked: false
+  payload: 'edge_index: ''23''
+
+    source_node_id: dy:ligand:P1
+
+    target_node_id: dy:aryl_halide:C1
+
+    relation_type: METAL_COORDINATION
+
+    weight: ''0.5''
+
+    evidence_sources: buchwald_hartwig_acs_chemrev_2025;buchwald_hartwig_libretexts;buchwald_hartwig_nature_index_topic'
+- review_item_id: DY:isolated_nodes:DY:isolated_nodes
+  dataset_key: DY
+  item_type: isolated_nodes
+  severity: medium
+  target_id: DY:isolated_nodes
+  review_required: true
+  review_status: pending
+  review_reason: Some feature-bearing atoms do not pass messages to other atoms.
+  recommended_action: Confirm they should remain readout-only nodes, or add reviewed
+    role/cross-role relations.
+  human_decision: ''
+  locked: false
+  payload: 'isolated_nodes:
+
+    - dy:additive:C5
+
+    - dy:aryl_halide:H2
+
+    - dy:aryl_halide:H3
+
+    - dy:base:N1
+
+    - dy:ligand:H3
+
+    - dy:ligand:H4
+
+    - dy:ligand:H9
+
+    - dy:ligand:H11'
+- review_item_id: DY:sparse_role_topology:DY:base
+  dataset_key: DY
+  item_type: sparse_role_topology
+  severity: medium
+  target_id: DY:base
+  review_required: true
+  review_status: pending
+  review_reason: Role base has only 1 graph node(s), but source data contains global
+    descriptors for this role.
+  recommended_action: Decide whether to add role-level/global descriptor nodes, or
+    expand topology with missing-DFT atom nodes.
+  human_decision: ''
+  locked: false
+  payload: "role: base\ngraph_node_count: 1\nsource_profile:\n  role_prefix: base\n\
+    \  total_column_count: 10\n  atom_descriptor_column_count: 1\n  global_descriptor_column_count:\
+    \ 9\n  atom_descriptor_sample:\n  - base_.N1_electrostatic_charge\n  global_descriptor_sample:\n\
+    \  - base_E_HOMO\n  - base_E_LUMO\n  - base_dipole_moment\n  - base_electronegativity\n\
+    \  - base_hardness\n  - base_molecular_volume\n  - base_molecular_weight\n  -\
+    \ base_ovality\n  - base_surface_area"

@@ -1,0 +1,6 @@
+node_id,az:amine:C1,az:amine:N1,az:aryl_halide:C1,az:aryl_halide:C2,az:ligand:P1
+az:amine:C1,0.0,0.33,0.0,0.0,0.0
+az:amine:N1,0.33,0.0,0.5,0.0,0.0
+az:aryl_halide:C1,0.0,0.5,0.0,0.67,0.5
+az:aryl_halide:C2,0.0,0.0,0.67,0.0,0.0
+az:ligand:P1,0.0,0.0,0.5,0.0,0.0
