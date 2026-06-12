@@ -23,20 +23,20 @@
 
 ## Key Innovations
 
-### 1. End‑to‑End Reaction Graph Construction
+### 1. End‑to‑End Reaction Graph Construction（RXNGrapher）
 - No pre‑defined templates or molecular graphs required.
 - Directly generates full graphs (reactants, products, and their relationships) from DFT descriptors and SMILES.
 - Supports popular datasets: Suzuki reactions, Doyle B–H (2018), etc.
 - **First tool** that accounts for both **inter‑molecular interactions** among reactants and **atomic‑level connections** within single molecules.
 - Packaged as an **agent tool** – easy to call from your own code.
 
-### 2. Paradigm‑Shifting Feature Selection
+### 2. Paradigm‑Shifting Feature Selection（RXNSelector）
 - Replaces the traditional *use all hundreds of DFT descriptors* OR *use none of DFT descriptors but only SMILES* approach.
 - Selects the most informative node features via:
   - Correlation analysis
   - Information entropy strategies
   - Decoupling of chain relationships among reaction nodes
-- Also provided as an **interactive GUI** for exploration.
+- Also provided as an **interactive GUI** for exploration.（https://rxnparadigm-7m55hf6bdtp8ufctedt9po.streamlit.app/）
 
 ## RXNSelector Streamlit App
 
