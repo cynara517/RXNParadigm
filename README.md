@@ -52,6 +52,9 @@ For Streamlit Community Cloud deployment, use:
 Main file path: RXNSelector/ui/streamlit_app.py
 ```
 
+The repository root `requirements.txt` mirrors the RXNSelector app dependencies
+so Streamlit Cloud installs packages such as `PyYAML` before importing the app.
+
 The app-specific installation guide, CLI examples, and Streamlit usage notes are
 available in:
 
