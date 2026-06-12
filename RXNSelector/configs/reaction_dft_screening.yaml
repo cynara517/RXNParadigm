@@ -1,0 +1,86 @@
+name: reaction_dft_variable_screening
+description: RXNSelector workflow for reaction-yield datasets.
+random_state: 42
+
+groups:
+  additive:
+    prefixes:
+      - additive_
+  aryl_halide:
+    prefixes:
+      - aryl_halide_
+  base:
+    prefixes:
+      - base_
+  ligand:
+    prefixes:
+      - ligand_
+
+correlation:
+  primary_threshold: 0.8
+  report_thresholds:
+    - 0.8
+    - 0.9
+
+selection:
+  pairwise_threshold: 0.9
+  group_methods:
+    default: components
+    ligand: dense_factor
+  representative_preferences:
+    additive:
+      - surface_area$
+    aryl_halide:
+      - \.H3_electrostatic_charge$
+      - V3_frequency$
+      - ovality$
+    base:
+      - surface_area$
+      - electronegativity$
+      - \.N1_electrostatic_charge$
+  dense_groups:
+    ligand:
+      max_features: 2
+      family_patterns:
+        - NMR_shift$
+        - V[0-9]+_frequency$
+
+ridge_dependency:
+  alpha: 1.0
+  edge_threshold: 0.9
+  multicollinearity_r2_threshold: 0.9
+  contributor_threshold: 0.05
+  min_multicollinearity_contributors: 2
+
+llm_chain_decomposition:
+  enabled: false
+  provider: openai_responses
+  base_url: https://api.openai.com/v1
+  model: gpt-4.1-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 4000
+  timeout_seconds: 60
+  strict_validation: true
+  literature_search: true
+  web_search_tool_type: web_search_preview
+  literature_context: ""
+  fallback_on_error: true
+
+residual_check:
+  threshold: 0.8
+  max_iterations: 100
+  skip_groups:
+    - ligand
+  representative_preferences:
+    additive:
+      - electronegativity$
+      - \.C3_electrostatic_charge$
+    aryl_halide:
+      - \.H3_electrostatic_charge$
+      - V3_frequency$
+      - \.C4_NMR_shift$
+    base:
+      - surface_area$
+      - electronegativity$
+      - \.N1_electrostatic_charge$

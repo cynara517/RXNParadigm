@@ -1,0 +1,15 @@
+name: residual_collinearity_check
+display_name: Residual Collinearity Check
+description: Loop over selected features and enforce residual correlation compliance.
+input:
+  required:
+    - initial_selected_features
+    - feature_decision_table
+output:
+  artifacts:
+    - final_features.json
+    - residual_collinearity_iterations.csv
+    - final_correlation_matrix.csv
+    - final_correlation_graph.svg
+next_recommended:
+  - final_feature_export

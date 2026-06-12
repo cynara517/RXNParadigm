@@ -38,6 +38,27 @@
   - Decoupling of chain relationships among reaction nodes
 - Also provided as an **interactive GUI** for exploration.
 
+## RXNSelector Streamlit App
+
+The release-ready RXNSelector app is packaged under:
+
+```text
+RXNSelector/
+```
+
+For Streamlit Community Cloud deployment, use:
+
+```text
+Main file path: RXNSelector/ui/streamlit_app.py
+```
+
+The app-specific installation guide, CLI examples, and Streamlit usage notes are
+available in:
+
+```text
+RXNSelector/USER_GUIDE.md
+```
+
 ---
 
 ## Comparison with Existing Methods

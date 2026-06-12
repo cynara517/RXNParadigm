@@ -1,0 +1,15 @@
+name: feature_selection_from_chains
+display_name: Feature Selection From Chains
+description: Combine independent variables and LLM chain decisions into an initial selected feature set.
+input:
+  required:
+    - dataset_profile
+    - ridge_dependency_report
+    - llm_chain_decomposition
+    - mi_scores_by_group
+output:
+  artifacts:
+    - initial_selected_features.json
+    - feature_decision_table.csv
+next_recommended:
+  - residual_collinearity_check

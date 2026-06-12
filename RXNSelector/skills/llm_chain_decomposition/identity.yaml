@@ -1,0 +1,13 @@
+name: llm_chain_decomposition
+display_name: LLM Chain Decomposition
+description: Decompose ridge structures into subchains and explain retain/remove suggestions using MI.
+input:
+  required:
+    - ridge_dependency_report
+    - mi_scores_by_group
+output:
+  artifacts:
+    - llm_chain_decomposition.json
+    - llm_chain_decomposition.md
+next_recommended:
+  - feature_selection_from_chains

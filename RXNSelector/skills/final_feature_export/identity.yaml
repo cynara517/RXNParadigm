@@ -1,0 +1,12 @@
+name: final_feature_export
+display_name: Final Feature Export
+description: Export the final screened dataset and concise screening report.
+input:
+  required:
+    - final_features
+    - dataset_path
+output:
+  artifacts:
+    - selected_dataset.csv
+    - final_report.md
+next_recommended: []

@@ -1,0 +1,13 @@
+name: ridge_dependency_graph
+display_name: Ridge Dependency Graph
+description: Build ridge-regression dependency structures and assign base variable types.
+input:
+  required:
+    - dataset_profile
+    - mi_scores_by_group
+output:
+  artifacts:
+    - ridge_dependency_report.json
+    - ridge_dependency_report.md
+next_recommended:
+  - llm_chain_decomposition

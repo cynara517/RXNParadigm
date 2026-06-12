@@ -1,0 +1,11 @@
+name: dataset_profile
+display_name: Dataset Profile
+description: Validate the strict dataset format and write target, feature, and group metadata.
+input:
+  required:
+    - dataset_path
+output:
+  artifacts:
+    - dataset_profile.json
+next_recommended:
+  - grouped_correlation

@@ -1,0 +1,11 @@
+name: mutual_information
+display_name: Mutual Information Scoring
+description: Score each feature by mutual information with the final-column target.
+input:
+  required:
+    - dataset_profile
+output:
+  artifacts:
+    - mi_scores_by_group.csv
+next_recommended:
+  - ridge_dependency_graph

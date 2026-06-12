@@ -1,0 +1,14 @@
+name: dependency_screening
+display_name: Dependency Chain Screening
+description: Select first-pass representative variables from dependency chains.
+input:
+  required:
+    - dataset_path
+    - mi_scores
+output:
+  artifacts:
+    - candidate_features.json
+    - dependency_components.csv
+    - dependency_audit.csv
+next_recommended:
+  - residual_collinearity_check

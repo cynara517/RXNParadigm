@@ -1,0 +1,11 @@
+name: benchmark_validate
+display_name: Benchmark Feature Validation
+description: Compare selected features with a known expected feature set.
+input:
+  required:
+    - final_features
+    - expected_features_path
+output:
+  artifacts:
+    - benchmark_validation.json
+next_recommended: []

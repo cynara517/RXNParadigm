@@ -1,0 +1,14 @@
+name: grouped_correlation
+display_name: Grouped Pearson Correlation
+description: Calculate group-wise Pearson matrices, high-correlation pairs, summaries, and heatmaps.
+input:
+  required:
+    - dataset_profile
+output:
+  artifacts:
+    - matrix_<group>.csv
+    - corr_<group>.svg
+    - high_correlation_pairs.csv
+    - correlation_summary.csv
+next_recommended:
+  - mutual_information
